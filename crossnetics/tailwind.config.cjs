@@ -11,6 +11,7 @@ export default {
             screens: {
                 '2xl': '1920px',
                 'xl': '1600px',
+                '2lg': '1280px',
             },
             dropShadow: {
                 'ipad': '20px 20px 20px rgba(0, 0, 0, 0.3)',

@@ -1,16 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
+import Description from "@components/Description.astro";
+import Analytics from "@components/Analytics.astro";
 
 const hero_text = {
   header: "Wellcome \n to Crossnetics!",
   body: "A unique platform with a suite of digital tools for marketing, analytics and social media, enhanced by AI and decentralized finance.",
   button: "start free analysis ",
 }
+
+const description_text = "Experience the world of our ecosystem, where advanced marketing tools make it easy and effective to realize all your strategic goals."
+
+const analytics_text = {
+  title: "Analytics",
+  body: "Our innovative solution streamlines the intricate analytics process, enabling you to channel your efforts into business expansion. Through seamless integration of cutting-edge social media, web metrics, and APIs, we craft a comprehensive mosaic of your online footprint. With Crossnetics as your ally, you consistently outpace competitors in the realm of digital marketing!",
+  metrics: {
+    title: "Cutting-Edge Metrics",
+    body: "We offer advanced metrics to evaluate key aspects of your social media presence. This allows you to analyze the impact on your audience and the effectiveness of strategies and campaigns.",
+  },
+  graphs: {
+    title: "Detailed Graphs",
+    body: "Turn data into actionable insights with our visual graphs. We visualize key metrics, making it easy to understand trends and relationships between metrics.",
+  },
+  APIs: {
+    title: "Official Social Network APIs",
+    body: "We integrate official social media APIs for reliable and up-to-date data access, providing accurate and complete information about your social media presence.",
+  },
+  web: {
+    title: "WEB analytics",
+    body: "We provide detailed web site analytics so you can study your competitors by marketing strategies, visits, global rankings, country rankings, industry rankings, social traffic, keywords and inbound traffic.",
+  },
+  general: {
+    title: "We aim to make analytics intuitive and useful",
+    body: "Our tools are designed so that you not only see the numbers, but also understand their impact on your business. We strive to provide you with the tools to make informed decisions based on concrete data and analytical analysis. Crossnetics transforms complex information into an easy-to-understand format, making analytics accessible and effective. Take advantage of our capabilities to pave a confident path to the digital world.",
+  },
+}
 ---
 
 <Layout title="Welcome to Crossnetics.">
   <main>
     <Hero {...hero_text} />
+    <Description description={description_text} />
+    <Analytics {...analytics_text} />
   </main>
 </Layout>
