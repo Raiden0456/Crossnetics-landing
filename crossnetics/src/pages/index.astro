@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
 import Description from "@components/Description.astro";
 import Analytics from "@components/Analytics.astro";
+import Social_swiper from "@components/Social_swiper.jsx";
 
 const hero_text = {
   header: "Wellcome \n to Crossnetics!",
@@ -15,33 +16,86 @@ const description_text = "Experience the world of our ecosystem, where advanced 
 const analytics_text = {
   title: "Analytics",
   body: "Our innovative solution streamlines the intricate analytics process, enabling you to channel your efforts into business expansion. Through seamless integration of cutting-edge social media, web metrics, and APIs, we craft a comprehensive mosaic of your online footprint. With Crossnetics as your ally, you consistently outpace competitors in the realm of digital marketing!",
-  metrics: {
-    title: "Cutting-Edge Metrics",
-    body: "We offer advanced metrics to evaluate key aspects of your social media presence. This allows you to analyze the impact on your audience and the effectiveness of strategies and campaigns.",
-  },
-  graphs: {
-    title: "Detailed Graphs",
-    body: "Turn data into actionable insights with our visual graphs. We visualize key metrics, making it easy to understand trends and relationships between metrics.",
-  },
-  APIs: {
-    title: "Official Social Network APIs",
-    body: "We integrate official social media APIs for reliable and up-to-date data access, providing accurate and complete information about your social media presence.",
-  },
-  web: {
-    title: "WEB analytics",
-    body: "We provide detailed web site analytics so you can study your competitors by marketing strategies, visits, global rankings, country rankings, industry rankings, social traffic, keywords and inbound traffic.",
-  },
+  sections: [
+    {
+      title: "Cutting-Edge Metrics",
+      body: "We offer advanced metrics to evaluate key aspects of your social media presence. This allows you to analyze the impact on your audience and the effectiveness of strategies and campaigns.",
+      image: "metrics"
+    },
+    {
+      title: "Detailed Graphs",
+      body: "Turn data into actionable insights with our visual graphs. We visualize key metrics, making it easy to understand trends and relationships between metrics.",
+      image: "graphs"
+    },
+    {
+      title: "Official Social Network APIs",
+      body: "We integrate official social media APIs for reliable and up-to-date data access, providing accurate and complete information about your social media presence.",
+      image: "api"
+    },
+    {
+      title: "WEB analytics",
+      body: "We provide detailed web site analytics so you can study your competitors by marketing strategies, visits, global rankings, country rankings, industry rankings, social traffic, keywords and inbound traffic.",
+      image: "web"
+    }
+  ],
   general: {
     title: "We aim to make analytics intuitive and useful",
     body: "Our tools are designed so that you not only see the numbers, but also understand their impact on your business. We strive to provide you with the tools to make informed decisions based on concrete data and analytical analysis. Crossnetics transforms complex information into an easy-to-understand format, making analytics accessible and effective. Take advantage of our capabilities to pave a confident path to the digital world.",
-  },
+  }
 }
+
+
+const social = [
+  {
+    title: "Tik-Tok analytics",
+    description: "Analyzing content trends and popularity.\nMonitoring audience engagement and interaction.\nEvaluating ad campaigns and ROI.",
+    image: "tiktok.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#FF78B9", "#3DB4EE"]
+  },
+  {
+    title: "YOUTUBE analytics",
+    description: "Analyzing content trends and popularity.\nMonitoring audience engagement and interaction.\nEvaluating ad campaigns and ROI.",
+    image: "youtube.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#E24478", "#FF7C94"]
+  },
+  {
+    title: "Instagram analytics",
+    description: "Analyzing content trends and popularity.\nMonitoring audience engagement and interaction.\nEvaluating ad campaigns and ROI.",
+    image: "instagram.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#B458BA", "#FF9960"]
+  },
+  {
+    title: "FACEBOOK analytics",
+    description: "Analyzing content trends and popularity.\nMonitoring audience engagement and interaction.\nEvaluating ad campaigns and ROI.",
+    image: "facebook.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#288BFF", "#75B6F3"]
+  },
+  {
+    title: "TWICH analytics",
+    description: "Analyzing content trends and popularity.\nMonitoring audience engagement and interaction.\nEvaluating ad campaigns and ROI.",
+    image: "twitch.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#9357B5", "#CFAFEB"]
+  },
+  {
+    title: "TELEGRAM analytics",
+    description: "Analyzing content trends and popularity.\nMonitoring audience engagement and interaction.\nEvaluating ad campaigns and ROI.",
+    image: "telegram.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#43CEF3", "#00A3E9"]
+  },
+]
 ---
 
 <Layout title="Welcome to Crossnetics.">
   <main>
     <Hero {...hero_text} />
     <Description description={description_text} />
-    <Analytics {...analytics_text} />
+    <Analytics title={analytics_text.title} body={analytics_text.body} sections={analytics_text.sections} general={analytics_text.general} />
+    <Social_swiper {social} client:load/>
   </main>
 </Layout>

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-swiper .swiper-pagination {
+  @apply top-10 h-fit flex flex-wrap flex-row gap-4 ml-[44.5%];
+}

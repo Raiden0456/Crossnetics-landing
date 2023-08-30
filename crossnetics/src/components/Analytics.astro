@@ -1,30 +1,21 @@
 ---
+interface Section {
+  title: string;
+  body: string;
+  image: string;
+}
+
 interface Props {
   title: string;
   body: string;
-  metrics: {
-    title: string;
-    body: string;
-  };
-  graphs: {
-    title: string;
-    body: string;
-  };
-  APIs: {
-    title: string;
-    body: string;
-  };
-  web: {
-    title: string;
-    body: string;
-  };
+  sections: Section[];
   general: {
     title: string;
     body: string;
   };
 }
 
-const {title, body, metrics, graphs, APIs, web, general} = Astro.props;
+const { title, body, sections, general } = Astro.props;
 ---
 
 <div class="h-[874px] bg-sky-100 flex items-start justify-center">
@@ -34,26 +25,13 @@ const {title, body, metrics, graphs, APIs, web, general} = Astro.props;
       <p class="mt-4 text-base font-normal leading-tight text-start text-gray-600">{body}</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-      <div class="flex flex-col items-start justify-start p-10 bg-white rounded-[50px] gap-y-4">
-        <img src="/analytics/metrics.svg">
-        <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{metrics.title}</h1>
-        <p class="text-gray-400 text-sm font-normal leading-[21px]">{metrics.body}</p>
-      </div>
-      <div class="flex flex-col items-start justify-start p-10 bg-white rounded-[50px] gap-y-4">
-        <img src="/analytics/graphs.svg">
-        <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{graphs.title}</h1>
-        <p class="text-gray-400 text-sm font-normal leading-[21px]">{graphs.body}</p>
-      </div>
-      <div class="flex flex-col items-start justify-start p-10 bg-white rounded-[50px] gap-y-4">
-        <img src="/analytics/api.svg">
-        <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{APIs.title}</h1>
-        <p class="text-gray-400 text-sm font-normal leading-[21px]">{APIs.body}</p>
-      </div>
-      <div class="flex flex-col items-start justify-start p-10 bg-white rounded-[50px] gap-y-4">
-        <img src="/analytics/web.svg">
-        <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{web.title}</h1>
-        <p class="text-gray-400 text-sm font-normal leading-[21px]">{web.body}</p>
-      </div>
+      {sections.map((section, index) => (
+        <div class="flex flex-col items-start justify-start p-10 bg-white rounded-[50px] gap-y-4">
+          <img src={`/analytics/${section.image}.svg`}>
+          <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{section.title}</h1>
+          <p class="text-gray-400 text-sm font-normal leading-[21px]">{section.body}</p>
+        </div>
+      ))}
       <div class="relative overflow-hidden md:col-span-2 flex flex-col items-start justify-start p-10 bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 rounded-[50px]">
         <div class="flex flex-col gap-y-4 w-full md:w-2/3 z-10">
           <h1 class="text-white text-base font-bold uppercase leading-tight">{general.title}</h1>
