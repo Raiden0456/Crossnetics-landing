@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .custom-swiper .swiper-pagination {
-  @apply top-10 h-fit flex flex-wrap flex-row gap-4 ml-[44.5%];
+  @apply top-10 h-fit w-full flex flex-wrap flex-row gap-3.5 items-center xl:ml-64 justify-center;
 }

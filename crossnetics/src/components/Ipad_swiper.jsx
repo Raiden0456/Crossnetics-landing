@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 
 export default function IpadSwiper() {
   return (
-    <div class="absolute top-5 left-6 w-11/12 h-11/12 drop-shadow-ipad bg-[url('/ipad.png')] bg-cover">
+    <div class="relative w-full h-full drop-shadow-ipad bg-[url('/ipad.png')] bg-cover">
       <div class="relative w-full h-full p-2 lg:p-3 xl:p-4">
         <div class="w-full h-full rounded-lg overflow-hidden">
           <Swiper 
