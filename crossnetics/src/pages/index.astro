@@ -4,6 +4,7 @@ import Hero from "@components/Hero.astro";
 import Description from "@components/Description.astro";
 import Analytics from "@components/Analytics.astro";
 import Social_swiper from "@components/Social_swiper.jsx";
+import Web3 from "@components/Web3.astro";
 
 const hero_text = {
   header: "Wellcome \n to Crossnetics!",
@@ -89,6 +90,34 @@ const social = [
     gradient: ["#43CEF3", "#00A3E9"]
   },
 ]
+
+const Web3_text = {
+  title: "Decentralized Advertising Marketplace",
+  body: "This is a platform where advertisers and performers can interact. By using decentralized financial technologies, the platform ensures transparency and efficiency in advertising campaigns.",
+  sections: [
+    {
+      title: "Buying and Selling Advertising",
+      body: "Your product deserves attention. The Marketplace offers you the opportunity to elevate its presence. Here, you can buy advertising space and reach wider audiences, as well as sell your space to those who appreciate your community.",
+      image: "gromofon.svg"
+    },
+    {
+      title: "Buying and Selling Advertising",
+      body: "With the integration of Web 3.0 technology, we've made influencer discovery and collaboration more transparent and lucrative. Find suitable influencers for your niche and establish long-term partnerships.",
+      image: "person.svg"
+    },
+    {
+      title: "Cryptocurrency Payment",
+      body: "NFT Rewards: Your active role and success in the Crossnetics ecosystem does not go unnoticed. For successfully executing orders on the marketplace, you receive unique NFTs that validate your contribution and value in the system.",
+      image: "crypto.svg"
+    },
+    {
+      title: "NFT Rewards",
+      body: "The future of digital finance is reflected in the ability to conduct transactions using cryptocurrencies worldwide. This method speeds up transactions and emphasizes the security of transactions.",
+      image: "nft.svg"
+    }
+  ],
+  testimonial: 'Crossnetics is where your online presence transforms into digital assets, and your contribution to the community gains real value. Join us and embark on your journey into the world of Web 3.0 with the "Marketplace" section on Crossnetics.'
+}
 ---
 
 <Layout title="Welcome to Crossnetics.">
@@ -97,5 +126,6 @@ const social = [
     <Description description={description_text} />
     <Analytics title={analytics_text.title} body={analytics_text.body} sections={analytics_text.sections} general={analytics_text.general} />
     <Social_swiper {social} client:load/>
+    <Web3 title={Web3_text.title} body={Web3_text.body} sections={Web3_text.sections} testimonial={Web3_text.testimonial} />
   </main>
 </Layout>

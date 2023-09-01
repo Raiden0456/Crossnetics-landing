@@ -20,6 +20,9 @@ export default {
             colors: {
                 'hero_gradient_1': '#49D1E3',
                 'hero_gradient_2': '#2782FF',
+                'web3-body': '#ABC8E3',
+                'web3-bg': '#383C4B',
+                'web3-grid': '#444859'
             },
         },
     },

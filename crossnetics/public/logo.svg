@@ -13,7 +13,7 @@
   <style>
     path { fill: #3862AE; }
     @media (prefers-color-scheme: dark) {
-        path { fill: #DDF2FD; }
+        path { fill: #DEEEFF; }
     }
   </style>
 </svg>

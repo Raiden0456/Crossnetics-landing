@@ -4,7 +4,7 @@ import { EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import './Social_swiper.css'; 
+import '../styles/Social_swiper.css' 
 
 export default function SocialSwiper({ social }) {
   const swiperRef = useRef(null);
@@ -38,7 +38,7 @@ export default function SocialSwiper({ social }) {
             {social.map((entry, index) => (
               <SwiperSlide key={index}>
                 <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[60rem] sm:min-h-[677px] flex items-center justify-center">
-                  <div className="relative flex justify-between w-2/3 h-full mt-48 md:mt-0">
+                  <div className="relative flex justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0">
                     <div className="flex w-4/12 items-center absolute invisible xl:visible xl:relative">
                       <img src={`/3d_images/${entry.image}`} alt="" className="w-full" />
                     </div>
