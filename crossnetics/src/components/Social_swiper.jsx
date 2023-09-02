@@ -40,7 +40,7 @@ export default function SocialSwiper({ social }) {
                 <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[60rem] sm:min-h-[677px] flex items-center justify-center">
                   <div className="relative flex justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0">
                     <div className="flex w-4/12 items-center absolute invisible xl:visible xl:relative">
-                      <img src={`/3d_images/${entry.image}`} alt="" className="w-full" />
+                      <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                     <div className="relative flex flex-col gap-y-10 md:gap-y-12 xl:gap-y-20 items-start justify-center lg:w-7/12">
                       <div className="relative flex flex-col gap-y-4 justify-start items-start">
@@ -48,12 +48,12 @@ export default function SocialSwiper({ social }) {
                         <p className="text-white text-xl xl:text-1.5xl 2xl:text-2xl font-medium whitespace-pre-line leading-tight">{entry.description}</p>
                       </div>
                       <div className="flex flex-col gap-y-2 justify-start items-start">
-                        <img src="/logo.svg" alt="" className="w-10" />
+                        <img src="/logo.svg" alt="logo" className="w-10" loading='lazy'/>
                         <p className="text-sky-100 text-sm font-normal leading-[18.20px] whitespace-pre-line">{entry.testimonial}</p>
                       </div>
                     </div>
                     <div className="flex w-4/12 items-center absolute invisible lg:visible lg:relative xl:invisible xl:absolute">
-                      <img src={`/3d_images/${entry.image}`} alt="" className="w-full" />
+                      <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 interface Section {
   title: string;
   body: string;
@@ -24,7 +25,7 @@ const { title, body, sections, testimonial } = Astro.props;
     <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
       {sections.map ((section) => (
         <div class="flex flex-row items-center justify-start gap-x-6 p-10 rounded-[50px] bg-web3-grid">
-          <img src={`/web3/${section.image}`} class="absolute invisible sm:visible sm:relative w-32 md:w-40 lg:w-60" />
+          <Image src={`/web3/${section.image}`} alt="section imgage" width={50} height={50} class="absolute invisible sm:visible sm:relative w-32 md:w-40 lg:w-60" />
           <div class="flex flex-col items-start justify-start gap-y-4">
             <h1 class="text-base font-bold uppercase text-sky-100 leading-tight">{ section.title }</h1>
             <p class="text-Web3-body text-sm font-normal leading-5 text-sky-100">{ section.body }</p>
@@ -33,9 +34,9 @@ const { title, body, sections, testimonial } = Astro.props;
       ))}
     </div>
     <div class="flex flex-col lg:flex-row w-full gap-10">
-      <img src="/logo.svg" class="w-20 lg:w-40" />
+      <Image src="/logo.svg" alt="logo" width={50} height={50} class="w-20 lg:w-40" />
       <p class="text-web3-body text-base font-normal leading-normal">{ testimonial }</p>
-      <img src="web3/WEB3.0.svg" class="w-60" />
+      <Image src="web3/WEB3.0.svg" alt="WEB3.0" width={50} height={50} class="w-60" />
     </div>
   </div>
 </div>

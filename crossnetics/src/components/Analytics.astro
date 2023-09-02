@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Section {
   title: string;
   body: string;
@@ -27,7 +29,7 @@ const { title, body, sections, general } = Astro.props;
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
       {sections.map((section, index) => (
         <div class="flex flex-col items-start justify-start p-10 bg-white rounded-[50px] gap-y-4">
-          <img src={`/analytics/${section.image}.svg`}>
+          <Image src={`/analytics/${section.image}.svg`} alt={`${section.image}`} width={30} height={30}/> 
           <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{section.title}</h1>
           <p class="text-gray-400 text-sm font-normal leading-[21px]">{section.body}</p>
         </div>
@@ -37,7 +39,7 @@ const { title, body, sections, general } = Astro.props;
           <h1 class="text-white text-base font-bold uppercase leading-tight">{general.title}</h1>
           <p class="text-white text-sm font-normal leading-[21px]">{general.body}</p>
         </div>
-        <img src="/3d_images/PC.svg" class="invisible md:visible md:w-3/5 lg:w-1/2 2lg:w-1/3 xl:w-1/2 absolute -right-24 -bottom-20 transform rotate-12 z-100">
+        <Image src="/3d_images/PC.svg" alt="PC" width={30} height={30} class="invisible md:visible md:w-3/5 lg:w-1/2 2lg:w-1/3 xl:w-1/2 absolute -right-24 -bottom-20 transform rotate-12 z-100" />
       </div>
     </div>
   </div>

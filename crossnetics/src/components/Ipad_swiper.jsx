@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative, Autoplay } from 'swiper/modules';
+import { Image } from 'astro:assets';
 
 import 'swiper/css';
 import 'swiper/css/effect-creative';
@@ -30,9 +31,9 @@ export default function IpadSwiper() {
             resistanceRatio={0}
             modules={[Autoplay, EffectCreative]}
           >
-            <SwiperSlide><img src='/slide.png' /></SwiperSlide>
-            <SwiperSlide><img src='/slide.png' /></SwiperSlide>
-            <SwiperSlide><img src='/slide.png' /></SwiperSlide>
+            <SwiperSlide><img src='/slide.png' alt="slide"/></SwiperSlide>
+            <SwiperSlide><img src='/slide.png' alt="slide"/></SwiperSlide>
+            <SwiperSlide><img src='/slide.png' alt="slide"/></SwiperSlide>
           </Swiper>
         </div>
       </div>
