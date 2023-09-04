@@ -6,12 +6,20 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '../styles/Social_swiper.css' 
 
-export default function SocialSwiper({ social }) {
+interface Social {
+  title: string;
+  description: string;
+  testimonial: string;
+  image: string;
+  gradient: string[];
+}
+
+export default function SocialSwiper({ social: social }: { social: Social[] }) {
   const swiperRef = useRef(null);
 
   const pagination = {
     type: "custom",
-    renderCustom: (_, current) => {
+    renderCustom: (_: any, current: any) => {
       return social.map((entry, index) => {
         const isActive = index + 1 === current;
         const baseClasses = "w-28 h-11 px-7.5 py-2.5 rounded-2xl flex justify-center items-center cursor-pointer";
@@ -33,7 +41,7 @@ export default function SocialSwiper({ social }) {
             pagination={pagination}
             effect={'fade'}
             modules={[EffectFade, Pagination]}
-            onSwiper={(swiper) => { swiperRef.current = swiper; }}
+            onSwiper={(swiper: any ) => { swiperRef.current = swiper; }}
           >
             {social.map((entry, index) => (
               <SwiperSlide key={index}>

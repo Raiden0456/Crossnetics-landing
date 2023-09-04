@@ -1,26 +1,40 @@
 ---
 import { Image } from 'astro:assets';
+import IpadSwiper from './Ipad_swiper';
 
 interface Props {
 	header: string;
 	body: string;
+  button: string;
 }
 
-const { header, body } = Astro.props;
+const { header, body, button } = Astro.props;
 ---
-
-<div class="bg-sky-100 flex items-start justify-center h-fit min-h-[949px] ">
-  <div class="flex flex-col lg:flex-row items-center justify-between w-11/12 lg:w-2/3 mt-20">
-    <div class="flex flex-col items-start justify-center w-full lg:w-[45%]">
-      <div class="flex flex-row gap-x-6">
-        <Image src={`/stars.svg`} alt="sprinkle" width={50} height={50}/>
-        <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-bold text-start text-gray-600 whitespace-pre-wrap">{header}</h1>
+<div>
+  <div class="bg-sky-100 flex items-start justify-center h-fit min-h-[949px] ">
+    <div class="flex flex-col lg:flex-row items-center justify-between w-11/12 lg:w-2/3 mt-20">
+      <div class="flex flex-col items-start justify-center w-full lg:w-[45%]">
+        <div class="flex flex-row gap-x-6">
+          <Image src={`/stars.svg`} alt="sprinkle" width={50} height={50}/>
+          <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-bold text-start text-gray-600 whitespace-pre-wrap">{header}</h1>
+        </div>
+        <p class="mt-10 text-base font-normal leading-tight text-start text-gray-600 whitespace-pre-wrap">{body}</p>
       </div>
-      <p class="mt-10 text-base font-normal leading-tight text-start text-gray-600 whitespace-pre-wrap">{body}</p>
+    
+      <div class="w-1/2 h-1/2">
+        <Image src={`/3d_images/PC_robo.svg`} alt="Robo" width={50} height={50} class="w-full h-full rotate-[15deg]"/>
+      </div>
     </div>
-  
-    <div class="w-1/2 h-1/2">
-      <Image src={`/3d_images/PC_robo.svg`} alt="Robo" width={50} height={50} class="w-full h-full rotate-[15deg]"/>
+  </div>
+  <div class="bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 flex flex-col  items-center justify-start h-fit min-h-[509px]">
+    <div class="flex flex-col items-center justify-center w-11/12 lg:w-2/3 gap-y-10">
+      <div class="w-2/3 lg:w-2/3 xl:w-1/2 mt-10 lg:-mt-10 2lg:-mt-20 xl:-mt-40">
+        <IpadSwiper image_path={["/ai_slide_2.png"]} client:load/>
+      </div>
+      <div class="w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer">
+        <div class="text-blue-500 text-xs font-extrabold uppercase">{button}</div>
+      </div>
     </div>
   </div>
 </div>
+
