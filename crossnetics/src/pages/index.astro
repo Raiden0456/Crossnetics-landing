@@ -6,6 +6,7 @@ import Analytics from "@components/Analytics.astro";
 import Social_swiper from "@components/Social_swiper.jsx";
 import Web3 from "@components/Web3.astro";
 import AI from "@components/AI.astro";
+import Blog from "@components/Blog.astro";
 
 const hero_text = {
   header: "Wellcome \n to Crossnetics!",
@@ -129,6 +130,37 @@ Mastering the Art of Querying: Unveiling the key to extracting the most from AI,
 With the comprehensive toolset afforded by Crossnetics, you can surmount the challenges that accompany channel development, ascertain the most opportune actions to take, and seamlessly integrate analytics and artificial intelligence to your benefit. Embrace the dawn of channel development's future with Crossnetics!`,
   button: "TRY NOW FOR FREE",
 }
+
+const blog = {
+  title: "Blog. Unveiling Knowledge in the Realm of Marketing and Technology",
+  blog: "Our blog stands as an indispensable resource for professional growth and achievement in the ever-evolving landscape of digital marketing. Join us on this journey towards knowledge today!",
+  sections: [
+    {
+      title: "Informative Articles:",
+      body: "Gain comprehensive insights into ongoing trends within the realms of marketing and technology. Explore how novel tools and techniques can enhance your business.",
+      image: "idea"
+    },
+    {
+      title: "Teaching Materials:",
+      body: "Aspiring to enhance your skills or embrace new knowledge? Our step-by-step guides, video tutorials, and enlightening webinars are designed to help you master essential marketing and social media skills.",
+      image: "study"
+    },
+    {
+      title: "Last news:",
+      body: "Stay connected to significant news and events spanning marketing, social media, and technological innovation. Remain current with any shifts that could impact your business.",
+      image: "news"
+    },
+    {
+      title: "Expert opinions",
+      body: "Listen to prominent industry experts as they share their wealth of knowledge and experience. Unearth distinctive strategies and approaches that can set you apart in the market.",
+      image: "graphic"
+    }
+  ],
+  general: {
+    title: "Stay informed",
+    body: "Stay informed about the latest trends and news within the spheres of marketing, social media, and technology through the CROSSNETICS Blog. We present an extensive collection of articles and resources that not only keep you up-to-date, but also enhance your professional journey.",
+  }
+}
 ---
 
 <Layout title="Welcome to Crossnetics.">
@@ -139,5 +171,6 @@ With the comprehensive toolset afforded by Crossnetics, you can surmount the cha
     <!-- <Social_swiper {social} client:load/> -->
     <Web3 title={Web3_text.title} body={Web3_text.body} sections={Web3_text.sections} testimonial={Web3_text.testimonial} />
     <AI header={AI_text.header} body={AI_text.body} button={AI_text.button} />
+    <Blog title={blog.title} blog={blog.blog} sections={blog.sections} general={blog.general} />
   </main>
 </Layout>
