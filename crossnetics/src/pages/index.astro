@@ -5,6 +5,7 @@ import Description from "@components/Description.astro";
 import Analytics from "@components/Analytics.astro";
 import Social_swiper from "@components/Social_swiper.jsx";
 import Web3 from "@components/Web3.astro";
+import AI from "@components/AI.astro";
 
 const hero_text = {
   header: "Wellcome \n to Crossnetics!",
@@ -118,6 +119,15 @@ const Web3_text = {
   ],
   testimonial: 'Crossnetics is where your online presence transforms into digital assets, and your contribution to the community gains real value. Join us and embark on your journey into the world of Web 3.0 with the "Marketplace" section on Crossnetics.'
 }
+
+const AI_text = {
+  header: "Optimizing Your \nGrowth",
+  body: `Crossnetics offers a suite of potent tools designed to amplify the growth of your channel, all driven by state-of-the-art AI technology.\n
+Channel Growth Analysis: Harnessing advanced AI capabilities, your content, audience, and trends undergo thorough analysis, culminating in tailor-made recommendations meticulously crafted to foster the expansion of your channel.\n
+Strategic Growth at its Best: Empowered by meticulous data scrutiny and in-depth analysis, you'll be equipped to forge a strategy that empowers you to make astute decisions, ultimately magnifying the trajectory of your channel's growth.\n
+Mastering the Art of Querying: Unveiling the key to extracting the most from AI, we furnish invaluable insights to facilitate your mastery of crafting precise queries. This ensures that the recommendations you receive are characterized by utmost accuracy and utility.\n
+With the comprehensive toolset afforded by Crossnetics, you can surmount the challenges that accompany channel development, ascertain the most opportune actions to take, and seamlessly integrate analytics and artificial intelligence to your benefit. Embrace the dawn of channel development's future with Crossnetics!`,
+}
 ---
 
 <Layout title="Welcome to Crossnetics.">
@@ -125,7 +135,8 @@ const Web3_text = {
     <Hero {...hero_text} />
     <Description description={description_text} />
     <Analytics title={analytics_text.title} body={analytics_text.body} sections={analytics_text.sections} general={analytics_text.general} />
-    <Social_swiper {social} client:load/>
+    <!-- <Social_swiper {social} client:load/> -->
     <Web3 title={Web3_text.title} body={Web3_text.body} sections={Web3_text.sections} testimonial={Web3_text.testimonial} />
+    <AI header={AI_text.header} body={AI_text.body} />
   </main>
 </Layout>
