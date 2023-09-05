@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+interface Social {
+  title: string;
+  url: string;
+  icon: string;
+}
+
+interface Props {
+  contact_us: string;
+  social_media: Social[];
+}
+
+const { contact_us, social_media } = Astro.props;
+---
+
+<div class="h-fit min-h-52 bg-web3-bg flex flex-col items-center justify-center">
+  <div class="w-11/12 lg:w-2/3 flex items-center justify-between my-10">
+    <div class="w-full flex flex-row flex-wrap items-center justify-between gap-y-6">
+      <Image class="h-1/2 lg:h-1/3" src="/logo.svg" alt="logo" width={50} height={50} />
+      <div class="flex flex-row flex-wrap items-center justify-start lg:justify-end gap-6 w-full lg:w-2/3">
+        {social_media.map((social, index) => (
+          <div class="flex flex-row gap-x-2 items-center justify-start lg:justify-end w-32">
+            <Image src={social.icon} alt="icon" width={20} height={20} />
+            <a href={social.url} class="text-slate-300 text-xs font-bold uppercase">{social.title}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="h-fit min-h-20 bg-footer-dark flex items-center justify-center bottom-0">
+  <div class="w-11/12 lg:w-2/3 flex items-center justify-between my-10">
+    <div class="w-full flex flex-row flex-wrap items-center justify-between gap-y-4">
+      <div class="flex flex-row flex-wrap items-center justify-start gap-6 w-full lg:w-1/2">
+        <a href="/" class="text-blue-500 hover:text-blue-400 text-sm font-medium underline capitalize" >Privacy policy</a>
+        <a href="/" class="text-blue-500 hover:text-blue-400 text-sm font-medium underline capitalize" >Data & Privacy FAQ</a>
+        <a href="/" class="text-blue-500 hover:text-blue-400 text-sm font-medium underline capitalize" >Influencer Opt Out</a>
+      </div>
+      <div class="flex flex-row gap-x-2 items-center justify-center">
+        <p class="text-slate-300 text-xs font-bold uppercase">{contact_us}</p>
+        <a href="/" class="text-blue-500 hover:text-blue-400 text-sm font-medium underline capitalize">info@crossnetics.com </a>
+      </div>
+    </div>
+  </div>
+</div>

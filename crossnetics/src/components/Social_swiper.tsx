@@ -47,7 +47,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
               <SwiperSlide key={index}>
                 <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[60rem] sm:min-h-[677px] flex items-center justify-center">
                   <div className="relative flex justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0">
-                    <div className="flex w-4/12 items-center absolute invisible xl:visible xl:relative">
+                    <div className="xg:flex w-4/12 items-center absolute hidden  xl:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                     <div className="relative flex flex-col gap-y-10 md:gap-y-12 xl:gap-y-20 items-start justify-center lg:w-7/12">
@@ -60,7 +60,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                         <p className="text-sky-100 text-sm font-normal leading-[18.20px] whitespace-pre-line">{entry.testimonial}</p>
                       </div>
                     </div>
-                    <div className="flex w-4/12 items-center absolute invisible lg:visible lg:relative xl:invisible xl:absolute">
+                    <div className="xl:flex w-4/12 items-center absolute hidden lg:visible lg:relativexl:absolute">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                   </div>

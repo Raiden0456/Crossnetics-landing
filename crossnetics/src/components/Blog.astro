@@ -31,7 +31,7 @@ const { title, sections, general, blog } = Astro.props;
           <h1 class="text-white text-base font-bold uppercase leading-tight">{general.title}</h1>
           <p class="text-white text-sm font-normal leading-[21px]">{general.body}</p>
         </div>
-        <Image src="/3d_images/page.svg" alt="page" width={30} height={30} class="invisible md:visible md:w-3/5 lg:w-1/2 2lg:w-1/3 xl:w-1/2 absolute -right-24 -bottom-20 transform rotate-12 z-100" />
+        <Image src="/3d_images/page.svg" alt="page" width={30} height={30} class="hidden md:flex xl:w-1/3 w-1/4 absolute right-0 top-4 z-100" />
       </div>
       {sections.map((section, index) => (
         <div class="flex flex-col items-start justify-start p-10 bg-white rounded-[50px] gap-y-4">
@@ -44,5 +44,6 @@ const { title, sections, general, blog } = Astro.props;
     <div class="flex flex-row items-start justify-start xl:w-3/4 gap-x-10">
       <Image src={`/blog/blog.svg`} alt="blog" width={50} height={50}/>
       <h1 class="text-blue-500 text-base font-normal leading-normal">{blog}</h1>
+    </div>
   </div>
 </div>

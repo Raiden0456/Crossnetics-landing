@@ -22,7 +22,8 @@ export default {
                 'hero_gradient_2': '#2782FF',
                 'web3-body': '#ABC8E3',
                 'web3-bg': '#383C4B',
-                'web3-grid': '#444859'
+                'web3-grid': '#444859',
+                'footer-dark': "#272933",
             },
         },
     },

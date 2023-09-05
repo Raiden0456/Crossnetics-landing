@@ -7,6 +7,8 @@ import Social_swiper from "@components/Social_swiper.jsx";
 import Web3 from "@components/Web3.astro";
 import AI from "@components/AI.astro";
 import Blog from "@components/Blog.astro";
+import LatestBlog from "@components/Latest_blog.astro";
+import Partners from "@components/Partners.astro";
 
 const hero_text = {
   header: "Wellcome \n to Crossnetics!",
@@ -161,6 +163,40 @@ const blog = {
     body: "Stay informed about the latest trends and news within the spheres of marketing, social media, and technology through the CROSSNETICS Blog. We present an extensive collection of articles and resources that not only keep you up-to-date, but also enhance your professional journey.",
   }
 }
+
+const latest_blog = {
+  title: "Latest in blog",
+  posts: [
+    {
+      title: "Unleashing the Power of Influencer Marketplaces: A Deep Dive into Social Media Strategies",
+      body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
+      image: "/latest_blog/comp.png",
+      tags: ["Social", "Marketing"]
+    },
+    {
+      title: "Connecting Brands and Influencers: The Evolution and Impact of Social Media Marketplaces",
+      body: "Aspiring to enhance your skills or embrace new knowledge? Our step-by-step guides, video tutorials, and enlightening webinars are designed to help you master essential marketing and social media skills.",
+      image: "/latest_blog/camera.png",
+      tags: ["Social", "Marketing"]
+    },
+    {
+      title: "From Engagement to Success: How Influencer Marketplaces Shape Social Media Marketing",
+      body: "Stay connected to significant news and events spanning marketing, social media, and technological innovation. Remain current with any shifts that could impact your business.",
+      image: "/latest_blog/cloud.png",
+      tags: ["Social", "Marketing"]
+    }
+  ],
+  button: "Read full blog"
+}
+
+const partners = {
+  title: "Our Partners",
+  partner_images: [
+    "/partners/similarweb.png",
+    "/partners/polygon.png",
+    "/partners/openai.png", 
+  ]
+}
 ---
 
 <Layout title="Welcome to Crossnetics.">
@@ -172,5 +208,7 @@ const blog = {
     <Web3 title={Web3_text.title} body={Web3_text.body} sections={Web3_text.sections} testimonial={Web3_text.testimonial} />
     <AI header={AI_text.header} body={AI_text.body} button={AI_text.button} />
     <Blog title={blog.title} blog={blog.blog} sections={blog.sections} general={blog.general} />
+    <LatestBlog title={latest_blog.title} posts={latest_blog.posts} button={latest_blog.button} />
+    <Partners title={partners.title} partner_images={partners.partner_images} />
   </main>
 </Layout>
