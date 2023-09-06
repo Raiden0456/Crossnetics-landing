@@ -18,7 +18,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
   const swiperRef = useRef(null);
 
   const pagination = {
-    type: "custom",
+    type: "custom" as const,
     renderCustom: (_: any, current: any) => {
       return social.map((entry, index) => {
         const isActive = index + 1 === current;
@@ -46,8 +46,8 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
             {social.map((entry, index) => (
               <SwiperSlide key={index}>
                 <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[60rem] sm:min-h-[677px] flex items-center justify-center">
-                  <div className="relative flex justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0">
-                    <div className="xg:flex w-4/12 items-center absolute hidden  xl:relative">
+                  <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0">
+                    <div className="xl:flex w-4/12 items-center absolute hidden  xl:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                     <div className="relative flex flex-col gap-y-10 md:gap-y-12 xl:gap-y-20 items-start justify-center lg:w-7/12">
