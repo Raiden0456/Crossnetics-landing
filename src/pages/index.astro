@@ -1,0 +1,214 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import Description from "@components/Description.astro";
+import Analytics from "@components/Analytics.astro";
+import Social_swiper from "@components/Social_swiper.jsx";
+import Web3 from "@components/Web3.astro";
+import AI from "@components/AI.astro";
+import Blog from "@components/Blog.astro";
+import LatestBlog from "@components/Latest_blog.astro";
+import Partners from "@components/Partners.astro";
+
+const hero_text = {
+  header: "Wellcome \n to Crossnetics!",
+  body: "A unique platform with a suite of digital tools for marketing, analytics and social media, enhanced by AI and decentralized finance.",
+  button: "start free analysis ",
+}
+
+const description_text = "Experience the world of our ecosystem, where advanced marketing tools make it easy and effective to realize all your strategic goals."
+
+const analytics_text = {
+  title: "Analytics",
+  body: "Our innovative solution streamlines the intricate analytics process, enabling you to channel your efforts into business expansion. Through seamless integration of cutting-edge social media, web metrics, and APIs, we craft a comprehensive mosaic of your online footprint. With Crossnetics as your ally, you consistently outpace competitors in the realm of digital marketing!",
+  sections: [
+    {
+      title: "Cutting-Edge Metrics",
+      body: "We offer advanced metrics to evaluate key aspects of your social media presence. This allows you to analyze the impact on your audience and the effectiveness of strategies and campaigns.",
+      image: "metrics"
+    },
+    {
+      title: "Detailed Graphs",
+      body: "Turn data into actionable insights with our visual graphs. We visualize key metrics, making it easy to understand trends and relationships between metrics.",
+      image: "graphs"
+    },
+    {
+      title: "Official Social Network APIs",
+      body: "We integrate official social media APIs for reliable and up-to-date data access, providing accurate and complete information about your social media presence.",
+      image: "api"
+    },
+    {
+      title: "WEB analytics",
+      body: "We provide detailed web site analytics so you can study your competitors by marketing strategies, visits, global rankings, country rankings, industry rankings, social traffic, keywords and inbound traffic.",
+      image: "web"
+    }
+  ],
+  general: {
+    title: "We aim to make analytics intuitive and useful",
+    body: "Our tools are designed so that you not only see the numbers, but also understand their impact on your business. We strive to provide you with the tools to make informed decisions based on concrete data and analytical analysis. Crossnetics transforms complex information into an easy-to-understand format, making analytics accessible and effective. Take advantage of our capabilities to pave a confident path to the digital world.",
+  }
+}
+
+
+const social = [
+  {
+    title: "Tik-Tok analytics",
+    description: "Analyzing content trends and popularity.\nMonitoring audience engagement and interaction.\nEvaluating ad campaigns and ROI.",
+    image: "tiktok.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#FF78B9", "#3DB4EE"]
+  },
+  {
+    title: "YOUTUBE analytics",
+    description: "Audience and viewer behavior analysis.\nTrack video and ad campaign performance.\nStudy engagement and reach.",
+    image: "youtube.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#E24478", "#FF7C94"]
+  },
+  {
+    title: "Instagram analytics",
+    description: "Analyzing subscriber demo",
+    image: "instagram.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#B458BA", "#FF9960"]
+  },
+  {
+    title: "FACEBOOK analytics",
+    description: "Analyzing activity on pages and groups.\nTracking the effectiveness of advertising and retargeting.\nStudy audience demographics.",
+    image: "facebook.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#288BFF", "#75B6F3"]
+  },
+  {
+    title: "TWITCH analytics",
+    description: "Analyzing content trends and popularity.\nMonitoring audience engagement and interaction.\nEvaluating ad campaigns and ROI.",
+    image: "twitch.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#9357B5", "#CFAFEB"]
+  },
+  {
+    title: "TELEGRAM analytics",
+    description: "Monitoring activity in chats and groups.\nAnalyzing conversions and user interactions.\nEvaluating the effectiveness of ad bots.",
+    image: "telegram.svg",
+    testimonial: "CROSSNETICS offers powerful tools to deeply analyze key metrics across popular platforms such as YouTube, Telegram, Instagram, TikTok, Facebook and Twitch. Connecting via API provides direct access to data, allowing you to gain valuable insights for your marketing campaigns. \n\n The ability to deeply analyze across multiple metrics makes CROSSNETICS the ideal solution for comprehensive management of your advertising campaigns in the world of digital marketing graphics. Tracking engagement with posts and stories. Studying conversion rates of ad campaigns.",
+    gradient: ["#43CEF3", "#00A3E9"]
+  },
+]
+
+const Web3_text = {
+  title: "Decentralized Advertising Marketplace",
+  body: "This is a platform where advertisers and performers can interact. By using decentralized financial technologies, the platform ensures transparency and efficiency in advertising campaigns.",
+  sections: [
+    {
+      title: "Buying and Selling Advertising",
+      body: "Your product deserves attention. The Marketplace offers you the opportunity to elevate its presence. Here, you can buy advertising space and reach wider audiences, as well as sell your space to those who appreciate your community.",
+      image: "gromofon.svg"
+    },
+    {
+      title: "Buying and Selling Advertising",
+      body: "With the integration of Web 3.0 technology, we've made influencer discovery and collaboration more transparent and lucrative. Find suitable influencers for your niche and establish long-term partnerships.",
+      image: "person.svg"
+    },
+    {
+      title: "Cryptocurrency Payment",
+      body: "NFT Rewards: Your active role and success in the Crossnetics ecosystem does not go unnoticed. For successfully executing orders on the marketplace, you receive unique NFTs that validate your contribution and value in the system.",
+      image: "crypto.svg"
+    },
+    {
+      title: "NFT Rewards",
+      body: "The future of digital finance is reflected in the ability to conduct transactions using cryptocurrencies worldwide. This method speeds up transactions and emphasizes the security of transactions.",
+      image: "nft.svg"
+    }
+  ],
+  testimonial: 'Crossnetics is where your online presence transforms into digital assets, and your contribution to the community gains real value. Join us and embark on your journey into the world of Web 3.0 with the "Marketplace" section on Crossnetics.'
+}
+
+const AI_text = {
+  header: "Optimizing Your \nGrowth",
+  body: `Crossnetics offers a suite of potent tools designed to amplify the growth of your channel, all driven by state-of-the-art AI technology.\n
+Channel Growth Analysis: Harnessing advanced AI capabilities, your content, audience, and trends undergo thorough analysis, culminating in tailor-made recommendations meticulously crafted to foster the expansion of your channel.\n
+Strategic Growth at its Best: Empowered by meticulous data scrutiny and in-depth analysis, you'll be equipped to forge a strategy that empowers you to make astute decisions, ultimately magnifying the trajectory of your channel's growth.\n
+Mastering the Art of Querying: Unveiling the key to extracting the most from AI, we furnish invaluable insights to facilitate your mastery of crafting precise queries. This ensures that the recommendations you receive are characterized by utmost accuracy and utility.\n
+With the comprehensive toolset afforded by Crossnetics, you can surmount the challenges that accompany channel development, ascertain the most opportune actions to take, and seamlessly integrate analytics and artificial intelligence to your benefit. Embrace the dawn of channel development's future with Crossnetics!`,
+  button: "TRY NOW FOR FREE",
+}
+
+const blog = {
+  title: "Blog. Unveiling Knowledge in the Realm of Marketing and Technology",
+  blog: "Our blog stands as an indispensable resource for professional growth and achievement in the ever-evolving landscape of digital marketing. Join us on this journey towards knowledge today!",
+  sections: [
+    {
+      title: "Informative Articles:",
+      body: "Gain comprehensive insights into ongoing trends within the realms of marketing and technology. Explore how novel tools and techniques can enhance your business.",
+      image: "idea"
+    },
+    {
+      title: "Teaching Materials:",
+      body: "Aspiring to enhance your skills or embrace new knowledge? Our step-by-step guides, video tutorials, and enlightening webinars are designed to help you master essential marketing and social media skills.",
+      image: "study"
+    },
+    {
+      title: "Last news:",
+      body: "Stay connected to significant news and events spanning marketing, social media, and technological innovation. Remain current with any shifts that could impact your business.",
+      image: "news"
+    },
+    {
+      title: "Expert opinions",
+      body: "Listen to prominent industry experts as they share their wealth of knowledge and experience. Unearth distinctive strategies and approaches that can set you apart in the market.",
+      image: "graphic"
+    }
+  ],
+  general: {
+    title: "Stay informed",
+    body: "Stay informed about the latest trends and news within the spheres of marketing, social media, and technology through the CROSSNETICS Blog. We present an extensive collection of articles and resources that not only keep you up-to-date, but also enhance your professional journey.",
+  }
+}
+
+const latest_blog = {
+  title: "Latest in blog",
+  posts: [
+    {
+      title: "Unleashing the Power of Influencer Marketplaces: A Deep Dive into Social Media Strategies",
+      body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
+      image: "/latest_blog/comp.png",
+      tags: ["Social", "Marketing"]
+    },
+    {
+      title: "Connecting Brands and Influencers: The Evolution and Impact of Social Media Marketplaces",
+      body: "Aspiring to enhance your skills or embrace new knowledge? Our step-by-step guides, video tutorials, and enlightening webinars are designed to help you master essential marketing and social media skills.",
+      image: "/latest_blog/camera.png",
+      tags: ["Social", "Marketing"]
+    },
+    {
+      title: "From Engagement to Success: How Influencer Marketplaces Shape Social Media Marketing",
+      body: "Stay connected to significant news and events spanning marketing, social media, and technological innovation. Remain current with any shifts that could impact your business.",
+      image: "/latest_blog/cloud.png",
+      tags: ["Social", "Marketing"]
+    }
+  ],
+  button: "Read full blog"
+}
+
+const partners = {
+  title: "Our Partners",
+  partner_images: [
+    "/partners/similarweb.png",
+    "/partners/polygon.png",
+    "/partners/openai.png", 
+  ]
+}
+---
+
+<Layout title="Welcome to Crossnetics.">
+  <main class="w-full">
+    <Hero {...hero_text} />
+    <Description description={description_text} />
+    <Analytics title={analytics_text.title} body={analytics_text.body} sections={analytics_text.sections} general={analytics_text.general} />
+    <!-- <Social_swiper {social} client:load/> -->
+    <Web3 title={Web3_text.title} body={Web3_text.body} sections={Web3_text.sections} testimonial={Web3_text.testimonial} />
+    <AI header={AI_text.header} body={AI_text.body} button={AI_text.button} />
+    <Blog title={blog.title} blog={blog.blog} sections={blog.sections} general={blog.general} />
+    <LatestBlog title={latest_blog.title} posts={latest_blog.posts} button={latest_blog.button} />
+    <Partners title={partners.title} partner_images={partners.partner_images} />
+  </main>
+</Layout>
