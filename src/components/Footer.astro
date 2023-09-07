@@ -20,9 +20,9 @@ const { contact_us, social_media } = Astro.props;
       <Image class="h-1/2 lg:h-1/3" src="/logo.svg" alt="logo" width={50} height={50} />
       <div class="flex flex-row flex-wrap items-center justify-start lg:justify-end gap-6 w-full lg:w-2/3">
         {social_media.map((social, index) => (
-          <div class="flex flex-row gap-x-2 items-center justify-start lg:justify-end w-32">
+          <div class="flex flex-row gap-x-2 items-center justify-start lg:justify-end w-20 xl:w-32">
             <Image src={social.icon} alt="icon" width={20} height={20} />
-            <a href={social.url} class="text-slate-300 text-xs font-bold uppercase">{social.title}</a>
+            <a href={social.url} class="text-slate-300 text-2xs xl:text-xs font-bold uppercase">{social.title}</a>
           </div>
         ))}
       </div>

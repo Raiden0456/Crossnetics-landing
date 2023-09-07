@@ -22,13 +22,13 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
     renderCustom: (_: any, current: any) => {
       return social.map((entry, index) => {
         const isActive = index + 1 === current;
-        const baseClasses = "w-28 h-11 px-7.5 py-2.5 rounded-2xl flex justify-center items-center cursor-pointer";
+        const baseClasses = "h-11 w-28 lg:w-[4.5rem] xl:w-28 lg:h-6 xl:h-11 rounded-2xl lg:rounded-lg xl:rounded-2xl flex justify-center items-center cursor-pointer";
         const bgHoverClass = isActive ? "" : "hover:shadow-lg hover:bg-opacity-60 transition-shadow duration-300";
         const bgColorClass = isActive ? "bg-white" : "bg-white bg-opacity-30";
         const textColorClass = isActive ? "text-blue-500" : "text-white";
         return `
           <div class="${baseClasses} ${bgColorClass} ${bgHoverClass}" onClick="document.querySelector('.custom-swiper').swiper.slideTo(${index})">
-            <div class="${textColorClass} text-xs font-extrabold uppercase">${entry.title.split(' ')[0]}</div>
+            <div class="${textColorClass} text-xs lg:text-3xs xl:text-xs font-extrabold uppercase">${entry.title.split(' ')[0]}</div>
           </div>`;
       }).join("");
     }
@@ -45,22 +45,22 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
           >
             {social.map((entry, index) => (
               <SwiperSlide key={index}>
-                <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[60rem] sm:min-h-[677px] flex items-center justify-center">
+                <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[50rem] sm:min-h-[677px] flex items-center justify-center">
                   <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0">
-                    <div className="xl:flex w-4/12 items-center absolute hidden  xl:relative">
+                    <div className="2lg:flex w-4/12 items-center absolute hidden  2lg:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                     <div className="relative flex flex-col gap-y-10 md:gap-y-12 xl:gap-y-20 items-start justify-center lg:w-7/12">
                       <div className="relative flex flex-col gap-y-4 justify-start items-start">
                         <h1 className="text-white text-2xl xl:text-3xl 2xl:text-4xl font-bold uppercase">{entry.title}</h1>
-                        <p className="text-white text-xl xl:text-1.5xl 2xl:text-2xl font-medium whitespace-pre-line leading-tight">{entry.description}</p>
+                        <p className="text-white text-lg xl:text-xl 2xl:text-2xl font-medium whitespace-pre-line">{entry.description}</p>
                       </div>
                       <div className="flex flex-col gap-y-2 justify-start items-start">
                         <img src="/logo.svg" alt="logo" className="w-10" loading='lazy'/>
-                        <p className="text-sky-100 text-sm font-normal leading-[18.20px] whitespace-pre-line">{entry.testimonial}</p>
+                        <p className="text-sky-100 text-2xs xl:text-sm  whitespace-pre-line">{entry.testimonial}</p>
                       </div>
                     </div>
-                    <div className="xl:flex w-4/12 items-center absolute hidden lg:visible lg:relativexl:absolute">
+                    <div className="lg:flex w-4/12 items-center hidden lg:relative 2lg:hidden 2lg:absolute">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                   </div>

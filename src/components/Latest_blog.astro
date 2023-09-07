@@ -23,13 +23,13 @@ const { title, posts, button } = Astro.props;
       <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-bold text-start text-gray-600">{title}</h1>
     </div>
     <div class="flex flex-col justify-center items-center gap-y-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 2lg:grid-cols-3 gap-6">
         {posts.map((post, index) => (
           <div class="flex flex-col h-full bg-white rounded-[50px] overflow-hidden">
-              <div class="w-full h-[270px] overflow-hidden">
+              <div class="w-full h-[160px] xl:h-[270px] overflow-hidden">
                   <Image src={`${post.image}`} alt={`${post.image}`} width={30} height={30} class="w-full h-full object-cover"/> 
               </div>
-              <div class="p-10 flex flex-col gap-y-4">
+              <div class="p-8 xl:p-10 flex flex-col gap-y-2 xl:gap-y-4">
                   <div class="flex flex-row gap-2 w-full flex-wrap">
                       {post.tags.map((tag, index) => (
                           <div class="px-2.5 py-0.5 bg-sky-100 rounded-[7px] justify-center items-center ">
@@ -37,8 +37,8 @@ const { title, posts, button } = Astro.props;
                           </div>
                       ))}
                   </div>
-                  <h1 class="text-blue-500 text-base font-bold leading-tight">{post.title}</h1>
-                  <p class="text-gray-400 text-sm font-normal leading-[21px]">{post.body}</p>
+                  <h1 class="text-blue-500 text-xs xl:text-base font-bold">{post.title}</h1>
+                  <p class="text-gray-400 text-2xs xl:text-sm ">{post.body}</p>
               </div>
           </div>
       ))}

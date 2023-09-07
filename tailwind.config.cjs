@@ -8,6 +8,10 @@ export default {
             fontFamily: {
                 'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
+            fontSize: {
+                '2xs': '.65rem',
+                '3xs': '.5rem',
+            },
             screens: {
                 '2xl': '1920px',
                 'xl': '1600px',

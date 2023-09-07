@@ -19,23 +19,23 @@ const { title, body, sections, testimonial } = Astro.props;
 <div class="h-fit min-h-screen bg-gradient-to-b from-gray-700 to-blue-500 flex flex-col items-center justify-center">
   <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-center gap-y-16 my-10">
     <div class="w-3/4 flex flex-col items-start justify-start gap-y-4">
-      <h1 class="text-3xl font-bold text-sky-100 capitalize leading-9">{ title }</h1>
-      <p class="text-web3-body text-base font-normal leading-normal">{ body }</p>
+      <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-bold text-start text-sky-100 capitalize">{ title }</h1>
+      <p class="text-web3-body text-xs xl:text-base font-normal">{ body }</p>
     </div>
-    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 2lg:grid-cols-2 gap-6">
       {sections.map ((section) => (
-        <div class="flex flex-row items-center justify-start gap-x-6 p-10 rounded-[50px] bg-web3-grid">
-          <Image src={`/web3/${section.image}`} alt="section imgage" width={50} height={50} class="absolute hidden sm:relative w-32 md:w-40 lg:w-60" />
-          <div class="flex flex-col items-start justify-start gap-y-4">
-            <h1 class="text-base font-bold uppercase text-sky-100 leading-tight">{ section.title }</h1>
-            <p class="text-Web3-body text-sm font-normal leading-5 text-sky-100">{ section.body }</p>
+        <div class="flex flex-row items-center justify-start gap-x-6 p-7 rounded-[50px] bg-web3-grid">
+          <Image src={`/web3/${section.image}`} alt="section imgage" width={50} height={50} class="hidden sm:flex w-32 xl:w-60" />
+          <div class="flex flex-col items-start justify-start gap-y-2 xl:gap-y-4">
+            <h1 class="text-xs xl:text-base font-bold uppercase text-sky-100 ">{ section.title }</h1>
+            <p class="text-Web3-body text-2xs xl:text-sm font-normal text-sky-100">{ section.body }</p>
           </div>
         </div>
       ))}
     </div>
     <div class="flex flex-col lg:flex-row w-full gap-10">
       <Image src="/logo.svg" alt="logo" width={50} height={50} class="w-20 lg:w-40" />
-      <p class="text-web3-body text-base font-normal leading-normal">{ testimonial }</p>
+      <p class="text-web3-body text-xs xl:text-base font-normal">{ testimonial }</p>
       <Image src="web3/WEB3.0.svg" alt="WEB3.0" width={50} height={50} class="w-60" />
     </div>
   </div>
