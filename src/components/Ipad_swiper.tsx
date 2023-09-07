@@ -1,5 +1,7 @@
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative, Autoplay } from 'swiper/modules';
+import SwiperCore  from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/effect-creative';
@@ -10,12 +12,21 @@ interface IpadSwiperProps {
 }
 
 export default function IpadSwiper({ image_path }: IpadSwiperProps) {
+  const swiperRef = useRef<SwiperCore | null>(null);
+
+  const handleSlideClick = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
+
   return (
     <div className="relative w-full h-full drop-shadow-ipad bg-[url('/ipad.png')] bg-cover">
       <div className="relative w-full h-full p-2 lg:p-3 xl:p-4">
         <div className="w-full h-full rounded-lg overflow-hidden">
           <Swiper 
             grabCursor={true}
+            rewind={true}
             effect={'creative'}
             creativeEffect={{
               prev: { 
@@ -29,10 +40,13 @@ export default function IpadSwiper({ image_path }: IpadSwiperProps) {
             resistance={true}
             resistanceRatio={0}
             modules={[Autoplay, EffectCreative]}
+            onSwiper={(swiper) => { swiperRef.current = swiper; }}
           >
             {image_path.map((path, index) => (
-              <SwiperSlide key={index}><img src={path} alt="slide"/></SwiperSlide>
-              ))}
+              <SwiperSlide key={index} onClick={handleSlideClick}>
+                <img src={path} alt="slide"/>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
