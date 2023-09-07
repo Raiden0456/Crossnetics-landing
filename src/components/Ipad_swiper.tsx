@@ -26,10 +26,6 @@ export default function IpadSwiper({ image_path }: IpadSwiperProps) {
                 translate: ['100%', 0, 0],
               },
             }}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
             resistance={true}
             resistanceRatio={0}
             modules={[Autoplay, EffectCreative]}
