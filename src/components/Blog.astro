@@ -21,7 +21,7 @@ const { title, sections, general, blog } = Astro.props;
 ---
 
 <div class="h-fit bg-sky-100 flex items-start justify-center">
-  <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-start gap-y-20 my-20">
+  <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-start gap-y-10 xl:gap-y-20 my-10 xl:my-20">
     <div class="flex flex-col items-start justify-start h-full w-full  2lg:w-[70%]">
       <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-bold text-start text-gray-600">{title}</h1>
     </div>
@@ -42,7 +42,7 @@ const { title, sections, general, blog } = Astro.props;
       ))}
     </div>
     <div class="flex flex-row items-start justify-start xl:w-3/4 gap-x-10">
-      <Image src={`/blog/blog.svg`} alt="blog" width={30} height={30} class="lg:w-1/12"/>
+      <Image src={`/blog/blog.svg`} alt="blog" width={30} height={30} class="w-[3vw]"/>
       <h1 class="text-blue-500 text-xs xl:text-base">{blog}</h1>
     </div>
   </div>

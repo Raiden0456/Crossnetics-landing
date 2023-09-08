@@ -22,7 +22,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
     renderCustom: (_: any, current: any) => {
       return social.map((entry, index) => {
         const isActive = index + 1 === current;
-        const baseClasses = "h-11 w-28 lg:w-[4.5rem] xl:w-28 lg:h-6 xl:h-11 rounded-2xl lg:rounded-lg xl:rounded-2xl flex justify-center items-center cursor-pointer";
+        const baseClasses = "h-11 w-28 lg:w-[4.5rem] xl:w-28 lg:h-8 xl:h-11 rounded-2xl lg:rounded-xl xl:rounded-2xl flex justify-center items-center cursor-pointer";
         const bgHoverClass = isActive ? "" : "hover:shadow-lg hover:bg-opacity-60 transition-shadow duration-300";
         const bgColorClass = isActive ? "bg-white" : "bg-white bg-opacity-30";
         const textColorClass = isActive ? "text-blue-500" : "text-white";

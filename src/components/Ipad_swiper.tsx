@@ -22,7 +22,7 @@ export default function IpadSwiper({ image_path }: IpadSwiperProps) {
 
   return (
     <div className="relative w-full h-full drop-shadow-ipad bg-[url('/ipad.png')] bg-cover">
-      <div className="relative w-full h-full p-2 lg:p-3 xl:p-4">
+      <div className="relative w-full h-full p-2 lg:p-3 xl:p-4 -ml-[1px] rounded-lg">
         <div className="w-full h-full rounded-lg overflow-hidden">
           <Swiper 
             grabCursor={true}
