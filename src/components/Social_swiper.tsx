@@ -15,6 +15,7 @@ interface Social {
 }
 
 export default function SocialSwiper({ social: social }: { social: Social[] }) {
+
   const swiperRef = useRef(null);
 
   const pagination = {
@@ -43,21 +44,25 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
             modules={[EffectFade, Pagination]}
             onSwiper={(swiper: any ) => { swiperRef.current = swiper; }}
           >
-            {social.map((entry, index) => (
+          {social.map((entry, index) => {
+            const [firstLine, secondLine] = entry.testimonial.split('\n', 2);
+            
+            return (
               <SwiperSlide key={index}>
-                <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[50rem] sm:min-h-[677px] flex items-center justify-center">
+                <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[50rem] sm:min-h-[520px] xl:min-h-[700px] flex items-center justify-center">
                   <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0">
                     <div className="2lg:flex w-4/12 items-center absolute hidden  2lg:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                     <div className="relative flex flex-col gap-y-10 md:gap-y-12 xl:gap-y-20 items-start justify-center lg:w-7/12">
                       <div className="relative flex flex-col gap-y-4 justify-start items-start">
-                        <h1 className="text-white text-2xl xl:text-3xl 2xl:text-4xl font-bold uppercase">{entry.title}</h1>
+                        <h1 className="text-white text-2xl xl:text-3xl 2xl:text-4xl font-bold capitalize">{entry.title}</h1>
                         <p className="text-white text-lg xl:text-xl 2xl:text-2xl font-medium whitespace-pre-line">{entry.description}</p>
                       </div>
                       <div className="flex flex-col gap-y-2 justify-start items-start">
                         <img src="/logo.svg" alt="logo" className="w-10" loading='lazy'/>
-                        <p className="text-sky-100 text-2xs xl:text-sm  whitespace-pre-line">{entry.testimonial}</p>
+                        <p className="text-sky-100 text-2xs xl:text-sm whitespace-pre-line">{firstLine}</p>
+                        {secondLine && <p className="text-sky-100 text-2xs xl:text-sm whitespace-pre-line">{secondLine}</p>}
                       </div>
                     </div>
                     <div className="lg:flex w-4/12 items-center hidden lg:relative 2lg:hidden 2lg:absolute">
@@ -66,7 +71,8 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                   </div>
                 </div>
               </SwiperSlide>
-            ))}
+            );
+          })}
       </Swiper>
     </div>
   );

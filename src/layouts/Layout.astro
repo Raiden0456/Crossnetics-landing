@@ -32,6 +32,8 @@ const header_sections = {
 }
 const footer = {
 	contact_us: "Contact Us",
+	discover: "Discover the full capabilities \nof Crossnetics with our premium package",
+	button: "View pricing",
 	social_media: [
 		{
 			title: "Twitter",
@@ -75,6 +77,6 @@ const footer = {
 	<body>
 		<Header sections={header_sections.sections}/>
 		<slot />
-		<Footer contact_us={footer.contact_us} social_media={footer.social_media}/>
+		<Footer contact_us={footer.contact_us} discover={footer.discover} social_media={footer.social_media}, button={footer.button}/>
 	</body>
 </html>
