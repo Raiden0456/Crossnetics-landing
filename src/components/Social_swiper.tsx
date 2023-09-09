@@ -54,7 +54,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                     <div className="2lg:flex w-4/12 items-center absolute hidden  2lg:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
-                    <div className="relative flex flex-col gap-y-10 md:gap-y-12 xl:gap-y-20 items-start justify-center lg:w-7/12">
+                    <div className="relative flex flex-col gap-y-10 md:gap-y-12 items-start justify-center lg:w-7/12">
                       <div className="relative flex flex-col gap-y-4 justify-start items-start">
                         <h1 className="text-white text-2xl xl:text-3xl 2xl:text-4xl font-bold capitalize">{entry.title}</h1>
                         <p className="text-white text-lg xl:text-xl 2xl:text-2xl font-medium whitespace-pre-line">{entry.description}</p>
