@@ -18,11 +18,11 @@ const { header, paragraphs, button, testimonial } = Astro.props;
 ---
 <div>
   <div class="bg-sky-100 flex items-start justify-center h-fit">
-    <div class="flex flex-col lg:flex-row items-center justify-between w-11/12 lg:w-2/3 my-20 lg:mt-10 2lg:mt-0 2lg:mb-40 xl:mt-10 2xl:mt-0">
+    <div class="flex flex-col lg:flex-row items-center justify-between w-11/12 lg:w-2/3 my-20 lg:mt-16 0 2lg:mb-40">
       <div class="flex flex-col items-start justify-center w-full lg:w-1/2 gap-y-5">
         <div class="flex flex-row gap-x-6 mb-5">
           <Image src={`/stars.svg`} alt="sprinkle" width={50} height={50} class="w-1/12 lg:w-2/6"/>
-          <h1 class="text-xl xl:text-2xl 2xl:text-3xl font-bold text-start text-gray-600 whitespace-pre-wrap">{header}</h1>
+          <h1 class="text-xl xl:text-2xl 2xl:text-3xl font-bold text-start text-gray-600 whitespace-pre-wrap leading-tight">{header}</h1>
         </div>
         {paragraphs.map((paragraph) => (
           <div class="flex flex-col gap-y-1">
