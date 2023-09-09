@@ -23,7 +23,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
     renderCustom: (_: any, current: any) => {
       return social.map((entry, index) => {
         const isActive = index + 1 === current;
-        const baseClasses = "h-11 w-28 lg:w-[4.5rem] xl:w-28 lg:h-8 xl:h-11 rounded-2xl lg:rounded-xl xl:rounded-2xl flex justify-center items-center cursor-pointer";
+        const baseClasses = "h-11 px-3 lg:h-8 xl:h-11 rounded-2xl lg:rounded-xl xl:rounded-2xl flex justify-center items-center cursor-pointer";
         const bgHoverClass = isActive ? "" : "hover:shadow-lg hover:bg-opacity-60 transition-shadow duration-300";
         const bgColorClass = isActive ? "bg-white" : "bg-white bg-opacity-30";
         const textColorClass = isActive ? "text-blue-500" : "text-white";
@@ -45,12 +45,11 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
             onSwiper={(swiper: any ) => { swiperRef.current = swiper; }}
           >
           {social.map((entry, index) => {
-            const [firstLine, secondLine] = entry.testimonial.split('\n', 2);
             
             return (
               <SwiperSlide key={index}>
-                <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[50rem] sm:min-h-[520px] xl:min-h-[700px] flex items-center justify-center">
-                  <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0">
+                <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-fit min-h-[50rem] md:min-h-[40rem] lg:min-h-[650px] 2lg:min-h-[550px] xl:min-h-[700px] flex items-center justify-center">
+                  <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-full mt-48 md:mt-0 2lg:mt-10 xl:mt-5">
                     <div className="2lg:flex w-4/12 items-center absolute hidden  2lg:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
@@ -61,8 +60,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                       </div>
                       <div className="flex flex-col gap-y-2 justify-start items-start">
                         <img src="/logo.svg" alt="logo" className="w-10" loading='lazy'/>
-                        <p className="text-sky-100 text-2xs xl:text-sm whitespace-pre-line">{firstLine}</p>
-                        {secondLine && <p className="text-sky-100 text-2xs xl:text-sm whitespace-pre-line">{secondLine}</p>}
+                        <p className="text-sky-100 text-2xs xl:text-sm whitespace-pre-line">{entry.testimonial}</p>
                       </div>
                     </div>
                     <div className="lg:flex w-4/12 items-center hidden lg:relative 2lg:hidden 2lg:absolute">
