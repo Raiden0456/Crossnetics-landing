@@ -26,7 +26,7 @@ export default function IpadSwiper({ image_path }: IpadSwiperProps) {
         <div className="w-full h-full rounded-lg overflow-hidden">
           <Swiper 
             grabCursor={true}
-            rewind={true}
+            loop={true}
             effect={'creative'}
             creativeEffect={{
               prev: { 

@@ -51,8 +51,8 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
             return (
               <SwiperSlide key={index}>
                 <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-[50rem] md:h-[40rem] lg:h-[650px] 2lg:h-[550px] xl:h-[700px] flex items-center justify-center">
-                  <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-2/3 mt-48 md:mt-0 2lg:mt-10 xl:mt-5">
-                    <div className="2lg:flex w-4/12 items-center absolute hidden  2lg:relative">
+                  <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-2/3 mt-48 md:mt-0 2lg:mt-24">
+                    <div className="2lg:flex w-4/12 items-start justify-start absolute hidden  2lg:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                     <div className="relative flex flex-col gap-y-6 items-start justify-between h-full lg:w-7/12">
@@ -66,7 +66,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                         <p className="text-sky-100 text-xs xl:text-base whitespace-pre-line">{entry.testimonial}</p>
                       </div>
                     </div>
-                    <div className="lg:flex w-4/12 items-center hidden lg:relative 2lg:hidden 2lg:absolute">
+                    <div className="lg:flex w-4/12 items-start justify-start hidden lg:relative 2lg:hidden 2lg:absolute ">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                   </div>
