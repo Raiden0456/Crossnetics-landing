@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .custom-pagination {
-  @apply flex flex-row flex-wrap justify-center md:justify-start h-fit gap-2.5 xl:gap-3.5;
+  @apply flex flex-row flex-wrap justify-between gap-2;
 }

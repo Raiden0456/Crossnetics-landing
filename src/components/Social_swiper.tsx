@@ -35,11 +35,11 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
               <SwiperSlide key={index}>
                 <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-[50rem] md:h-[40rem] lg:h-[600px] 2lg:h-[500px] xl:h-[700px] flex items-center justify-center">
                   <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-2/3 mt-48  lg:my-20">
-                    <div className="2lg:flex w-4/12 items-start justify-start absolute hidden  2lg:relative">
+                    <div className="2lg:flex w-4/12 items-start justify-center absolute hidden  2lg:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
-                    <div className="relative flex flex-col gap-y-6 items-start justify-between h-full lg:w-7/12">
-                      <div className="custom-pagination">
+                    <div className="relative flex flex-col gap-y-4 items-start justify-between h-full lg:w-7/12">
+                      <div className="custom-pagination mb-6 w-full">
                           {social.map((entry, idx) => {
                             const isActive = idx === index;
                             const baseClasses = "h-11 px-3 lg:h-8 xl:h-11 rounded-2xl lg:rounded-xl xl:rounded-2xl flex justify-center items-center cursor-pointer";
@@ -48,7 +48,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                             const textColorClass = isActive ? "text-blue-500" : "text-white";
                             return (
                               <div key={idx} className={`${baseClasses} ${bgColorClass} ${bgHoverClass}`} onClick={() => swiperRef.current?.slideTo(idx)}>
-                                <div className={`${textColorClass} text-xs lg:text-3xs xl:text-xs font-extrabold uppercase`}>{entry.button}</div>
+                                <div className={`${textColorClass} text-xs lg:text-3xs xl:text-xs font-extrabold uppercase mt-[1px]`}>{entry.button}</div>
                               </div>
                             );
                           })}
