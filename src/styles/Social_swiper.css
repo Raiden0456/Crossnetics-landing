@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-swiper .swiper-pagination {
-  @apply top-6 xl:top-14 h-fit w-full flex flex-wrap flex-row gap-2.5 xl:gap-3.5 items-center lg:ml-32 2lg:ml-[9.6rem] xl:ml-52 2xl:ml-[12rem] justify-center lg:justify-start 2lg:justify-center;
+.custom-pagination {
+  @apply flex flex-row flex-wrap justify-center md:justify-start h-fit gap-2.5 xl:gap-3.5;
 }
