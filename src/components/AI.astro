@@ -28,7 +28,7 @@ const { header, paragraphs, button, testimonial } = Astro.props;
           {paragraphs.map((paragraph) => (
             <div class="flex flex-col gap-y-1">
               <h1 class="text-xs xl:text-base font-bold text-start text-gray-600 whitespace-pre-wrap">{paragraph.header}</h1>
-              <ul class="list-disc list-outside text-xs xl:text-base font-normal text-start text-gray-600 whitespace-pre-wrap">
+              <ul class="list-['•__'] list-outside text-xs xl:text-base font-normal text-start text-gray-600 whitespace-pre-wrap">
                 {paragraph.body.split('\n').map((item) => (
                   <li>{item}</li>
                 ))}
@@ -47,7 +47,7 @@ const { header, paragraphs, button, testimonial } = Astro.props;
   <div class="bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 flex flex-col  items-center justify-center lg:justify-start h-fit min-h-[509px]">
     <div class="flex flex-col items-center justify-center w-11/12 lg:w-2/3 gap-y-10 mb-10">
       <div class="w-2/3 lg:w-2/3 xl:w-1/2 mt-10 lg:-mt-20 2lg:-mt-24 xl:-mt-24 2xl:-mt-32">
-        <IpadSwiper image_path={["/ai_slide_2.png"]} client:load/>
+        <IpadSwiper image_path={["/ai_slide_2.png"]} pagi_active={false} client:load/>
       </div>
       <div class="w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
         <div class="text-blue-500 text-xs font-extrabold uppercase">{button}</div>

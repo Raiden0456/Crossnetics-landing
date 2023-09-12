@@ -50,18 +50,18 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
             
             return (
               <SwiperSlide key={index}>
-                <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-[50rem] md:h-[40rem] lg:h-[650px] 2lg:h-[550px] xl:h-[700px] flex items-center justify-center">
-                  <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-2/3 mt-48 md:mt-0 2lg:mt-24">
+                <div style={{background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`}} className="h-[50rem] md:h-[40rem] lg:h-[600px] 2lg:h-[500px] xl:h-[700px] flex items-center justify-center">
+                  <div className="relative flex flex-row justify-between w-11/12 lg:w-2/3 h-2/3 mt-48  lg:mt-20 xl:mt-[8rem]">
                     <div className="2lg:flex w-4/12 items-start justify-start absolute hidden  2lg:relative">
                       <img src={`/3d_images/${entry.image}`} alt="3d-image" className="w-full" loading='lazy'/>
                     </div>
                     <div className="relative flex flex-col gap-y-6 items-start justify-between h-full lg:w-7/12">
                       <div className="relative flex flex-col gap-y-4 justify-start items-start">
                         <h1 className="text-white text-xl xl:text-2xl 2xl:text-3xl font-bold leading-tight">{entry.header}</h1>
-                        <h2 className="text-white text-lg xl:text-xl 2xl:text-2xl font-medium leading-tight">{entry.title}</h2>
-                        <p className="text-sky-100 text-xs xl:text-base whitespace-pre-line leading-[21px]">{entry.description}</p>
+                        <h2 className="text-white text-base xl:text-xl 2xl:text-2xl font-medium leading-tight">{entry.title}</h2>
+                        <p className="text-sky-100 text-2xs xl:text-base whitespace-pre-line leading-[21px]">{entry.description}</p>
                       </div>
-                      <div className="flex flex-col gap-y-2 justify-start items-start">
+                      <div className="flex flex-col gap-y-2 justify-start items-start mb-10">
                         <img src="/logo.svg" alt="logo" className="w-8" loading='lazy'/>
                         <p className="text-sky-100 text-xs xl:text-base whitespace-pre-line">{entry.testimonial}</p>
                       </div>

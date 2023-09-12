@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-swiper .swiper-pagination {
+  @apply p-10 bottom-[-20px] h-fit w-full flex flex-wrap flex-row gap-2.5 xl:gap-3.5 items-center justify-center;
+}
