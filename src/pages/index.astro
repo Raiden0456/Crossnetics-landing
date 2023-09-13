@@ -10,10 +10,11 @@ import Blog from "@components/Blog.astro";
 import LatestBlog from "@components/Latest_blog.astro";
 import Partners from "@components/Partners.astro";
 
-const hero_text = {
-  header: "Welcome \n to Crossneyics!",
+const hero_props = {
+  header: "Welcome \n to Crossnetics!",
   body: "A unique platform with a suite of digital tools for marketing, analytics and social media, enhanced by AI and decentralized finance.",
   button: "Get started for free",
+  gradient: ["#49D1E3", "#2782FF"],
 }
 
 const description_text = "Experience the world of our ecosystem, where advanced marketing tools make it easy and effective to realize all your strategic goals."
@@ -251,8 +252,8 @@ const partners = {
 ---
 
 <Layout title="Welcome to Crossnetics.">
-  <main class="w-full">
-    <Hero {...hero_text} />
+  <main class="w-full" transition:animate="fade">
+    <Hero {...hero_props} />
     <Description description={description_text} />
     <Analytics title={analytics_text.title} body={analytics_text.body} sections={analytics_text.sections} general={analytics_text.general} />
     <Social_swiper {social} client:load/>

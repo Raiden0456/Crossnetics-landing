@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import Collapse from "@components/Collapse.tsx";
+
+const hero_props = {
+  header: "Key Features\nof Crossnetics Platform",
+  body: `In an era of rapidly changing technology and market demands, the Crossnetics platform provides a set of innovative tools to effectively engage with the world of digital marketing.
+  
+Below are the platform's key capabilities, each designed to meet the needs of advertisers, execs and other digital advertising marketers.`,
+  button: "Get started for free",
+  gradient: ["#1F3266", "#2882FF"]
+}
+
+const collapse_sections = [
+    {
+      title: "Connecting to Social Networks",
+      description: "The Crossnetics platform provides a powerful tool to integrate with major social media platforms such as YouTube, Telegram, Instagram, Facebook, TikTok, and Twitch. This opens up unique opportunities for analyzing and monitoring influence.",
+      key_capabilities: [
+        {
+          title: "Metrics Analysis",
+          description: "Collect and process all available metrics by account to deeply analyze interactions and impact.",
+        },
+        {
+          title: "Influencer Database",
+          description: "Ability to search and analyze potential partners among a wide range of known influencers.",
+        },
+        {
+          title: "Crossrating",
+          description: "An innovative approach to evaluating influencers by rating, making it easier to select the best candidates for collaboration.",
+        },
+        {
+          title: "Application to Digital Advertising",
+          description: "Given the current stage of digital advertising, social media integration is a vital tool. It allows advertisers and execs to get to the heart of social interactions, understand their audiences, and create effective strategies based on real data.",
+        }
+      ],
+      benefits: [
+        {
+          title: "Efficiency",
+          description: "Quick access to key social account information.",
+        },
+        {
+          title: "Targeting",
+          description: "Targeting advertising to specific audiences using accurate data.",
+        },
+        {
+          title: "Flexibility and Scalability",
+          description: "Flexibility and Scalability: Ability to adapt strategies in real-time based on direct data.",
+        }
+      ],
+      image: "image"
+    },
+    {
+      title: "Web Analytics",
+      description: "Web analytics on the Crossnetics platform is a feature-rich tool provided thanks to our partners from Similarweb, which allows you to analyze websites on a number of key parameters. This tool gives advertisers and marketers a valuable insight into the current position and growth dynamics of their web resources.",
+      key_capabilities: [
+        {
+          title: "Visits Analysis",
+          description: "Monitor website traffic, number of visits and user behavior.",
+        },
+        {
+          title: "Rating",
+          description: "Identify global rankings, country rankings and industry rankings.",
+        },
+        {
+          title: "Industry Analysis",
+          description: "Identify top countries by industry, most popular industries, and social traffic and keyword research.",
+        },
+        {
+          title: "Application to Digital Advertising",
+          description: "Today, understanding and analyzing web traffic is key to success in digital advertising. Crossnetics Web analytics helps in understanding the dynamics of audience interaction and enables informed business decisions.",
+        }
+      ],
+      benefits: [
+        {
+          title: "Deep Analytics",
+          description: "The ability to deeply analyze web traffic and site audiences.",
+        },
+        {
+          title: "Decision Making",
+          description: "Informed decisions based on accurate data and insights.",
+        },
+        {
+          title: "Competitive Analysis",
+          description: "The ability to assess your website's position compared to industry competitors.",
+        }
+      ],
+      image: "image"
+    },
+  ]
+---
+
+<Layout title="Crossnetics software.">
+  <main class="w-full" transition:animate="fade">
+    <Hero {...hero_props} />
+    <Collapse sections={collapse_sections} client:load/>
+  </main>
+</Layout>
