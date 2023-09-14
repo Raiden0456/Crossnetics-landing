@@ -21,8 +21,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
   const swiperRef = useRef<SwiperCore | null>(null);
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="relative w-full h-full">
+    <div className="flex items-center justify-center"> 
         <Swiper 
           className="h-full w-screen custom-swiper"
           
@@ -72,7 +71,6 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
             );
           })}
         </Swiper>
-      </div>
     </div>
   );
 }

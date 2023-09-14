@@ -8,8 +8,11 @@ interface Details {
 interface Sectione {
   title: string;
   description: string;
-  key_capabilities: Details[];
-  benefits: Details[];
+  key_capabilities?: Details[];
+  benefits?: {
+    details: Details[];
+    testimonial?: string;
+  };
   image?: string;
 }
 interface Props {
@@ -27,15 +30,18 @@ export default function Collapse({ sections }: Props) {
     <div className="bg-gradient-to-b from-sky-200 to-sky-100 flex items-center justify-center">
       <div className="w-11/12 lg:w-2/3 flex items-center justify-start 2lg:justify-center my-20">
         <div className="flex flex-row gap-x-14 w-full">
-          <div className="flex flex-col gap-y-4 w-1/3 h-fit p-6 rounded-3xl bg-white">
+          <div className="hidden lg:flex flex-col gap-y-4 w-1/3 h-fit p-6 rounded-3xl bg-white sticky top-20">
             {(sections || []).map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-row gap-x-2 rounded-lg items-start justify-start transition-all duration-300 ${
+                className={`flex flex-row gap-x-2 rounded-lg items-start justify-start transition-all duration-300 cursor-pointer ${
                   activeSection === index
-                    ? "text-white bg-blue-500  ml-px p-2 w-fit"
-                    : "text-gray-600"
+                    ? "text-white bg-blue-500  ml-px p-2 w-fit scale-105"
+                    : "text-gray-600 hover:scale-105"
                 }`}
+                onClick={() =>
+                  setActiveSection(activeSection === index ? null : index)
+                }
               >
                 <p
                   className={`${
@@ -80,7 +86,7 @@ export default function Collapse({ sections }: Props) {
                 <div
                   className={`transform transition-max-h duration-500 ease-in-out overflow-hidden ${
                     activeSection === index
-                      ? "max-h-[1000px] opacity-100 scale-100"
+                      ? "max-h-[3000px] opacity-100 scale-100"
                       : "max-h-0 opacity-0 scale-95"
                   }`}
                 >
@@ -88,7 +94,7 @@ export default function Collapse({ sections }: Props) {
                     <div className="flex flex-col gap-y-2">
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
-                          className="w-5"
+                          className="w-5 mt-2"
                           src="software_img/description.svg"
                           alt="description"
                           width={20}
@@ -104,10 +110,10 @@ export default function Collapse({ sections }: Props) {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-y-2">
+                    <div className={`${item.key_capabilities ? "" : "hidden absolute"} flex flex-col gap-y-2`}>
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
-                          className="w-5"
+                          className="w-5 mt-2"
                           src="software_img/key.svg"
                           alt="key"
                           width={20}
@@ -132,13 +138,16 @@ export default function Collapse({ sections }: Props) {
                               </div>
                             ))}
                           </div>
+                          <div className="w-full">
+                              {item.image ? <img src={`/software_img/${item.image}`} alt="" className="w-full" loading='lazy'/> : null}
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-y-2">
+                    <div className={`${item.benefits ? "" : "hidden absolute"} flex flex-col gap-y-2`}>
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
-                          className="w-5"
+                          className="w-5 mt-2"
                           src="software_img/star.svg"
                           alt="star"
                           width={20}
@@ -149,7 +158,7 @@ export default function Collapse({ sections }: Props) {
                             Benefits to users
                           </h2>
                           <div className="flex flex-col gap-y-4">
-                            {item.benefits?.map((detail, index) => (
+                            {item.benefits?.details.map((detail, index) => (
                               <div
                                 key={index}
                                 className="flex flex-col gap-y-1"
@@ -162,6 +171,7 @@ export default function Collapse({ sections }: Props) {
                                 </p>
                               </div>
                             ))}
+                            <p className="text-gray-600 text-xs xl:text-base italic">{item.benefits?.testimonial}</p>
                           </div>
                         </div>
                       </div>

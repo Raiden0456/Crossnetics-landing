@@ -81,8 +81,8 @@ const footer = {
 		<ViewTransitions />
 	</head>
 	<body class="bg-[#2882FF]">
-		<Header sections={header_sections.sections}/>
+		<Header sections={header_sections.sections} transition:persist/>
 		<slot />
-		<Footer contact_us={footer.contact_us} discover={footer.discover} social_media={footer.social_media}, button={footer.button}/>
+		<Footer contact_us={footer.contact_us} discover={footer.discover} social_media={footer.social_media}, button={footer.button} transition:persist/>
 	</body>
 </html>
