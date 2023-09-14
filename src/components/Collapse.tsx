@@ -96,7 +96,7 @@ export default function Collapse({ sections }: Props) {
                         <img
                           className="w-5 mt-2"
                           src="software_img/description.svg"
-                          alt="description"
+                          alt=""
                           width={20}
                           height={20}
                         />
@@ -115,7 +115,7 @@ export default function Collapse({ sections }: Props) {
                         <img
                           className="w-5 mt-2"
                           src="software_img/key.svg"
-                          alt="key"
+                          alt=""
                           width={20}
                           height={20}
                         />
@@ -149,7 +149,7 @@ export default function Collapse({ sections }: Props) {
                         <img
                           className="w-5 mt-2"
                           src="software_img/star.svg"
-                          alt="star"
+                          alt=""
                           width={20}
                           height={20}
                         />

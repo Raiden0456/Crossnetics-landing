@@ -53,7 +53,7 @@ export default function IpadSwiper({ image_path, pagi_active }: IpadSwiperProps)
           >
             {image_path.map((path, index) => (
               <SwiperSlide key={index} onClick={handleSlideClick}>
-                <img src={path} alt="slide" />
+                <img src={path} alt="" />
               </SwiperSlide>
             ))}
           </Swiper>

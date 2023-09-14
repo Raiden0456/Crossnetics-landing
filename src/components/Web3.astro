@@ -25,7 +25,7 @@ const { title, body, sections, testimonial } = Astro.props;
     <div class="grid grid-cols-1 2lg:grid-cols-2 gap-6">
       {sections.map ((section) => (
         <div class="flex flex-row items-center justify-start gap-x-6 p-7 rounded-[50px] bg-web3-grid">
-          <Image src={`/web3/${section.image}`} alt="section imgage" width={50} height={50} class="hidden sm:flex w-32 xl:w-60" />
+          <Image src={`/web3/${section.image}`} alt="" width={50} height={50} class="hidden sm:flex w-32 xl:w-60" />
           <div class="flex flex-col items-start justify-start gap-y-2 xl:gap-y-4">
             <h1 class="text-xs xl:text-base font-bold uppercase text-sky-100 ">{ section.title }</h1>
             <p class="text-Web3-body text-2xs xl:text-sm font-normal text-sky-100">{ section.body }</p>
@@ -34,9 +34,9 @@ const { title, body, sections, testimonial } = Astro.props;
       ))}
     </div>
     <div class="flex flex-col lg:flex-row w-full gap-10 lg:items-center">
-      <Image src="/logo.svg" alt="logo" width={50} height={50} class="w-20 lg:w-40" />
+      <Image src="/logo.svg" alt="" width={50} height={50} class="w-20 lg:w-40" />
       <p class="text-web3-body text-xs xl:text-base font-normal">{ testimonial }</p>
-      <Image src="web3/WEB3.0.svg" alt="WEB3.0" width={50} height={50} class="w-60" />
+      <Image src="web3/WEB3.0.svg" alt="" width={50} height={50} class="w-60" />
     </div>
   </div>
 </div>

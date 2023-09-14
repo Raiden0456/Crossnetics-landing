@@ -29,7 +29,7 @@ const { title, body, sections, general } = Astro.props;
     <div class="grid grid-cols-1 md:grid-cols-2 2lg:grid-cols-3 gap-6">
       {sections.map((section, index) => (
         <div class="flex flex-col items-start justify-start p-8 xl:p-10 bg-white rounded-[50px] gap-y-2 xl:gap-y-4">
-          <Image src={`/analytics/${section.image}.svg`} alt={`${section.image}`} width={30} height={30} class="w-8 h-8"/> 
+          <Image src={`/analytics/${section.image}.svg`} alt="" width={30} height={30} class="w-8 h-8"/> 
           <h1 class="text-blue-500 text-xs xl:text-base font-bold uppercase leading-tight">{section.title}</h1>
           <p class="text-gray-400 text-2xs xl:text-sm">{section.body}</p>
         </div>
@@ -39,7 +39,7 @@ const { title, body, sections, general } = Astro.props;
           <h1 class="text-white text-xs xl:text-base font-bold uppercase">{general.title}</h1>
           <p class="text-indigo-50  text-2xs xl:text-sm">{general.body}</p>
         </div>
-        <Image src="/3d_images/PC.svg" alt="PC" width={30} height={30} class="hidden md:flex md:w-2/5 xl:w-1/2 absolute -right-10 -bottom-10 xl:-right-24 xl:-bottom-20 transform rotate-12 z-100" />
+        <Image src="/3d_images/PC.svg" alt="" width={30} height={30} class="hidden md:flex md:w-2/5 xl:w-1/2 absolute -right-10 -bottom-10 xl:-right-24 xl:-bottom-20 transform rotate-12 z-100" />
       </div>
     </div>
   </div>
