@@ -7,7 +7,7 @@ interface Props {
 	body: string;
 	button: string;
   gradient: string[]
-  ipad_slides: string[]
+  ipad_slides?: string[]
 }
 
 const { header, body, button, gradient, ipad_slides } = Astro.props;
@@ -23,9 +23,8 @@ const { header, body, button, gradient, ipad_slides } = Astro.props;
           <div class="text-blue-500 text-xs font-extrabold uppercase">{button}</div>
       </div>
     </div>
-  
-    <div class="hidden absolute lg:flex lg:relative w-1/2 h-1/2">
+    {ipad_slides && <div class="hidden lg:flex lg:relative w-1/2 h-1/2">
       <Ipad_swiper image_path={ipad_slides} pagi_active={true} client:load/>
-    </div>
+    </div>}
   </div>
 </div>
