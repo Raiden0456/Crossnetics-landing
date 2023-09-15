@@ -13,7 +13,6 @@ interface Sectione {
     details: Details[];
     testimonial?: string;
   };
-  image?: string;
 }
 interface Props {
   sections: Sectione[];
@@ -137,9 +136,6 @@ export default function Collapse({ sections }: Props) {
                                 </p>
                               </div>
                             ))}
-                          </div>
-                          <div className="w-full">
-                              {item.image ? <img src={`/software_img/${item.image}`} alt="" className="w-full" loading='lazy'/> : null}
                           </div>
                         </div>
                       </div>
