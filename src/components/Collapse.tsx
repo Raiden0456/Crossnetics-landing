@@ -26,41 +26,69 @@ export default function Collapse({ sections }: Props) {
   const headerHeight = 100;
   const initialOpenSections = useMemo(() => new Array(sections.length).fill(false), [sections.length]);
   const [openSections, setOpenSections] = useState<boolean[]>(initialOpenSections);
-
   const [activeSection, setActiveSection] = useState<number | null>(null);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const updateActiveSection = useCallback(() => {
     const viewportHeight = window.innerHeight;
-    const offset = headerHeight;
+    const middle = viewportHeight / 2; // Middle of the viewport
+  
     let activeIndex = null;
-
+  
     for (let i = 0; i < sectionRefs.current.length; i++) {
       const section = sectionRefs.current[i];
-      if (section) {
+      if (section && openSections[i]) { // Ensure the section is open
         const rect = section.getBoundingClientRect();
-        if (rect.top < viewportHeight - offset && rect.bottom > offset) {
+        const titlePosition = rect.top;
+  
+        if (titlePosition < middle && (titlePosition + rect.height) > middle) {
           activeIndex = i;
           break;
         }
       }
     }
-
+  
     setActiveSection(activeIndex);
-  }, []);
+  }, [openSections]);
+  
+  
 
   useEffect(() => {
     window.addEventListener("scroll", updateActiveSection);
     return () => window.removeEventListener("scroll", updateActiveSection);
-  }, []);
+  }, [updateActiveSection]);
 
   const scrollToSection = useCallback((index: number) => {
     const section = sectionRefs.current[index];
     if (section) {
-      const offsetTop = section.offsetTop - headerHeight;
-      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+      setTimeout(() => {
+        const offsetTop = section.offsetTop - headerHeight;
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+      }, 200); // 200ms delay for animation
     }
   }, []);
+  
+  
+
+  const handleNavigationClick = (index: number) => {
+    const newOpenSections = [...openSections];
+    newOpenSections[index] = true; // Always open the section
+    setOpenSections(newOpenSections);
+    scrollToSection(index);
+    updateActiveSection();
+  };
+
+  const handleSectionToggle = (index: number) => {
+    const newOpenSections = [...openSections];
+    newOpenSections[index] = !newOpenSections[index];
+    setOpenSections(newOpenSections);
+    if (!newOpenSections[index]) {
+      // If the section is being closed, don't scroll to it
+      return;
+    }
+    scrollToSection(index);
+    updateActiveSection();
+  };
 
   return (
     <div className="bg-gradient-to-b from-sky-200 to-sky-100 flex items-center justify-center">
@@ -76,8 +104,7 @@ export default function Collapse({ sections }: Props) {
                     : "text-gray-600 hover:scale-105"
                 }`}
                 onClick={() => {
-                  scrollToSection(index);
-                  updateActiveSection();
+                  handleNavigationClick(index)
                 }}
               >
                 <p
@@ -103,10 +130,7 @@ export default function Collapse({ sections }: Props) {
                 <div
                   className="flex flex-row justify-between cursor-pointer w-full gap-6"
                   onClick={() => {
-                    const newOpenSections = [...openSections];
-                    newOpenSections[index] = !newOpenSections[index];
-                    setOpenSections(newOpenSections);
-                    updateActiveSection();
+                    handleSectionToggle(index);
                   }}
                 >
                   <div className="flex flex-row gap-x-4">

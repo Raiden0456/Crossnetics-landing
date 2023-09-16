@@ -13,7 +13,7 @@ interface IpadSwiperProps {
   pagi_active: boolean;
 }
 
-export default function IpadSwiper({ image_path, pagi_active }: IpadSwiperProps) {
+export default function IpadSwiper({ image_path, pagi_active = true }: IpadSwiperProps) {
   const swiperRef = useRef<SwiperCore | null>(null);
   const [activeIndex, setActiveIndex] = useState(0); // State to keep track of the active slide
   const pagi_active_class = pagi_active ? "" : "hidden";
