@@ -15,7 +15,7 @@ const activeSection = sections.find(section => section.url === Astro.url.pathnam
 
 <div class="absolute hidden lg:fixed lg:flex justify-center items-center top-0 h-16 w-full bg-blue-500 z-50">
   <div class="w-2/3 h-full flex flex-row justify-between">
-    <Image src="/header.svg" alt="" height={50} width={50} class="w-[20%]" />
+    <Image src="/header.svg" alt="" height={50} width={50} class="w-[20%]" loading="eager" />
     <div class="flex flex-row gap-x-6 h-full justify-center items-center">
       <div class="flex flex-row gap-x-4 xl:gap-x-6 h-full">
         {sections.map(section => {
