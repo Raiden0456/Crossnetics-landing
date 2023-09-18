@@ -5,7 +5,7 @@ import { EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import '../styles/Social_swiper.css';
+import '../../styles/Social_swiper.css';
 
 interface Social {
   header: string;

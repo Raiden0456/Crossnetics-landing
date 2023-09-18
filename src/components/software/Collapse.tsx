@@ -91,10 +91,10 @@ export default function Collapse({ sections }: Props) {
   };
 
   return (
-    <div className="bg-gradient-to-b from-sky-200 to-sky-100 flex items-center justify-center">
+    <div className="bg-gradient-to-b from-sky-200 via-sky-100 to-sky-200 flex items-center justify-center">
       <div className="w-11/12 lg:w-2/3 flex items-center justify-start 2lg:justify-center my-20">
         <div className="flex flex-row gap-x-14 w-full">
-          <div className="hidden lg:flex flex-col gap-y-4 w-1/3 h-fit p-6 rounded-3xl bg-white sticky top-20">
+          <div className="hidden lg:flex flex-col gap-y-4 w-1/3 h-fit p-6 rounded-3xl bg-white sticky top-28">
             {(sections || []).map((item, index) => (
               <div
                 key={index}
@@ -163,7 +163,7 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="software_img/description.svg"
+                          src="/icons/description.svg"
                           alt=""
                           width={20}
                           height={20}
@@ -186,7 +186,7 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="software_img/key.svg"
+                          src="/icons/key.svg"
                           alt=""
                           width={20}
                           height={20}
@@ -221,7 +221,7 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="software_img/star.svg"
+                          src="/icons/star.svg"
                           alt=""
                           width={20}
                           height={20}

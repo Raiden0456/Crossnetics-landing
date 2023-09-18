@@ -1,14 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
-import Description from "@components/Description.astro";
-import Analytics from "@components/Analytics.astro";
-import Social_swiper from "@components/Social_swiper.tsx";
-import Web3 from "@components/Web3.astro";
-import AI from "@components/AI.astro";
-import Blog from "@components/Blog.astro";
+import Description from "@components/home/Description.astro";
+import Analytics from "@components/home/Analytics.astro";
+import Social_swiper from "@components/home/Social_swiper";
+import Web3 from "@components/home/Web3.astro";
+import AI from "@components/home/AI.astro";
+import Blog from "@components/home/Blog.astro";
 import LatestBlog from "@components/Latest_blog.astro";
-import Partners from "@components/Partners.astro";
+import Partners from "@components/home/Partners.astro";
 
 const hero_props = {
   header: "Welcome \n to Crossnetics!",
@@ -264,4 +264,4 @@ const partners = {
     <LatestBlog title={latest_blog.title} posts={latest_blog.posts} button={latest_blog.button} />
     <Partners title={partners.title} partner_images={partners.partner_images} />
   </main>
-</Layout>
+</Layout>@components/home/Description.astro@components/home/Analytics.astro@components/home/Social_swiper@components/home/Web3.astro@components/home/AI.astro@components/home/Blog.astro@components/home/Partners.astro

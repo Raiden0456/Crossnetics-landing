@@ -8,9 +8,10 @@ interface Props {
 	button: string;
   gradient: string[]
   ipad_slides?: string[]
+  hero_image?: string
 }
 
-const { header, body, button, gradient, ipad_slides } = Astro.props;
+const { header, body, button, gradient, ipad_slides, hero_image } = Astro.props;
 ---
 
 <div style={{background: `linear-gradient(to left, ${gradient[0]}, ${gradient[1]})`}} class="flex items-center justify-center h-screen ">
@@ -23,8 +24,9 @@ const { header, body, button, gradient, ipad_slides } = Astro.props;
           <div class="text-blue-500 text-xs font-extrabold uppercase">{button}</div>
       </div>
     </div>
-    {ipad_slides && <div class="hidden lg:flex lg:relative w-1/2 h-1/2">
-      <Ipad_swiper image_path={ipad_slides} pagi_active={true} client:load/>
-    </div>}
+    <div class="hidden lg:flex lg:relative w-1/2 h-1/2 justify-end">
+      {ipad_slides && <Ipad_swiper image_path={ipad_slides} pagi_active={true} client:load/>}
+      {hero_image && <Image src={hero_image} alt="" height={50} width={50} class="w-10/12 h-10/12" />}
+    </div>
   </div>
 </div>

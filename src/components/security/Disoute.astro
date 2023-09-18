@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  body: {
+    title: string;
+    body: string;
+  }[]
+
+}
+
+const {title, body} = Astro.props;
+---

@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+
+interface Grid_element2 {
+  title: string;
+  subtitle: string;
+  body: {
+    title: string;
+    body: string;
+  }[]
+  bg_image: string;
+  image: string;
+}
+
+interface Props {
+  title: string;
+  list: string[];
+  grid2: Grid_element2[];
+}
+
+const {title, list, grid2} = Astro.props;
+---

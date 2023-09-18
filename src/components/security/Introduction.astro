@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+
+interface Introduction {
+  title: string;
+  body: string;
+}
+
+interface Grid_element {
+  title: string;
+  body: string;
+  image: string;
+}
+
+interface Props {
+  introduction: Introduction;
+  polygon: string;
+  ether: string;
+  grid: Grid_element[];
+}
+
+const {introduction, polygon, ether, grid} = Astro.props;
+---
+
+<div class="flex flex-row gap-x-4 w-full items-start justify-start">
+  <Image src="/icons/description.svg" class="w-5 mt-2" alt="" width={20} height={20}/>
+  <div class="flex flex-col gap-y-5">
+    <h2 class="text-blue-500 font-bold text-lg xl:text-2xl leading-tight">
+      {introduction.title}
+    </h2>
+    <p class="text-gray-600 text-xs xl:text-base whitespace-pre-wrap">
+      {introduction.body}
+    </p>
+  </div>
+</div>
+<div class="flex flex-row gap-x-4 w-full items-start justify-start">
+  <Image src="/icons/polygon.svg" class="w-5 mt-2" alt="" width={20} height={20}/>
+  <h2 class="text-gray-600 font-bold text-lg xl:text-2xl leading-tight">
+    {polygon}
+  </h2>
+</div>
+<div class="flex flex-row gap-x-4 w-full items-start justify-start">
+  <Image src="/icons/ether.svg" class="w-5 mt-2" alt="" width={20} height={20}/>
+  <h2 class="text-gray-600 font-bold text-lg xl:text-2xl leading-tight">
+    {ether}
+  </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {grid.map((section, index) => (
+    <div class="flex flex-col items-start justify-start p-8 xl:p-10 bg-white rounded-[50px] gap-y-2 xl:gap-y-4">
+      <Image src={`/security_img/${section.image}.svg`} alt="" width={30} height={30} class="w-8 h-8"/> 
+      <h1 class="text-blue-500 text-xs xl:text-base font-bold uppercase leading-tight">{section.title}</h1>
+      <p class="text-gray-400 text-2xs xl:text-sm">{section.body}</p>
+    </div>
+  ))}
+</div>

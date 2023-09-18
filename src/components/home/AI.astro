@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import IpadSwiper from './Ipad_swiper';
+import IpadSwiper from '../Ipad_swiper';
 
 interface Paragraph {
   header: string;
@@ -21,7 +21,7 @@ const { header, paragraphs, button, testimonial } = Astro.props;
     <div class="flex flex-col lg:flex-row items-center justify-between w-11/12 lg:w-2/3 my-20 lg:mt-16 0 2lg:mb-40">
       <div class="flex flex-col items-start justify-center w-full lg:w-1/2 gap-y-5">
         <div class="flex flex-row gap-x-6 mb-5">
-          <Image src={`/stars.svg`} alt="" width={50} height={50} class="w-[10%]"/>
+          <Image src={`/icons/stars.svg`} alt="" width={50} height={50} class="w-[10%]"/>
           <h1 class="text-lg xl:text-2xl 2xl:text-3xl font-bold text-start text-gray-600 whitespace-pre-wrap leading-tight">{header}</h1>
         </div>
         <div class="flex flex-col gap-y-4 pl-5">
