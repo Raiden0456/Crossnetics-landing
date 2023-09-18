@@ -2,7 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
 import Introduction from "@components/security/Introduction.astro";
-import type { Code, Debug } from "astro:components";
+import Pros from "@components/security/Pros.astro";
+import Dispute from "@components/security/Dispute.astro";
+import Conclusion from "@components/security/Conclusion.astro";
 
 const hero_props = {
   header: "Key Features\nof Safety and Security",
@@ -17,8 +19,10 @@ const header = "Security Section for Crossnetics Platform"
 const introduction_props = {
   introduction: {
     title: "Introduction",
-    body: `One of the security parameters of the platform is blockchain technology and Crossnetics runs on the Polygon blockchain\n
-Let us tell you why we have chosen this technology to provide security and scalability on our platform and additional security measures.\n
+    body: `One of the security parameters of the platform is blockchain technology and Crossnetics runs on the Polygon blockchain
+
+Let us tell you why we have chosen this technology to provide security and scalability on our platform and additional security measures.
+
 Polygon enhances Ethereum scalability through a layered architecture that increases transaction throughput while minimizing costs. Here are its key technology features:`
   },
   polygon: "Polygon is a multi-faceted platform for Ethereum-compatible blockchains, offering a solution for Ethereum scalability and interoperability.",
@@ -37,17 +41,86 @@ Polygon enhances Ethereum scalability through a layered architecture that increa
   ]
 }
 
+const props_props = {
+  title: "Pros of smart contracts",
+  list: [
+    "Many processes can be automated. This is one of the main benefits of smart contracts.",
+    "Smart contracts allow you to make the system of controlling the fulfillment of contract terms transparent.",
+    "The system can independently monitor the fulfillment of contract terms.",
+    "Information about smart-contracts is recorded in the blockchain The parties will not be able to change the terms of the contract after it is formalized.",
+    "Smart contracts allow you to make the system of controlling the fulfillment of contract terms transparent.",
+    "The technology, thanks to the ability to save information on the blockchain, allows financial transactions to be carried out anonymously and securely.",
+    "Information about smart-contracts is recorded in the blockchain The parties will not be able to change the terms of the contract after it is formalized.",
+    "Automating the process avoids errors.",
+    "Transferring agreements to a digital environment speeds up document flow and makes it easier."
+  ],
+  grid: [
+    {
+      title: "Decentralized Identity",
+      subtitle: "Identity in a decentralized environment.",
+      body: [
+        {
+          title: "Uniqueness",
+          body: "Each user receives a unique identifier that is not controlled by centralized structures."
+        },
+        {
+          title: "Security",
+          body: "Protection against data theft and leaks thanks to decentralized systems."
+        },
+        {
+          title: "Privacy",
+          body: "Users have full control over their data and its use."
+        }
+      ],
+      image: "cubic",
+      bg_image: "grad_cubic"
+    }
+  ]
+}
+
+const dispute_props = {
+  title: `Dispute between the parties to the transaction
+Protecting your interests at every stage.`,
+  body: [
+    {
+      title: "Understanding the risks",
+      body: "We recognize that there may be ambiguities or disputes when using the platform. This is a normal part of any business or investment."
+    },
+    {
+      title: "Mechanism for resolving disputes",
+      body: "If disputes arise, we provide tools to resolve them. This ensures a fair, impartial and transparent resolution to any issues that arise."
+    },
+    {
+      title: "Mechanism for resolving disputes",
+      body: "Either party can initiate a dispute directly through the Crossnetics platform user interface. This process is designed to eliminate the possibility of fraud and give each party the opportunity to express their point of view."
+    },
+    {
+      title: "Mechanism for resolving disputes",
+      body: "You won't have to worry about potential conflicts or disagreements. We provide a clear and structured process for resolving them that ensures your interests are protected."
+    }
+  ],
+}
+
+const conclusion_props = {
+  title: "Conclusion:",
+  body: `Crossnetics provides a high level of security, efficiency and compliance, making the Crossnetics platform the ideal solution for your business and personal development without having to worry about your personal data and financial relationships. The Crossnetics platform actively utilizes cutting-edge technology and innovative approaches to ensure all transactions are secure and transparent. Through integration with Polygon, users have access to a wide range of tools and features that maximize the efficiency and security of digital assets.
+
+In addition, by focusing on privacy and data protection, Crossnetics ensures that users' information remains strictly confidential and protected from any external threats. In conclusion, Crossnetics is committed to creating a sustainable and trusted space for market participants to interact. Whether investors, developers or ordinary users, everyone will find convenient and effective solutions on the Crossnetics platform. Our goal is to provide comfort, security and high performance for all our customers.`,
+  button: "try now for free"
+}
 ---
 
 <Layout title="Crossnetics security">
-  <main class="w-full" transition:animate="initial">
+  <main class="w-full" transition:animate="slide">
     <Hero {...hero_props} />
       <div class="bg-gradient-to-b from-sky-200 via-sky-100 to-sky-200 flex items-center justify-center">
         <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center my-20">
-          <h1 class="font-bold text-xl xl:text-3xl leading-tight text-gray-600 mb-10 ml-8">{header}</h1>
+          <h1 class="font-bold text-2xl xl:text-3xl leading-tight text-gray-600 mb-10 ml-[1.9rem]">{header}</h1>
           <div class="flex flex-col gap-y-8">
             <Introduction {...introduction_props}  />
-      
+            <Pros {...props_props} />
+            <Dispute {...dispute_props} />
+            <Conclusion {...conclusion_props} />
           </div>
         </div>
       </div>

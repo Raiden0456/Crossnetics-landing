@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-interface Grid_element2 {
+interface Grid_element {
   title: string;
   subtitle: string;
   body: {
@@ -15,8 +15,49 @@ interface Grid_element2 {
 interface Props {
   title: string;
   list: string[];
-  grid2: Grid_element2[];
+  grid: Grid_element[];
 }
 
-const {title, list, grid2} = Astro.props;
+const {title, list, grid} = Astro.props;
 ---
+
+<div class="flex flex-row gap-x-4 w-full items-start justify-start">
+  <Image src="/icons/star.svg" class="w-4 mt-2" alt="" width={20} height={20}/>
+  <div class="flex flex-col gap-y-5">
+    <h2 class="text-blue-500 font-bold text-lg xl:text-2xl leading-tight">
+      {title}
+    </h2>
+    <ul class="text-gray-600 text-xs xl:text-base whitespace-pre-wrap space-y-3">
+      {list.map((item) => (
+        <li class="flex flex-row gap-x-3 items-center">
+          <Image src="/icons/+.svg" class="w-2" alt="" width={12} height={12}/>
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {grid.map((section) => (
+    <div class="relative flex flex-row overflow-hidden md:col-span-2 items-center justify-start p-8 xl:p-10 bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 rounded-[50px] gap-y-2 xl:gap-y-4">
+      <div class="w-1/5 hidden md:flex items-center justify-start z-40">
+        <Image src={`/security_img/${section.image}.svg`} alt="" width={30} height={30} class="w-11/12"/> 
+      </div>
+      <div class="w-4/5 flex flex-col gap-y-4 z-40">
+        <div class="flex flex-col gap-y-2">
+          <h1 class="text-white text-xl xl:text-3xl font-bold">{section.title}</h1>
+          <h2 class="text-sky-100 text-base xl:text-2xl font-bold">{section.subtitle}</h2>
+        </div>
+        <div class="flex flex-col gap-y-2 z-40">
+          {section.body.map((item) => (
+            <div class="flex flex-col gap-y-1">
+              <h3 class="text-white text-sm xl:text-base font-bold">{item.title}</h3>
+              <p class="text-white text-sm xl:text-base">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Image src={`/security_img/${section.bg_image}.png`} alt="" width={50} height={50} quality="100" class="hidden md:flex md:w-4/12 absolute -left-24 -bottom-20 xl:-left-40 xl:-bottom-36 z-10" />
+    </div>
+  ))}
+</div>

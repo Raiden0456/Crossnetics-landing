@@ -29,7 +29,7 @@ const { title, body, sections, general } = Astro.props;
     <div class="grid grid-cols-1 md:grid-cols-2 2lg:grid-cols-3 gap-6">
       {sections.map((section, index) => (
         <div class="flex flex-col items-start justify-start p-8 xl:p-10 bg-white rounded-[50px] gap-y-2 xl:gap-y-4">
-          <Image src={`/analytics/${section.image}.svg`} alt="" width={30} height={30} class="w-8 h-8"/> 
+          <Image src={`/analytics/${section.image}.svg`} alt="" width={30} height={30} class="w-10 h-10"/> 
           <h1 class="text-blue-500 text-xs xl:text-base font-bold uppercase leading-tight">{section.title}</h1>
           <p class="text-gray-400 text-2xs xl:text-sm">{section.body}</p>
         </div>
