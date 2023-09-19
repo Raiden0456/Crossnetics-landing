@@ -35,14 +35,14 @@ const { title, sections, general, blog } = Astro.props;
       </div>
       {sections.map((section, index) => (
         <div class="flex flex-col items-start justify-start p-7 xl:p-10 bg-white rounded-[50px] gap-y-3 xl:gap-y-4">
-          <Image src={`/blog/${section.image}.svg`} alt="" width={30} height={30} class="w-10 h-10"/> 
+          <Image src={`/blog_img/${section.image}.svg`} alt="" width={30} height={30} class="w-10 h-10"/> 
           <h1 class="text-blue-500 text-xs xl:text-base font-bold uppercase leading-tight">{section.title}</h1>
           <p class="text-gray-400 text-2xs xl:text-sm">{section.body}</p>
         </div>
       ))}
     </div>
     <div class="flex flex-row items-start justify-start xl:w-3/4 gap-x-10">
-      <Image src={`/blog/blog.svg`} alt="" width={30} height={30} class="w-8 md:w-10 xl:w-14"/>
+      <Image src={`/blog_img/blog.svg`} alt="" width={30} height={30} class="w-8 md:w-10 xl:w-14"/>
       <h1 class="text-blue-500 text-xs xl:text-base leading-tight">{blog}</h1>
     </div>
   </div>
