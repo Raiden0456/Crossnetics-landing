@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import Footer_sections from "../layouts/Footer_sections.astro";
+import Section from "../components/footer_sections/Section.astro";
+
+const data_props = {
+  title: "Data Privacy FAQ",
+  button: "go back",
+  sections: [
+    {
+      title: "Accounts and Authorization",
+      body: `Authorization is performed using a social media profile. To authorize, simply click the round button in the "My Social Networks" section. After that, the window will automatically close, and you will be logged into the service. The indicator that you are authorized is the profile that appears in the list.
+      
+Browsers based on Chrome might block pop-up windows when trying to authorize via Twitter. In such cases, you need to allow pop-ups for the Crossnetics website and repeat the action (this is done by clicking on the icon with a red cross in the browser's address bar).
+      
+If you want to authorize as a new user in the service but, when you click the authorization button, it logs you in with the old account, you need to first log out and switch to the desired account within the social network itself. Afterward, you can proceed with the authorization in the service, as social networks by default suggest using the already used account for other websites and services.`,
+    },
+    {
+      title: "Tariffs",
+      body: `There are three full paid tariffs and one free tariff with limitations available for using the service.
+
+The full tariffs differ from each other in terms of functionality. More details can be found on the tariffs page.`,
+
+    },
+    {
+      title: "Search and Analysis",
+      body: `After registration, a search bar becomes available in the search section. To perform an analysis of a particular page or hashtags, you need to find the desired page through the service and select it for analysis.
+      
+The search operates in three modes: search by URL (address), search by name, and search by hashtags.`,
+
+    },
+    {
+      title: "Filtering",
+      body: `When any of the filters is activated, the total metrics in the "Loaded Pages" section will be recalculated automatically based on the posts that remain in the feed.
+      
+Different filters can be combined together. For example, you can simultaneously enable a filter for photos while excluding text. In such a case, only posts with images but without text will remain in the feed.`,
+    },
+    {
+      title: "Functional Limitations",
+      body: `The functionality of the service might vary or have limitations for certain social networks. Such limitations are associated with the operations of the networks themselves and their limits imposed on similar services.`,
+    },
+    {
+      title: "Utilized Metrics",
+      body: `Engagement Rate - the coefficient of user engagement with published content (posts). In other words, it displays the percentage of users who showed activity towards the publications.`,
+    },
+    {
+      title: "What is a Marketplace?",
+      body: `A marketplace allows users to engage in commercial transactions related to advertising and marketing. It involves placing a customer's advertisements on an executor's social media accounts.`,
+      italic: "Crossnetics is a service that provides a guarantee in this process."
+    },
+    {
+      title: "How am I protected when making a transaction on the marketplace?",
+      body: `All online transactions are protected through conditional escrow. When an advertisement is published, the amount of cryptocurrency for the ad is automatically reserved from the seller's funding wallet. This means that if the seller doesn't release your cryptocurrency, support service agents can release the reserved funds to you.`,
+    },
+    {
+      title: "What are the transaction fees on Crossnetics?",
+      body: `Crossnetics charges a transaction fee of 1% from the customer's order for each completed order.`,
+    },
+  ]
+};
+---
+
+<Footer_sections title="Data privacy FAQ">
+  <main class="w-full" transition:animate="slide">
+    <div class="flex flex-row w-full gap-x-16 justify-between items-start">
+      <Image src="/footer_img/data.png" class="w-[300px]" alt="" width={50} height={50} />
+      <Section {...data_props}/>   
+    </div>
+  </main>
+</Footer_sections>

@@ -1,0 +1,89 @@
+--- 
+import { ViewTransitions } from 'astro:transitions';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+const header_sections = {
+	sections: [
+		{
+			title: 'Home',
+			url: '/',
+		},
+		{
+			title: 'Software',
+			url: '/software',
+		},
+		{
+			title: 'Security',
+			url: '/security',
+		},
+		{
+			title: 'Blog',
+			url: '/blog',
+		},
+		{
+			title: 'Community',
+			url: '/community',
+		},
+	],
+}
+const footer = {
+	contact_us: "Contact Us",
+	discover: "Discover the full capabilities \nof Crossnetics with our Pro Package",
+	button: "View pricing",
+	social_media: [
+		{
+			title: "Twitter",
+			url: "",
+			icon: "/footer/twitter.svg"
+		},
+		{
+			title: "Instagram",
+			url: "",
+			icon: "/footer/instagram.svg"
+
+		},
+		{
+			title: "Github",
+			url: "",
+			icon: "/footer/github.svg"
+		},
+		{
+			title: "Linkedin",
+			url: "",
+			icon: "/footer/linkedin.svg"
+		},
+		{
+			title: "Telegram",
+			url: "",
+			icon: "/footer/telegram.svg"
+		},
+		
+	]
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="bg-white">
+		<Header sections={header_sections.sections} transition:persist/>
+		<div class="flex items-center justify-center">
+      <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center mt-40 mb-20">  
+				<slot />
+			</div>
+		</div>
+		<Footer contact_us={footer.contact_us} discover={footer.discover} social_media={footer.social_media} button={footer.button} transition:persist/>
+	</body>
+</html>

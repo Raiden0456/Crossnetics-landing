@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+	title: string;
+
+  button: string;
+  sections: {
+    title?: string;
+    body?: string;
+    list?: string[];
+    subtext?: string;
+    italic?: string;
+  }[];
+}
+
+const { title, button, sections } = Astro.props;
+---
+
+<div class="flex flex-col gap-y-10">
+  <h2 class="text-2xl xl:text-3xl font-bold text-gray-600">{title}</h2>
+  <div class="flex flex-col gap-y-5">
+    {sections.map((section) => (
+      <div class="flex flex-col gap-y-6">
+        <div class="flex flex-col gap-y-2">
+          {section.title && <h3 class="text-base xl:text-xl font-bold text-blue-500">{section.title}</h3>}
+          {section.body &&<p class="text-sm text-gray-600 xl:text-base whitespace-pre-wrap">{section.body}</p>}
+        </div>
+        
+        {section.list && (
+          <ul class="list-['•__'] list-outside text-sm text-gray-600 xl:text-base ml-10">
+            {section.list.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        )}
+
+        {
+          section.subtext && (
+            // Using a regex pattern to test if section.subtext looks like an email
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(section.subtext) ? 
+              <a href={`mailto:${section.subtext}`} class="text-sm xl:text-base whitespace-pre-wrap cursor-pointer underline text-blue-500">{section.subtext}</a> :
+              <p class="text-sm text-gray-600 xl:text-base whitespace-pre-wrap">{section.subtext}</p>
+          )
+        }
+
+
+        {section.italic && (
+          <p class="text-xs text-gray-600 xl:text-sm italic whitespace-pre-wrap">{section.italic}</p>
+        )}
+      </div>
+    ))}
+  </div>
+  <a href="/" class="self-center">
+    <div class="self-center h-11 px-6 py-2.5 bg-sky-100 rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-all hover:bg-blue-200">
+      <Image src="/icons/back.svg" class="w-4 h-4" alt="" width={20} height={20} />
+      <div class="text-blue-500 text-xs font-extrabold uppercase">{button}</div>
+    </div>
+  </a>
+</div>
