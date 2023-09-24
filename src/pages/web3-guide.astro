@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import Footer_sections from "../layouts/Footer_sections.astro";
+import Web3_guide from "../components/footer_sections/Web3_guide.astro";
+
+const data_props = {
+  title: "Web3.0 guide",
+  button: "contact support",
+  subtitle: "How to Connect Using MetaMask to the Polygon Blockchain",
+  body: "Our website utilizes the Polygon blockchain technology to ensure scalability and efficiency. To connect to our website and make use of its features, you will need the MetaMask wallet configured for the Polygon blockchain.",
+  steps: [
+    {
+      title: "Installing MetaMask",
+      list: [
+        "Open your browser and go to the official MetaMask website: [https://metamask.io](https://metamask.io).",
+        'Click on the "Get Started" or "Download" button to begin the extension installation.',
+        "Follow the instructions to install MetaMask in your browser (Google Chrome, Mozilla Firefox, and other supported browsers).",
+      ],
+      image: "/footer_img/step1.png",
+    },
+    {
+      title: "Creating a Wallet",
+      list: [
+        "After installing MetaMask, find the MetaMask icon in the top right corner of your browser and click   on it.",
+        'Select "Create a Wallet."',
+        "Create a password for your wallet and follow the instructions to generate your secret phrase (seed phrase). Be sure to save this phrase in a secure location as it will be needed to restore access to your wallet.",
+      ],
+      image: "/footer_img/step2.png",
+    },
+    {
+      title: "Connecting to the Polygon Blockchain",
+      list: [
+        "After creating the MetaMask wallet, return to our website.",
+        `On the page, you'll see the "Сonnect to web2/3" button. Click on it.`,
+      ],
+      image: "/footer_img/step3.png",
+    },
+    {
+      title: "Interacting with the Polygon Blockchain Website",
+      body: `You are now connected to our website through MetaMask, configured for the Polygon blockchain! 
+
+You can use the website's features, interact with content, and conduct transactions on the Polygon blockchain, ensuring fast and cost-effective operations.
+
+If you encounter any questions or difficulties, feel free to reach out to our support service.`,
+    },
+  ]
+};
+---
+
+<Footer_sections title="Influencer Opt Out">
+  <main class="w-full" transition:animate="slide">
+    <div class="flex flex-row w-full gap-x-16 justify-between items-start">
+      <Image src="/footer_img/knight.png" class="w-[150px] xl:w-[300px]" alt="" width={50} height={50} />
+      <Web3_guide {...data_props}/>   
+    </div>
+  </main>
+</Footer_sections>

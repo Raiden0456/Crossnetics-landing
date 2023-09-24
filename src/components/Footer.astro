@@ -62,14 +62,14 @@ const { contact_us, discover, social_media, button } = Astro.props;
         >
           <div class="text-xs font-extrabold uppercase">{button}</div>
         </div>
-        <div
-          class="w-fit h-11 px-6 py-2.5 bg-footer-button hover:bg-footer-button-hover rounded-2xl flex justify-center items-center cursor-pointer text-footer-button-text hover:text-footer-button-hover-text text-xl"
+        <a
+          href="/web3-guide" class="w-fit h-11 px-6 py-2.5 bg-footer-button hover:bg-footer-button-hover rounded-2xl flex justify-center items-center cursor-pointer text-footer-button-text hover:text-footer-button-hover-text text-xl"
         >
           <span class="font-light">WEB</span><span
             class="font-semibold">3.0</span
           ><span class="font-thin"></span><span
             class="font-light">GUIDE</span>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -104,7 +104,7 @@ const { contact_us, discover, social_media, button } = Astro.props;
         <p class="text-slate-300 text-xs font-bold uppercase">{contact_us}</p>
         <a
           href="mailto:info@crossnetics.com"
-          class="text-blue-500 hover:text-blue-400 text-sm font-medium underline capitalize"
+          class="text-blue-500 hover:text-blue-400 text-sm font-medium underline"
           >info@crossnetics.com
         </a>
       </div>
