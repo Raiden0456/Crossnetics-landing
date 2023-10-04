@@ -17,18 +17,18 @@ interface Props {
 const { header, paragraphs, button, testimonial } = Astro.props;
 ---
 <div>
-  <div class="bg-sky-100 flex items-start justify-center h-fit">
-    <div class="flex flex-col lg:flex-row items-center justify-between w-11/12 lg:w-2/3 my-20 lg:mt-16 0 2lg:mb-40">
+  <div class="bg-sky-100 flex items-start justify-center h-fit overflow-hidden">
+    <div class="flex flex-col-reverse lg:flex-row items-center justify-between w-10/12 lg:w-2/3 my-20 lg:mt-16 0 2lg:mb-40">
       <div class="flex flex-col items-start justify-center w-full lg:w-1/2 gap-y-5">
-        <div class="flex flex-row gap-x-6 mb-5">
-          <Image src={`/icons/stars.svg`} alt="" width={50} height={50} class="w-[10%]"/>
-          <h1 class="text-lg xl:text-2xl 2xl:text-3xl font-bold text-start text-gray-600 whitespace-pre-wrap leading-tight">{header}</h1>
+        <div class="flex flex-col md:flex-row mb-5 gap-6">
+          <Image src={`/icons/stars.svg`} alt="" width={50} height={50} class="w-2/12 lg:w-[10%] "/>
+          <h1 class="text-2xl 2xl:text-3xl font-bold text-start text-gray-600 whitespace-pre-wrap leading-tight">{header}</h1>
         </div>
         <div class="flex flex-col gap-y-4 pl-5">
           {paragraphs.map((paragraph) => (
             <div class="flex flex-col gap-y-1">
-              <h1 class="text-xs xl:text-base font-bold text-start text-gray-600 whitespace-pre-wrap">{paragraph.header}</h1>
-              <ul class="list-['•__'] list-outside text-xs xl:text-base font-normal text-start text-gray-600 whitespace-pre-wrap">
+              <h1 class="text-base font-bold text-start text-gray-600 whitespace-pre-wrap">{paragraph.header}</h1>
+              <ul class="list-['•__'] list-outside text-base font-normal text-start text-gray-600 whitespace-pre-wrap">
                 {paragraph.body.split('\n').map((item) => (
                   <li>{item}</li>
                 ))}
@@ -36,17 +36,17 @@ const { header, paragraphs, button, testimonial } = Astro.props;
             </div>
           ))}
         </div>
-        <p class="text-2xs xl:text-sm font-normal italic text-start text-gray-600 whitespace-pre-wrap">{testimonial}</p>
+        <p class="text-sm font-normal italic text-start text-gray-600 whitespace-pre-wrap">{testimonial}</p>
       </div>
     
-      <div class="w-7/12 h-7/12">
-        <Image src={`/3d_images/PC_robo.png`} alt="" width={50} height={50} class="w-full h-full rotate-[15deg] lg:-mr-10 "/>
+      <div class="w-[500px] -mt-52 lg:mt-0 lg:w-7/12 lg:h-7/12">
+        <Image src={`/3d_images/PC_robo.png`} alt="" width={50} height={50} class="aboslute w-full h-full rotate-[15deg] ml-8 lg:-mr-10 "/>
       </div>
     </div>
   </div>
-  <div class="bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 flex flex-col  items-center justify-center lg:justify-start h-fit min-h-[509px]">
-    <div class="flex flex-col items-center justify-center w-11/12 lg:w-2/3 gap-y-10 mb-10">
-      <div class="w-2/3 lg:w-2/3 xl:w-1/2 mt-10 lg:-mt-20 2lg:-mt-32 ">
+  <div class="bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 flex flex-col  items-center justify-center lg:justify-start h-fit min-h-[300px] tablet:min-h-[400px]">
+    <div class="flex flex-col items-center justify-center w-10/12 lg:w-2/3 gap-y-10 mb-10">
+      <div class="w-full md:w-2/3 lg:w-2/3 xl:w-1/2 -mt-16 2lg:-mt-32 ">
         <IpadSwiper image_path={["/ai_slide_2.png"]} pagi_active={false} client:load/>
       </div>
       <div class="w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">

@@ -17,7 +17,7 @@ const { title, subtitle, body, button, steps } = Astro.props;
 ---
 
 <div class="flex flex-col gap-y-8 xl:gap-y-10">
-  <h1 class="text-2xl xl:text-3xl font-bold text-gray-600 ml-[1.9rem]">
+  <h1 class="text-3xl font-bold text-gray-600 ml-[1.9rem]">
     {title}
   </h1>
   <div class="flex flex-col gap-y-10">
@@ -32,14 +32,14 @@ const { title, subtitle, body, button, steps } = Astro.props;
       <div class="flex flex-col gap-y-2">
         {
           subtitle && (
-            <h3 class="text-base xl:text-xl font-bold text-blue-500">
+            <h3 class="text-xl font-bold text-blue-500">
               {subtitle}
             </h3>
           )
         }
         {
           body && (
-            <p class="text-sm text-gray-600 xl:text-base whitespace-pre-wrap">
+            <p class="text-gray-600 text-base whitespace-pre-wrap">
               {body}
             </p>
           )
@@ -50,7 +50,7 @@ const { title, subtitle, body, button, steps } = Astro.props;
       steps.map((step) => (
         <div class="flex flex-col gap-y-6">
           {step.title && (
-            <h2 class="text-2xl xl:text-3xl font-bold text-gray-600 ml-[1.9rem]">
+            <h2 class="text-3xl font-bold text-gray-600 ml-[1.9rem]">
               <span class="text-blue-500">
                 Step {steps.indexOf(step) + 1}:{" "}
               </span>{" "}
@@ -59,13 +59,13 @@ const { title, subtitle, body, button, steps } = Astro.props;
           )}
 
           {step.body && (
-            <p class="text-sm text-gray-600 xl:text-base whitespace-pre-wrap">
+            <p class=" text-gray-600 text-base whitespace-pre-wrap">
               {step.body}
             </p>
           )}
 
           {step.list && (
-            <ul class="text-sm text-gray-600 xl:text-base space-y-4">
+            <ul class=" text-gray-600 text-base space-y-4">
               {step.list.map((item, index) => (
                 <li class="flex flex-row gap-x-[14px] items-center justify-start">
                   <div class="min-w-[17px] min-h-[17px] max-w-[17px] max-h-[17px] bg-blue-500 rounded-full flex items-center justify-center text-sky-100 font-bold text-2xs">

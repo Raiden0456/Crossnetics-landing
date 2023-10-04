@@ -22,10 +22,10 @@ const header_sections = {
 			title: 'Security',
 			url: '/security',
 		},
-		{
-			title: 'Blog',
-			url: '/blog',
-		},
+		// {
+		// 	title: 'Blog',
+		// 	url: '/blog',
+		// },
 		{
 			title: 'Community',
 			url: '/community',
@@ -80,7 +80,7 @@ const footer = {
 	<body class="bg-white">
 		<Header sections={header_sections.sections} transition:persist/>
 		<div class="flex items-center justify-center">
-      <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center mt-40 mb-20">  
+      <div class="w-10/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center mt-40 mb-20">  
 				<slot />
 			</div>
 		</div>

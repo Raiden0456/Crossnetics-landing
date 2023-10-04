@@ -62,8 +62,11 @@ Different filters can be combined together. For example, you can simultaneously 
 
 <Footer_sections title="Data privacy FAQ">
   <main class="w-full" transition:animate="slide">
-    <div class="flex flex-row w-full gap-x-16 justify-between items-start">
-      <Image src="/footer_img/data.png" class="w-[150px] xl:w-[300px]" alt="" width={50} height={50} />
+    <div class="flex flex-col lg:flex-row w-full gap-16 justify-between items-start">
+      <div class="relative min-w-[150px] lg:min-w-[300px] h-[200px] lg:h-[100vw] overflow-hidden">
+        <Image src="/footer_img/data.png" alt="" class="absolute top-0 w-full" width={50} height={50} />
+        <div class="absolute bottom-0 lg:hidden w-full h-[25px] bg-gradient-to-b from-transparent to-white"></div>
+      </div>
       <Section {...data_props}/>   
     </div>
   </main>
