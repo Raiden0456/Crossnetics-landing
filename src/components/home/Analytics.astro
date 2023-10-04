@@ -21,25 +21,25 @@ const { title, body, sections, general } = Astro.props;
 ---
 
 <div class="h-fit bg-sky-100 flex items-start justify-center">
-  <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-start gap-y-10  mb-[100px]">
+  <div class="w-10/12 lg:w-2/3 flex flex-col items-start justify-start gap-y-10  mb-[100px]">
     <div class="flex flex-col items-start justify-start h-full w-full 2lg:w-[70%]">
-      <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-bold text-start text-gray-600 leading-tight">{title}</h1>
-      <p class="mt-4 text-xs xl:text-base text-start text-gray-600">{body}</p>
+      <h1 class="text-3xl 2xl:text-4xl font-bold text-start text-gray-600 leading-tight">{title}</h1>
+      <p class="mt-4 text-base text-start text-gray-600">{body}</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 2lg:grid-cols-3 gap-6">
       {sections.map((section, index) => (
         <div class="flex flex-col items-start justify-start p-7 xl:p-10 bg-white rounded-[50px] gap-y-3 xl:gap-y-4">
           <Image src={`/analytics/${section.image}.svg`} alt="" width={30} height={30} class="w-10 h-10"/> 
-          <h1 class="text-blue-500 text-xs xl:text-base font-bold uppercase leading-tight">{section.title}</h1>
-          <p class="text-gray-400 text-2xs xl:text-sm">{section.body}</p>
+          <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{section.title}</h1>
+          <p class="text-gray-400 text-sm">{section.body}</p>
         </div>
       ))}
-      <div class="relative overflow-hidden md:col-span-2 flex flex-col items-start justify-center p-7 xl:p-10 bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 rounded-[50px]">
-        <div class="flex flex-col gap-y-3 xl:gap-y-4 w-full md:w-2/3 z-10">
-          <h1 class="text-white text-xs xl:text-base font-bold uppercase">{general.title}</h1>
-          <p class="text-indigo-50  text-2xs xl:text-sm">{general.body}</p>
+      <div class="relative min-h-[500px] md:min-h-0 overflow-hidden md:col-span-2 flex flex-col items-start justify-start md:justify-center p-7  xl:p-10 bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 rounded-[50px]">
+        <div class="flex flex-col mt-3 gap-y-3 xl:gap-y-4 w-full md:w-2/3 z-10">
+          <h1 class="text-white text-base font-bold uppercase">{general.title}</h1>
+          <p class="text-indigo-50 text-sm">{general.body}</p>
         </div>
-        <Image src="/3d_images/PC.png" alt="" width={30} height={30} class="hidden md:flex md:w-2/5 xl:w-1/2 absolute -right-10 -bottom-10 xl:-right-24 xl:-bottom-20 transform rotate-12 z-100" />
+        <Image src="/3d_images/PC.png" alt="" width={30} height={30} class="flex w-full md:w-2/5 xl:w-1/2 absolute -bottom-20 md:-right-10 md:-bottom-10 xl:-right-24 xl:-bottom-20 transform rotate-12 z-100" />
       </div>
     </div>
   </div>

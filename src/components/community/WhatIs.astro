@@ -18,10 +18,10 @@ const { title, body, sections, button } = Astro.props;
 ---
 
 <div class="h-fit bg-white flex items-start justify-center">
-  <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-start gap-y-10  my-10 xl:my-20">
+  <div class="w-10/12 lg:w-2/3 flex flex-col items-start justify-start gap-y-10  my-10 xl:my-20">
     <div class="flex flex-col items-start justify-start h-full w-full 2lg:w-[70%] gap-y-3">
-      <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-bold text-start text-gray-600 leading-tight">{title}</h1>
-      <p class="mt-4 text-xs xl:text-base text-start text-gray-600 whitespace-pre-wrap">{body}</p>
+      <h1 class="text-4xl font-bold text-start text-gray-600 leading-tight">{title}</h1>
+      <p class="mt-4 text-base text-start text-gray-600 whitespace-pre-wrap">{body}</p>
     </div>
     <div class="w-52 h-11 px-7.5 py-2.5 bg-blue-500 rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
       <div class="text-white text-xs font-extrabold uppercase">{button}</div>
@@ -30,8 +30,8 @@ const { title, body, sections, button } = Astro.props;
       {sections.map((section, index) => (
         <div class="flex flex-col items-start justify-start w-full p-7 xl:p-10 bg-sky-100 rounded-[50px] gap-y-3 xl:gap-y-4">
           <Image src={`/community_img/${section.image}.svg`} alt="" width={30} height={30} class="w-10 h-10"/> 
-          <h1 class="text-blue-500 text-xs xl:text-base font-bold uppercase leading-tight">{section.title}</h1>
-          <p class="text-gray-400 text-2xs xl:text-sm">{section.body}</p>
+          <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{section.title}</h1>
+          <p class="text-gray-400 text-sm">{section.body}</p>
         </div>
       ))}
     </div>

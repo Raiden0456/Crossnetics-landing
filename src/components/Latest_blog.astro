@@ -22,9 +22,9 @@ const { title, posts, button } = Astro.props;
 ---
 
 <div class="xl:min-h-[788px] h-fit bg-gradient-to-b from-sky-100 to-sky-200  flex items-start justify-center">
-  <div class="w-11/12 lg:w-2/3 flex flex-col justify-center gap-y-10 my-10 xl:my-20">
+  <div class="w-10/12 lg:w-2/3 flex flex-col justify-center gap-y-10 my-10 xl:my-20">
     <div class="flex flex-row items-center justify-start h-full w-full xl:w-[70%] gap-x-6">
-      <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-bold text-start text-gray-600 opacity-70">{title}</h1>
+      <h1 class="text-4xl font-bold text-start text-gray-600 opacity-70">{title}</h1>
       <Image src="/latest_blog/coming.svg" alt="Coming soon" width={30} height={30} class="w-10"/> 
     </div>
     <div class="flex flex-col justify-center items-center gap-y-10">
@@ -45,10 +45,10 @@ const { title, posts, button } = Astro.props;
                     </div>
                   }
                   {post.group && 
-                    <p class="text-slate-300 text-sm font-medium leading-[13px]">{post.group.type} / {post.group.members} members</p>
+                    <p class="text-slate-300 text-xs font-medium leading-[13px]">{post.group.type} / {post.group.members} members</p>
                   }
-                  <h1 class="text-blue-500 text-xs xl:text-base font-bold">{post.title}</h1>
-                  <p class="text-gray-400 text-2xs xl:text-sm ">{post.body}</p>
+                  <h1 class="text-blue-500 text-base font-bold">{post.title}</h1>
+                  <p class="text-gray-400 text-sm ">{post.body}</p>
               </div>
           </div>
       ))}

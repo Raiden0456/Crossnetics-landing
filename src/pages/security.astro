@@ -25,8 +25,14 @@ Let us tell you why we have chosen this technology to provide security and scala
 
 Polygon enhances Ethereum scalability through a layered architecture that increases transaction throughput while minimizing costs. Here are its key technology features:`
   },
-  polygon: "Polygon is a multi-faceted platform for Ethereum-compatible blockchains, offering a solution for Ethereum scalability and interoperability.",
-  ether: "Benefits: Ethereum compatibility, improved performance and security, opportunity for multiple applications and blockchains.",
+  polygon: {
+    title: "Why Poligon?",
+    body: "The choice fell on the Polygon blockchain due to its high performance, compatibility with Ethereum, and multilayer architecture. This allows the platform to process a large number of operations simultaneously, ensuring speed and low costs."
+  },
+  ether: {
+    title: "Compatibility and Scalability",
+    body: "Polygon offers full compatibility with Ethereum, expanding its application possibilities. The multilayer architecture accelerates transactions and makes the platform ready for scaling in the future."
+  },
   grid: [
     {
       title: "Polygon security framework",
@@ -60,17 +66,9 @@ const props_props = {
       subtitle: "Identity in a decentralized environment.",
       body: [
         {
-          title: "Uniqueness",
-          body: "Each user receives a unique identifier that is not controlled by centralized structures."
+          title: "",
+          body: "Platform users receive unique identifiers that are not controlled by centralized structures. This ensures the privacy and security of each user's data."
         },
-        {
-          title: "Security",
-          body: "Protection against data theft and leaks thanks to decentralized systems."
-        },
-        {
-          title: "Privacy",
-          body: "Users have full control over their data and its use."
-        }
       ],
       image: "cubic",
       bg_image: "grad_cubic"
@@ -79,25 +77,12 @@ const props_props = {
 }
 
 const dispute_props = {
-  title: `Dispute between the parties to the transaction
-Protecting your interests at every stage.`,
+  title: `Dispute Resolution Mechanisms`,
   body: [
     {
-      title: "Understanding the risks",
-      body: "We recognize that there may be ambiguities or disputes when using the platform. This is a normal part of any business or investment."
+      title: "",
+      body: "In case of disputes or disagreements, Crossnetics provides tools for their resolution. These mechanisms guarantee fairness and transparency in resolving conflict situations, safeguarding the interests of all parties."
     },
-    {
-      title: "Mechanism for resolving disputes",
-      body: "If disputes arise, we provide tools to resolve them. This ensures a fair, impartial and transparent resolution to any issues that arise."
-    },
-    {
-      title: "Mechanism for resolving disputes",
-      body: "Either party can initiate a dispute directly through the Crossnetics platform user interface. This process is designed to eliminate the possibility of fraud and give each party the opportunity to express their point of view."
-    },
-    {
-      title: "Mechanism for resolving disputes",
-      body: "You won't have to worry about potential conflicts or disagreements. We provide a clear and structured process for resolving them that ensures your interests are protected."
-    }
   ],
 }
 
@@ -114,13 +99,16 @@ In addition, by focusing on privacy and data protection, Crossnetics ensures tha
   <main class="w-full" transition:animate="slide">
     <Hero {...hero_props} />
       <div class="bg-gradient-to-b from-sky-200 via-sky-100 to-sky-200 flex items-center justify-center">
-        <div class="w-11/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center my-20">
+        <div class="w-10/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center my-20">
           <h1 class="font-bold text-2xl xl:text-3xl leading-tight text-gray-600 mb-10 ml-[1.9rem]">{header}</h1>
           <div class="flex flex-col gap-y-8">
             <Introduction {...introduction_props}  />
             <Pros {...props_props} />
             <Dispute {...dispute_props} />
-            <Conclusion {...conclusion_props} />
+            <!-- <Conclusion {...conclusion_props} /> -->
+            <div class="self-center mt-16 w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+              <div class="text-blue-500 text-xs font-extrabold uppercase">Try now for free</div>
+            </div>
           </div>
         </div>
       </div>
