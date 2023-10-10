@@ -37,7 +37,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                 style={{
                   background: `linear-gradient(to left, ${entry.gradient[0]}, ${entry.gradient[1]})`,
                 }}
-                className="h-[58rem] iphonePro:h-[53rem] lg:h-[600px] 2lg:h-[700px] flex items-start justify-center 2lg:items-center lg:justify-center"
+                className="h-[58rem] iphonePro:h-[53rem] md:h-[600px] 2lg:h-[700px] flex items-start justify-center 2lg:items-center lg:justify-center"
               >
                 <div className="relative flex flex-row justify-between w-10/12 lg:w-2/3 h-2/3 mt-10 2lg:my-20">
                   <div className="2lg:flex w-4/12 items-start justify-center absolute hidden  2lg:relative">
@@ -48,12 +48,12 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                       loading="lazy"
                     />
                   </div>
-                  <div className="relative flex flex-col gap-6 items-start justify-start h-full lg:w-7/12 z-20">
-                    <div className="flex flex-row flex-wrap gap-2 mb-52 lg:mb-6 w-full">
+                  <div className="relative flex flex-col gap-6 items-start justify-start h-full md:w-7/12 z-20">
+                    <div className="flex flex-row flex-wrap justify-between md:justify-start gap-y-2 md:gap-2 mb-44 md:mb-6 w-full">
                       {social.map((entry, idx) => {
                         const isActive = idx === index;
                         const baseClasses =
-                          "h-11 min-w-[46px] px-3 h-11 rounded-2xl flex justify-center items-center cursor-pointer";
+                          "min-w-[46px] px-2 md:px-3 h-11 rounded-2xl flex justify-center items-center cursor-pointer";
                         const bgHoverClass = isActive
                           ? ""
                           : "hover:shadow-lg hover:bg-opacity-60 transition-shadow duration-300";
@@ -71,7 +71,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                           >
                             {isActive ? (
                               <div
-                                className={`${textColorClass} text-xs font-extrabold uppercase mt-[1px]`}
+                                className={`${textColorClass} text-2xs md:text-xs font-extrabold uppercase mt-[1px]`}
                               >
                                 {entry.button}
                               </div>
@@ -109,7 +109,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                       </p>
                     </div>
                   </div>
-                  <div className="lg:flex w-full tablet:w-3/4 md:w-1/2 absolute z-0 -right-20 tablet:-right-10 mt-12 lg:w-5/12 items-start justify-start lg:relative 2lg:hidden ">
+                  <div className="lg:flex w-8/12 md:w-1/2 absolute z-0 -right-20 md:-right-10 mt-20 lg:w-5/12 items-start justify-start lg:relative 2lg:hidden ">
                     <img
                       src={`/3d_images/${entry.image}`}
                       alt=""
