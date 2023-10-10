@@ -49,11 +49,11 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                     />
                   </div>
                   <div className="relative flex flex-col gap-6 items-start justify-start h-full lg:w-7/12 z-20">
-                    <div className="flex flex-row flex-wrap gap-2 mb-52 lg:mb-6 w-full">
+                    <div className="flex flex-row flex-wrap justify-between md:justify-start gap-y-2 md:gap-2 mb-52 md:mb-6 w-full">
                       {social.map((entry, idx) => {
                         const isActive = idx === index;
                         const baseClasses =
-                          "h-11 min-w-[46px] px-3 h-11 rounded-2xl flex justify-center items-center cursor-pointer";
+                          "min-w-[46px] px-2 md:px-3 h-11 rounded-2xl flex justify-center items-center cursor-pointer";
                         const bgHoverClass = isActive
                           ? ""
                           : "hover:shadow-lg hover:bg-opacity-60 transition-shadow duration-300";
@@ -71,7 +71,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                           >
                             {isActive ? (
                               <div
-                                className={`${textColorClass} text-xs font-extrabold uppercase mt-[1px]`}
+                                className={`${textColorClass} text-2xs md:text-xs font-extrabold uppercase mt-[1px]`}
                               >
                                 {entry.button}
                               </div>

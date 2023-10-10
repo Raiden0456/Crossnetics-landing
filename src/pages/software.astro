@@ -10,7 +10,7 @@ const hero_props = {
 Below are the platform's key capabilities, each designed to meet the needs of advertisers, execs and other digital advertising marketers.`,
   button: "Get started for free",
   gradient: ["#1F3266", "#2882FF"],
-  ipad_slides: ["slide.png", "slide.png", "slide.png", "slide.png"],
+  hero_image: "/software_img/hero.png",
 }
 
 const collapse_sections = [
@@ -256,7 +256,7 @@ const collapse_sections = [
 ---
 
 <Layout title="Crossnetics software">
-  <main class="w-full" transition:animate="slide">
+  <main class="w-full" transition:animate="fade">
     <Hero {...hero_props} />
     <Collapse sections={collapse_sections} client:load/>
   </main>
