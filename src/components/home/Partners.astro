@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 interface Props {
   title: string;
-  partner_images: string[];
+  partner_images: any[];
 }
 
 const { title, partner_images } = Astro.props;
@@ -16,7 +16,7 @@ const { title, partner_images } = Astro.props;
     <div class="flex flex-row flex-wrap justify-start md:justify-between items-center gap-10 md:gap-14">
       {partner_images.map((image) => (
         <div class="w-3/12 flex justify-center items-center">
-          <Image class="w-full h-full object-contain" src={image} width={30} height={30} alt="" />
+          <Image class="w-full h-full object-contain" src={image} alt="" />
         </div>
       ))}
     </div>

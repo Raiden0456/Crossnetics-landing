@@ -4,13 +4,43 @@ import Layout from "../layouts/Layout.astro";
 import LatestBlog from "@components/Latest_blog.astro";
 import WhatIs from "@components/community/WhatIs.astro";
 
+//top banner image
+import top from "../images/community_img/top.png";
+
+
+//Groups images 
+import comp from "../images/community_img/comp.png";
+import highFive from "../images/community_img/high-five.png";
+import look from "../images/community_img/look.png";
+
+const group_images = {
+  comp,
+  highFive,
+  look
+}
+
+//What is images
+import groups from "../images/community_img/groups.svg";
+import update from "../images/community_img/update.svg";
+import testing from "../images/community_img/testing.svg";
+import partner from "../images/community_img/partner.svg";
+
+const whatIs_images = {
+  groups,
+  update,
+  testing,
+  partner
+}
+
+
+
 const groups_props = {
   title: "User Groups",
   posts: [
     {
       title: "Job Board",
       body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
-      image: "/community_img/comp.png",
+      image: group_images.comp,
       group: {
         type: "Public",
         members: 123,
@@ -19,7 +49,7 @@ const groups_props = {
     {
       title: "Crossnetics Academy Group",
       body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
-      image: "/community_img/high-five.png",
+      image: group_images.highFive,
       group: {
         type: "Public",
         members: 123,
@@ -28,7 +58,7 @@ const groups_props = {
     {
       title: "Networking Group",
       body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
-      image: "/community_img/look.png",
+      image: group_images.look,
       group: {
         type: "Public",
         members: 123,
@@ -47,22 +77,22 @@ Use your Crossnetics username and password to log in.`,
     {
       title: "USERS GROUPS",
       body: "Find a Chapter by city, language or topic",
-      image: "groups"
+      image: whatIs_images.groups
     },
     {
       title: "PRODUCT UPDATES",
       body: "Stay up to date on the latest releases",
-      image: "update"
+      image: whatIs_images.update
     },
     {
       title: "Become a TESTER",
       body: "Have a say in our product development",
-      image: "testing"
+      image: whatIs_images.testing
     },
     {
       title: "Become a partner",
       body: "Have a say in our product development",
-      image: "partner"
+      image: whatIs_images.partner
     },
   ],
   button: "LOG IN to CROSSNETICS"
@@ -72,7 +102,7 @@ Use your Crossnetics username and password to log in.`,
 
 <Layout title="Crossnetics security">
   <main class="w-full" transition:animate="fade">
-    <Image src="/community_img/top.png" alt="" width={100} height={100} class="w-full mt-16" />
+    <Image src={top} alt="" class="w-full mt-16" />
     <WhatIs {...whatIs_props} /> 
     <LatestBlog {...groups_props} />    
   </main>

@@ -6,12 +6,24 @@ import Pros from "@components/security/Pros.astro";
 import Dispute from "@components/security/Dispute.astro";
 import Conclusion from "@components/security/Conclusion.astro";
 
+// Hero images
+import computer from "../images/security_img/computer.png";
+
+// Introduction images
+import poly_shield from "../images/security_img/poly_shield.svg";
+import ether_sign from "../images/security_img/ether_sign.svg";
+
+// Pros images
+import cubic from "../images/security_img/cubic.svg";
+import grad_cubic from "../images/security_img/grad_cubic.png";
+
+
 const hero_props = {
   header: "Key Features\nof Safety and Security",
   body: `In an era of rapidly changing technology and market demands, the Crossnetics platform provides a set of innovative tools to effectively engage with the world of digital marketing.`,
   button: "Get started for free",
   gradient: ["#1B76FF", "#49E3B5"],
-  hero_image: "/security_img/computer.png",
+  hero_image: computer,
 }
 
 const header = "Security Section for Crossnetics Platform"
@@ -37,12 +49,12 @@ Polygon enhances Ethereum scalability through a layered architecture that increa
     {
       title: "Transaction security",
       body: "Utilizing PoS and Plasma chains technologies, Polygon creates a secure environment for conducting transactions. These technologies provide additional layers of protection, making the platform resilient to potential threats.",
-      image: "poly_shield"
+      image: poly_shield
     },
     {
       title: "Benefits of Smart Contracts",
       body: "Smart contracts on Polygon automate and simplify many processes on the platform. They ensure transparency and reliable execution of contract terms, making advertising campaigns more effective.",
-      image: "ether_sign"
+      image: ether_sign
     }
   ]
 }
@@ -70,8 +82,8 @@ const props_props = {
           body: "Platform users receive unique identifiers that are not controlled by centralized structures. This ensures the privacy and security of each user's data."
         },
       ],
-      image: "cubic",
-      bg_image: "grad_cubic"
+      image: cubic,
+      bg_image: grad_cubic
     }
   ]
 }

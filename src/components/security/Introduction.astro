@@ -1,6 +1,10 @@
 ---
 import { Image } from "astro:assets";
 
+//Images
+import description_img from "../../images/icons/description.svg";
+import polygon_img from "../../images/icons/polygon.svg";
+import ether_img from "../../images/icons/ether.svg";
 interface Text {
   title: string;
   body: string;
@@ -9,7 +13,7 @@ interface Text {
 interface Grid_element {
   title: string;
   body: string;
-  image: string;
+  image: any;
 }
 
 interface Props {
@@ -23,7 +27,7 @@ const {introduction, polygon, ether, grid} = Astro.props;
 ---
 
 <div class="flex flex-row gap-x-4 w-full items-start justify-start">
-  <Image src="/icons/description.svg" class="w-4 mt-2" alt="" width={20} height={20}/>
+  <Image src={description_img} class="w-4 mt-2" alt="" />
   <div class="flex flex-col gap-y-5">
     <h2 class="text-blue-500 font-bold text-2xl leading-tight">
       {introduction.title}
@@ -34,7 +38,7 @@ const {introduction, polygon, ether, grid} = Astro.props;
   </div>
 </div>
 <div class="flex flex-row gap-x-4 w-full items-start justify-start">
-  <Image src="/icons/polygon.svg" class="w-5 mt-2" alt="" width={20} height={20}/>
+  <Image src={polygon_img} class="w-5 mt-2" alt="" />
   <div class="flex flex-col gap-y-5">
     <h2 class="text-gray-600 font-bold text-2xl leading-tight">
       {polygon.title}
@@ -45,7 +49,7 @@ const {introduction, polygon, ether, grid} = Astro.props;
   </div>
 </div>
 <div class="flex flex-row gap-x-4 w-full items-start justify-start">
-  <Image src="/icons/ether.svg" class="w-5" alt="" width={20} height={20}/>
+  <Image src={ether_img} class="w-5" alt="" />
   <div class="flex flex-col gap-y-5">
     <h2 class="text-gray-600 font-bold text-2xl leading-tight">
       {ether.title}
@@ -58,7 +62,7 @@ const {introduction, polygon, ether, grid} = Astro.props;
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
   {grid.map((section, index) => (
     <div class="flex flex-col items-start justify-start p-8 xl:p-10 bg-white rounded-[50px] gap-y-2 xl:gap-y-4">
-      <Image src={`/security_img/${section.image}.svg`} alt="" width={30} height={30} class="w-10 h-10"/> 
+      <Image src={section.image} alt=""  class="w-10 h-10"/> 
       <h1 class="text-gray-600 text-base font-bold uppercase leading-tight">{section.title}</h1>
       <p class="text-gray-600 text-sm">{section.body}</p>
     </div>

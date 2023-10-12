@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+
 interface Details {
   title: string;
   description: string;
@@ -145,10 +146,9 @@ export default function Collapse({ sections }: Props) {
                     className={`transform duration-500 ${
                       openSections[index] ? "-scale-y-100" : ""
                     }`}
-                    src="arrow.svg"
+                    src="/arrow.svg"
+                    width={20}
                     alt=""
-                    width={15}
-                    height={15}
                   />
                 </div>
                 <div
@@ -163,10 +163,8 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="/icons/description.svg"
+                          src="/description.svg"
                           alt=""
-                          width={20}
-                          height={20}
                         />
                         <div className="flex flex-col gap-y-2">
                           <h2 className="text-blue-500 font-bold text-2xl leading-tight">
@@ -186,7 +184,7 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="/icons/key.svg"
+                          src="/key.svg"
                           alt=""
                           width={20}
                           height={20}
@@ -221,7 +219,7 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="/icons/star.svg"
+                          src="/star.svg"
                           alt=""
                           width={20}
                           height={20}
