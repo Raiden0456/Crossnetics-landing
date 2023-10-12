@@ -3,6 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
 import Collapse from "@components/software/Collapse";
 
+
+//Images
+import hero_img from "../images/software_img/hero.png";
+
 const hero_props = {
   header: "Key Features\nof Crossnetics Platform",
   body: `In an era of rapidly changing technology and market demands, the Crossnetics platform provides a set of innovative tools to effectively engage with the world of digital marketing.
@@ -10,7 +14,7 @@ const hero_props = {
 Below are the platform's key capabilities, each designed to meet the needs of advertisers, execs and other digital advertising marketers.`,
   button: "Get started for free",
   gradient: ["#1F3266", "#2882FF"],
-  hero_image: "/software_img/hero.png",
+  hero_image: hero_img,
 }
 
 const collapse_sections = [

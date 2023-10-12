@@ -1,10 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 
+//Images 
+import page from '../../images/3d_images/page.png';
+import blogImg from '../../images/blog_img/blog.svg';
+
 interface Section {
   title: string;
   body: string;
-  image: string;
+  image: any;
 }
 
 interface Props {
@@ -31,18 +35,18 @@ const { title, sections, general, blog } = Astro.props;
           <h1 class="text-white text-base font-bold uppercase leading-tight">{general.title}</h1>
           <p class="text-white text-sm">{general.body}</p>
         </div>
-        <Image src="/3d_images/page.png" alt="" width={30} height={30} class="flex w-11/12 xl:w-1/3 md:w-4/12 2lg:w-5/12 absolute -right-10 md:right-0 -bottom-12 md:-mt-10 2lg:-mt-4 z-100" />
+        <Image src={page} alt=""  class="flex w-11/12 xl:w-1/3 md:w-4/12 2lg:w-5/12 absolute -right-10 md:right-0 -bottom-12 md:-mt-10 2lg:-mt-4 z-100" />
       </div>
       {sections.map((section, index) => (
         <div class="flex flex-col items-start justify-start p-7 xl:p-10 bg-white rounded-[50px] gap-y-3 xl:gap-y-4">
-          <Image src={`/blog_img/${section.image}.svg`} alt="" width={30} height={30} class="w-10 h-10"/> 
+          <Image src={section.image} alt=""  class="w-10 h-10"/> 
           <h1 class="text-blue-500 text-base font-bold uppercase leading-tight">{section.title}</h1>
           <p class="text-gray-400 text-sm">{section.body}</p>
         </div>
       ))}
     </div>
     <div class="flex flex-row items-start justify-start xl:w-3/4 gap-x-5 lg:gap-x-10">
-      <Image src={`/blog_img/blog.svg`} alt="" width={30} height={30} class="w-8 md:w-10 xl:w-14"/>
+      <Image src={blogImg} alt=""  class="w-8 md:w-10 xl:w-14"/>
       <h1 class="text-blue-500 text-xs lg:text-base leading-tight">{blog}</h1>
     </div>
   </div>

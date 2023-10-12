@@ -1,11 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 
+//Images
+import coming from '../images/latest_blog/coming.svg';
+
 interface Post {
   title: string;
   body: string;
-  image: string;
+  image: any;
   tags?: string[];
+  date?: string;
   group?: {
     type: string;
     members: number;
@@ -25,30 +29,31 @@ const { title, posts, button } = Astro.props;
   <div class="w-10/12 lg:w-2/3 flex flex-col justify-center gap-y-10 my-10 xl:my-20">
     <div class="flex flex-row items-center justify-start h-full w-full xl:w-[70%] gap-x-6">
       <h1 class="text-4xl font-bold text-start text-gray-600 opacity-70">{title}</h1>
-      <Image src="/latest_blog/coming.svg" alt="Coming soon" width={30} height={30} class="w-10"/> 
+      <Image src={coming} alt="Coming soon"  class="w-10"/> 
     </div>
     <div class="flex flex-col justify-center items-center gap-y-10">
       <div class="grid grid-cols-1 md:grid-cols-2 2lg:grid-cols-3 gap-6">
         {posts.map((post, index) => (
           <div class="flex flex-col bg-white rounded-[50px] overflow-hidden flex-shrink-0 opacity-70">
               <div class="w-full h-40 xl:h-72 overflow-hidden">
-                  <Image src={`${post.image}`} alt="" width={30} height={30} class="w-full h-full object-cover"/> 
+                  <Image src={post.image} alt=""  class="w-full h-full object-cover"/> 
               </div>
               <div class="p-8 xl:p-10 flex flex-col gap-y-2 xl:gap-y-4">
-                  {post.tags && 
-                    <div class="flex flex-row gap-2 w-full flex-wrap">
-                      {post.tags.map((tag, index) => (
-                          <div class="px-2.5 py-0.5 bg-sky-100 rounded-[7px] justify-center items-center ">
-                              <div class="text-blue-500 text-[10px] font-medium leading-[13px]">{tag}</div>
-                          </div>
-                      ))}
-                    </div>
-                  }
+                  <div class=" text-slate-300 text-2xs font-medium">{post.date}</div>
                   {post.group && 
                     <p class="text-slate-300 text-xs font-medium leading-[13px]">{post.group.type} / {post.group.members} members</p>
                   }
                   <h1 class="text-blue-500 text-base font-bold">{post.title}</h1>
                   <p class="text-gray-400 text-sm ">{post.body}</p>
+                  {post.tags && 
+                    <div class="flex flex-row gap-2 w-full flex-wrap justify-end bottom-0">
+                      {post.tags.map((tag, index) => (
+                          <div class="px-2.5 py-1.5 bg-sky-100 rounded-xl justify-center items-center">
+                              <div class="text-blue-500 text-2xs font-medium">{tag}</div>
+                          </div>
+                      ))}
+                    </div>
+                  }
               </div>
           </div>
       ))}

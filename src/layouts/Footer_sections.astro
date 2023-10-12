@@ -3,6 +3,13 @@ import { ViewTransitions } from 'astro:transitions';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 
+//Images 
+import twitter from '../images/footer/twitter.svg';
+import instagram from '../images/footer/instagram.svg';
+import github from '../images/footer/github.svg';
+import linkedin from '../images/footer/linkedin.svg';
+import telegram from '../images/footer/telegram.svg';
+
 interface Props {
 	title: string;
 }
@@ -40,28 +47,28 @@ const footer = {
 		{
 			title: "Twitter",
 			url: "",
-			icon: "/footer/twitter.svg"
+			icon: twitter
 		},
 		{
 			title: "Instagram",
 			url: "",
-			icon: "/footer/instagram.svg"
+			icon: instagram
 
 		},
 		{
 			title: "Github",
 			url: "",
-			icon: "/footer/github.svg"
+			icon: github
 		},
 		{
 			title: "Linkedin",
 			url: "",
-			icon: "/footer/linkedin.svg"
+			icon: linkedin
 		},
 		{
 			title: "Telegram",
 			url: "",
-			icon: "/footer/telegram.svg"
+			icon: telegram
 		},
 		
 	]

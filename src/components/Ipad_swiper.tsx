@@ -9,11 +9,11 @@ import 'swiper/css/pagination';
 import '../styles/Ipad_pagination.css';
 
 interface IpadSwiperProps {
-  image_path: string[];
+  slides: any[];
   pagi_active: boolean;
 }
 
-export default function IpadSwiper({ image_path, pagi_active = true }: IpadSwiperProps) {
+export default function IpadSwiper({ slides, pagi_active = true }: IpadSwiperProps) {
   const swiperRef = useRef<SwiperCore | null>(null);
   const [activeIndex, setActiveIndex] = useState(0); // State to keep track of the active slide
   const pagi_active_class = pagi_active ? "" : "hidden";
@@ -24,8 +24,9 @@ export default function IpadSwiper({ image_path, pagi_active = true }: IpadSwipe
     }
   };
 
+
   return (
-    <div className="relative w-full h-full drop-shadow-ipad bg-[url('/ipad.png')] bg-cover">
+    <div className="relative w-full h-full drop-shadow-ipad bg-[url('/src/images/ipad.png')] bg-cover">
       <div className="relative w-full h-full p-2 sm:p-4 lg:p-3 2lg:p-4 -ml-[1px] rounded-sm md:rounded-lg">
         <div className="w-full h-full rounded-xl overflow-hidden">
           <Swiper
@@ -48,17 +49,17 @@ export default function IpadSwiper({ image_path, pagi_active = true }: IpadSwipe
               swiperRef.current = swiper;
             }}
             onSlideChange={(swiper) => {
-              setActiveIndex(swiper.activeIndex % image_path.length);
+              setActiveIndex(swiper.activeIndex % slides.length);
             }}
           >
-            {image_path.map((path, index) => (
+            {slides.map((slide, index) => (
               <SwiperSlide key={index} onClick={handleSlideClick}>
-                <img src={path} alt="" loading='eager' />
+                <img src={slide.src} alt="" loading='eager' />
               </SwiperSlide>
             ))}
           </Swiper>
           <div className={`${pagi_active_class} absolute left-0 right-0 -bottom-10 flex items-center justify-center`}>
-            {image_path.map((_, index) => {
+            {slides.map((_, index) => {
               const baseClasses = "bg-white w-2 h-2 rounded-full transition-all duration-300 transform mx-1";
               const activeClass = index === activeIndex ? "w-6" : "";
               return <div key={index} className={`${baseClasses} ${activeClass}`}></div>;

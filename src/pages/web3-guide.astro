@@ -1,7 +1,12 @@
 ---
-import { Image } from 'astro:assets';
 import Footer_sections from "../layouts/Footer_sections.astro";
 import Web3_guide from "../components/footer_sections/Web3_guide.astro";
+
+//Images
+import step1 from "../images/footer_img/step1.png";
+import step2 from "../images/footer_img/step2.png";
+import step3 from "../images/footer_img/step3.png";
+
 
 const data_props = {
   title: "Web3.0 guide",
@@ -16,7 +21,7 @@ const data_props = {
         'Click on the "Get Started" or "Download" button to begin the extension installation.',
         "Follow the instructions to install MetaMask in your browser (Google Chrome, Mozilla Firefox, and other supported browsers).",
       ],
-      image: "/footer_img/step1.png",
+      image: step1,
     },
     {
       title: "Creating a Wallet",
@@ -25,7 +30,7 @@ const data_props = {
         'Select "Create a Wallet."',
         "Create a password for your wallet and follow the instructions to generate your secret phrase (seed phrase). Be sure to save this phrase in a secure location as it will be needed to restore access to your wallet.",
       ],
-      image: "/footer_img/step2.png",
+      image: step2,
     },
     {
       title: "Connecting to the Polygon Blockchain",
@@ -33,7 +38,7 @@ const data_props = {
         "After creating the MetaMask wallet, return to our website.",
         `On the page, you'll see the "Сonnect to web2/3" button. Click on it.`,
       ],
-      image: "/footer_img/step3.png",
+      image: step3,
     },
     {
       title: "Interacting with the Polygon Blockchain Website",

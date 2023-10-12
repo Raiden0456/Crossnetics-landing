@@ -7,13 +7,14 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "../../styles/Social_swiper.css";
 
+
 interface Social {
   header: string;
   title: string;
   button: string;
   description: string;
   testimonial: string;
-  image: string;
+  image: any;
   gradient: string[];
 }
 
@@ -42,7 +43,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                 <div className="relative flex flex-row justify-between w-10/12 lg:w-2/3 h-2/3 mt-10 2lg:my-20">
                   <div className="2lg:flex w-4/12 items-start justify-center absolute hidden  2lg:relative">
                     <img
-                      src={`/3d_images/${entry.image}`}
+                      src={entry.image.src}
                       alt=""
                       className="w-full"
                       loading="lazy"
@@ -77,7 +78,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                               </div>
                             ) : (
                               <img
-                                src={`/icons/${entry.button.toLowerCase()}.svg`}
+                                src={`/src/images/icons/${entry.button.toLowerCase()}.svg`}
                                 alt="Icon"
                                 className="w-5 h-5"
                               />
@@ -99,7 +100,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                     </div>
                     <div className="flex flex-row lg:flex-col gap-2 justify-start items-start">
                       <img
-                        src="/logo.svg"
+                        src="/src/images/logo.svg"
                         alt=""
                         className="w-8"
                         loading="lazy"
@@ -111,7 +112,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                   </div>
                   <div className="lg:flex w-8/12 md:w-1/2 absolute z-0 -right-20 md:-right-10 mt-20 lg:w-5/12 items-start justify-start lg:relative 2lg:hidden ">
                     <img
-                      src={`/3d_images/${entry.image}`}
+                      src={entry.image.src}
                       alt=""
                       className="w-full"
                       loading="lazy"

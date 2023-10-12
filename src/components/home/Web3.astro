@@ -1,9 +1,14 @@
 ---
 import { Image } from 'astro:assets';
+
+//Images 
+import logo from '../../images/logo.svg';
+import web3 from '../../images/web3/WEB3.0.svg';
+
 interface Section {
   title: string;
   body: string;
-  image: string;
+  image: any;
 }
 
 interface Props {
@@ -25,7 +30,7 @@ const { title, body, sections, testimonial } = Astro.props;
     <div class="grid grid-cols-1 2lg:grid-cols-2 gap-6">
       {sections.map ((section) => (
         <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 p-7 rounded-[50px] bg-web3-grid">
-          <Image src={`/web3/${section.image}`} alt="" width={50} height={50} class="flex w-32 xl:w-60" />
+          <Image src={section.image} alt=""  class="flex w-32 xl:w-60" />
           <div class="flex flex-col items-center justify-center text-center md:text-start md:items-start md:justify-start gap-y-2 xl:gap-y-4">
             <h1 class="text-base font-bold uppercase text-sky-100 ">{ section.title }</h1>
             <p class="text-Web3-body text-sm font-normal text-sky-100">{ section.body }</p>
@@ -34,10 +39,9 @@ const { title, body, sections, testimonial } = Astro.props;
       ))}
     </div>
     <div class="flex flex-row w-full gap-5 md:gap-10 items-center">
-      <Image src="/logo.svg" alt="" width={50} height={50} class="w-10 lg:w-40 self-start md:self-auto" />
+      <Image src={logo} alt=""  class="w-10 lg:w-40 self-start md:self-auto" />
       <p class="text-web3-body text-base font-normal">{ testimonial }</p>
-      <Image src="/web3/WEB3.0.svg" alt="" width={100} height={1} class="hidden md:flex w-60" />
-      <Image src="/web3/rotated_WEB3.0.svg" alt="" width={100} height={1} class="md:hidden h-32" />
+      <Image src={web3} alt=""  class="hidden md:flex w-60" />
     </div>
   </div>
 </div>

@@ -1,5 +1,9 @@
 ---
 import { Image } from "astro:assets";
+
+//Images
+import info from "../../images/icons/info.svg";
+
 interface Props {
   title: string;
   subtitle: string;
@@ -9,7 +13,7 @@ interface Props {
     title?: string;
     body?: string;
     list?: string[];
-    image?: string;
+    image?: any;
   }[];
 }
 
@@ -23,11 +27,9 @@ const { title, subtitle, body, button, steps } = Astro.props;
   <div class="flex flex-col gap-y-10">
     <div class="flex flex-row gap-x-4 w-full items-start justify-start">
       <Image
-        src="/icons/info.svg"
+        src={info}
         class="h-[17px] mt-1"
         alt=""
-        width={24}
-        height={24}
       />
       <div class="flex flex-col gap-y-2">
         {
@@ -83,8 +85,6 @@ const { title, subtitle, body, button, steps } = Astro.props;
                 src={step.image}
                 class="w-full"
                 alt=""
-                width={20}
-                height={20}
               />
             </div>
           )}

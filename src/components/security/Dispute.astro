@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
+//Images
+import info from "../../images/icons/info.svg";
 interface Props {
   title: string;
   body: {
@@ -14,7 +16,7 @@ const {title, body} = Astro.props;
 ---
 
 <div class="flex flex-row gap-x-4 w-full items-start justify-start">
-  <Image src="/icons/info.svg" class="w-4 mt-2" alt="" width={20} height={20}/>
+  <Image src={info} class="w-4 mt-2" alt=""/>
   <div class="flex flex-col gap-y-2">
     <h2 class="text-blue-500 font-bold text-2xl leading-tight whitespace-pre-wrap">
       {title}
