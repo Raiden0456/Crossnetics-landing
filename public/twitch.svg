@@ -1,0 +1,7 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="twitch">
+<path d="M11.8261 4H10.4348V8H11.8261V4Z" fill="white"/>
+<path d="M6.95652 4H8.34783V8H6.95652V4Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.66667L1.09078 0H16V10L11.8261 14H8.34783L6.18156 16H3.47826V14H0V2.66667ZM11.8261 11.3333L14.6087 8.66667V1.33333H2.78261V11.3333H5.56522V13.3333L7.65217 11.3333H11.8261Z" fill="white"/>
+</g>
+</svg>

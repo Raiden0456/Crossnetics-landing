@@ -146,7 +146,7 @@ export default function Collapse({ sections }: Props) {
                     className={`transform duration-500 ${
                       openSections[index] ? "-scale-y-100" : ""
                     }`}
-                    src="/src/images/arrow.svg"
+                    src="/arrow.svg"
                     width={20}
                     alt=""
                   />
@@ -163,7 +163,7 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="/src/images/icons/description.svg"
+                          src="/description.svg"
                           alt=""
                         />
                         <div className="flex flex-col gap-y-2">
@@ -184,7 +184,7 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="/src/images/icons/key.svg"
+                          src="/key.svg"
                           alt=""
                           width={20}
                           height={20}
@@ -219,7 +219,7 @@ export default function Collapse({ sections }: Props) {
                       <div className="flex flex-row gap-x-4 w-full items-start justify-start">
                         <img
                           className="w-5 mt-2"
-                          src="/src/images/icons/star.svg"
+                          src="/star.svg"
                           alt=""
                           width={20}
                           height={20}

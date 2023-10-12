@@ -78,7 +78,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                               </div>
                             ) : (
                               <img
-                                src={`/src/images/icons/${entry.button.toLowerCase()}.svg`}
+                                src={`/${entry.button.toLowerCase()}.svg`}
                                 alt="Icon"
                                 className="w-5 h-5"
                               />
@@ -100,7 +100,7 @@ export default function SocialSwiper({ social: social }: { social: Social[] }) {
                     </div>
                     <div className="flex flex-row lg:flex-col gap-2 justify-start items-start">
                       <img
-                        src="/src/images/logo.svg"
+                        src="/logo.svg"
                         alt=""
                         className="w-8"
                         loading="lazy"
