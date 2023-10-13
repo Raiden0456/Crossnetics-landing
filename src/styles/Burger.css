@@ -12,25 +12,41 @@
   height: 2px !important;
 } 
 
-
 .bm-menu {
-  background: linear-gradient(to right, rgb(45, 100, 190), rgb(75, 192, 200));
-  padding: 2.5em 1.5em 0;
+  background: linear-gradient(to bottom, rgba(42, 48, 67, 0.9) 0%, rgba(42, 48, 67, 0.9) 85%, rgba(39, 125, 255, 0.9) 140%);
+  padding: 2.5em 1em 0;
   font-size: 30px;
   font-weight: 500;
   line-height: 1.25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+}
+
+
 .bm-item {
-  color: #DDF2FD;
-  margin-top: 10px;
-}:active {
-  color: white;
+  display: inline-block;
+  text-align: center;
+  color: #DEEFFF;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-size: 20px; 
+  text-transform: uppercase;
 }
 
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 40px;
+  width: 40px;
 }
 
 .bm-cross {
