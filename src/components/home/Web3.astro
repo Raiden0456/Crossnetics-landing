@@ -38,9 +38,13 @@ const { title, body, sections, testimonial } = Astro.props;
         </div>
       ))}
     </div>
-    <div class="flex flex-row w-full gap-5 md:gap-10 items-center">
-      <Image src={logo} alt=""  class="w-10 lg:w-40 self-start md:self-auto" />
-      <p class="text-web3-body text-base font-normal">{ testimonial }</p>
+    <div class="flex flex-col md:flex-row w-full gap-5 md:gap-10 items-center justify-start">
+      <div class="md:hidden flex flex-row gap-5 md:gap-10 self-start">
+        <Image src={logo} alt=""  class="w-10 lg:w-40 self-start md:self-auto" />
+        <Image src={web3} alt=""  class="flex w-32" />
+      </div>
+      <Image src={logo} alt=""  class="hidden md:flex w-20 self-start md:self-auto" />
+      <p class="text-web3-body text-sm font-normal">{ testimonial }</p>
       <Image src={web3} alt=""  class="hidden md:flex w-60" />
     </div>
   </div>
