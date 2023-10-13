@@ -9,11 +9,17 @@ interface Section {
   title: string;
   url: string;
 }
+interface Social {
+  title: string;
+  url: string;
+  icon: any;
+}
 interface Props {
 	sections: Section[];
+  burgerMenuSocial: Social[];
 }
 
-const { sections } = Astro.props;
+const { sections, burgerMenuSocial } = Astro.props;
 const activeSection = sections.find(section => section.url === Astro.url.pathname);
 
 ---
@@ -39,6 +45,6 @@ const activeSection = sections.find(section => section.url === Astro.url.pathnam
     </div>
   </div>
   <div class="lg:hidden absolute w-full h-full">
-    <BurgerMenu client:load />
+    <BurgerMenu social_media={burgerMenuSocial} client:load />
   </div>
 </div>
