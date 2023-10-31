@@ -27,12 +27,16 @@ const header_sections = {
 interface Social {
   title: string;
   url: string;
-  icon: any;
+  icon: {
+    src: string;
+    width?: number;
+    height?: number;
+    format?: string;
+  };
 }
 
 // BurgerMenu component
-const BurgerMenu = ( { social_media: social_media }: { social_media: Social[] } ) => {
-  console.log(social_media);
+const BurgerMenu = ({ social_media = [] }: { social_media?: Social[] }) => {
   return (
     <Menu right width={"100%"}>
       <>
@@ -68,7 +72,7 @@ const BurgerMenu = ( { social_media: social_media }: { social_media: Social[] } 
             <div className="w-full flex flex-row md:justify-between gap-6">
               <div className="flex flex-row flex-wrap items-center right-0 justify-start md:justify-end gap-4 w-fit">
                 {social_media && social_media.map((social, index) => (
-                  <div className="flex flex-row gap-x-1 2lg:gap-x-2 items-center justify-center w-22 text-slate-300 hover:text-sky-100">
+                  <div key={index}  className="flex flex-row gap-x-1 2lg:gap-x-2 items-center justify-center w-22 text-slate-300 hover:text-sky-100">
                     <img
                       src={social.icon.src}
                       alt=""
