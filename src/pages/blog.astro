@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LatestNews from '@components/blog/LatestNews.astro';
+import LatestInBlog from '@components/blog/LatestInBlog.astro';
+---
+
+<html>
+<head>
+    <title>Blog Page</title>
+</head>
+<body>
+<Layout>
+    <main class="w-full" transition:animate="slide">
+        <LatestNews />
+        <LatestInBlog />
+    </main>
+</Layout>
+</body>
+</html>

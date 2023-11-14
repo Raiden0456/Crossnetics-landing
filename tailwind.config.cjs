@@ -16,9 +16,9 @@ export default {
                 '2xl': '1920px',
                 'xl': '1600px',
                 '2lg': '1280px',
-                'xs': '360px',
-                'iphonePro': '376px',
                 'tablet': '429px',
+                'iphonePro': '376px',
+                'xs': '360px',
             },
             dropShadow: {
                 'ipad': '20px 20px 20px rgba(0, 0, 0, 0.3)',
