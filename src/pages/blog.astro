@@ -2,6 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import LatestNews from '@components/blog/LatestNews.astro';
 import LatestInBlog from '@components/blog/LatestInBlog.astro';
+
+//import image
+import blog_img from '../images/blog_page_img/blog_image.png'
+
+const latest_props = [
+    {
+        date: 'April 14, 2023',
+        title: 'Industry weighs potential of AI-designed watches',
+        text: 'Small text about. If you want to find the best time to post on Instagram, you\'re probably trying to...',
+        tags: ['Social'],
+        image: blog_img
+    }
+]
 ---
 
 <html>
@@ -11,7 +24,7 @@ import LatestInBlog from '@components/blog/LatestInBlog.astro';
 <body>
 <Layout>
     <main class="w-full" transition:animate="slide">
-        <LatestNews />
+        <LatestNews {...latest_props} />
         <LatestInBlog />
     </main>
 </Layout>

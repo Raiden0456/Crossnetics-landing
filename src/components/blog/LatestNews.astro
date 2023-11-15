@@ -1,5 +1,22 @@
 ---
 import Skeleton from './LastedNewsItem';
+
+interface News {
+    date: string
+    title: string
+    text: string
+    tags: string[]
+    image: any
+}
+
+interface Props {
+    latest: News[]
+}
+
+const { latest } = Astro.props
+
+console.log(latest)
+
 ---
 
 <div class="mx-auto p-4 mt-14 bg-[#DEEFFF]">
@@ -9,10 +26,10 @@ import Skeleton from './LastedNewsItem';
             <button class="text-[#0080FF]">View All</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-            <Skeleton  client:load/>
-            <Skeleton  client:load/>
-            <Skeleton  client:load/>
-            <Skeleton client:load/>
+            <Skeleton {latest} height="150px" client:load/>
+            <Skeleton {latest} height="150px" client:load/>
+            <Skeleton {latest} height="150px" client:load/>
+            <Skeleton {latest} height="150px" client:load/>
         </div>
     </div>
 </div>

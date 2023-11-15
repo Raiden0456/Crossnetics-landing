@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Skeleton from "react-loading-skeleton";
 
@@ -16,11 +16,8 @@ const BlogItemSkeleton = ({ width, height, rounded }: BlogSkeletonProps) => {
     height,
     borderRadius: rounded,
   };
-  return (
-    <>
-      <Skeleton style={style} />
-    </>
-  );
+  const [loading, setLoading] = useState(true);
+  return <>{loading ? <Skeleton style={style} /> : <div>hello</div>}</>;
 };
 
 export default BlogItemSkeleton;
