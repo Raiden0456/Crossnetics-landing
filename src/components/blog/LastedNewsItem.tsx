@@ -7,7 +7,7 @@ interface News {
   title: string;
   text: string;
   tags: string[];
-  image: string; // Предполагается, что это строка с URL изображения
+  image: string;
 }
 
 interface Props {
