@@ -1,5 +1,5 @@
 ---
-import Skeleton from './LastedNewsItem';
+import Skeleton from './LatestNewsItem';
 
 interface News {
     date: string
@@ -22,7 +22,7 @@ const { latest } = Astro.props
             <h2 class="text-2xl font-bold mb-4 text-[#484E5E]">Latest News</h2>
             <button class="text-[#0080FF]">View All</button>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Skeleton latest={latest} height={150}/>
             <Skeleton latest={latest} height={150} />
             <Skeleton latest={latest} height={150} />

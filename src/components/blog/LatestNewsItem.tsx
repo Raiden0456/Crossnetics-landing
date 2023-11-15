@@ -7,7 +7,7 @@ interface News {
   title: string;
   text: string;
   tags: string[];
-  image: string;
+  image: any;
 }
 
 interface Props {
@@ -25,9 +25,13 @@ const BlogItemSkeleton = ({ height, rounded, latest }: Props) => {
   return (
     <>
       {latest.map((el, index) => (
-        <div key={index} className="flex items-start">
-          <img src={el.image.src} alt={el.title} className="w-40" />
-          <div className="ml-2 space-y-2.5">
+        <div key={index} className="flex items-stretch flex-col lg:flex-row gap-6">
+        <img 
+          src={el.image.src} 
+          alt={el.title} 
+          className=" self-stretch object-cover max-w-[200px] h-full rounded-[40px]" 
+        />
+          <div className="flex flex-col h-full gap-4 justify-between">
             <p className="text-slate-300 text-2xs font-medium">{el.date}</p>
             <h2 className="text-blue-500 text-base lg:text-sm xl:text-base font-bold leading-tight">
               {el.title}
@@ -35,9 +39,18 @@ const BlogItemSkeleton = ({ height, rounded, latest }: Props) => {
             <p className="text-gray-400 text-sm lg:text-xs xl:text-sm leading-tight">
               {el.text}
             </p>
-            <span className="px-2 py-1 bg-green-200 rounded-xl justify-center items-center text-2xs text-[#0080FF]">
-              {el.tags.join(", ")}
-            </span>
+            {el.tags && (
+              <div className="flex flex-row gap-2 w-full flex-wrap bottom-0">
+                {el.tags.map((tag, index) => (
+                  <div
+                    key={index}
+                    className="px-2 py-1 bg-green-200 rounded-xl justify-center items-center"
+                  >
+                    <div className="text-blue-500 text-2xs">{tag}</div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       ))}
