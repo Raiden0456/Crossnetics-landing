@@ -15,6 +15,18 @@ const latest_props = [
         image: blog_img
     }
 ]
+
+const latest_posts_props = [
+    {
+        id: 1,
+        date: 'April 14, 2023',
+        title: "Here's What You Need to Know About YouTube's New Shorts Creation Tools.",
+        text: "YouTube's response to the short-form video trend has taken the shape of a powerful contender: YouTube Shorts. As the popularity of platforms like TikTok continues...",
+        tags: ['Influencing'],
+        likes: 12,
+        image: '/facebook_banner.png'
+    }
+]
 ---
 
 <html>
@@ -25,7 +37,7 @@ const latest_props = [
 <Layout title="Blog">
     <main class="w-full" transition:animate="slide">
         <LatestNews latest={latest_props} />
-        <LatestInBlog />
+        <LatestInBlog posts={latest_posts_props} />
     </main>
 </Layout>
 </body>
