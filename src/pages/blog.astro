@@ -22,9 +22,9 @@ const latest_props = [
     <title>Blog Page</title>
 </head>
 <body>
-<Layout>
+<Layout title="Blog">
     <main class="w-full" transition:animate="slide">
-        <LatestNews {...latest_props} />
+        <LatestNews latest={latest_props} />
         <LatestInBlog />
     </main>
 </Layout>
