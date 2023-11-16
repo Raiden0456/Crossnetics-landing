@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import LatestNews from '@components/blog/LatestNews.astro';
-import LatestInBlog from '@components/blog/LatestInBlog.astro';
+import LatestInBlog from '@components/blog/LatestBlog.tsx';
 
 //import image
 import blog_img from '../../public/news.png'
@@ -37,7 +37,7 @@ const latest_posts_props = [
 <Layout title="Blog">
     <main class="w-full" transition:animate="slide">
         <LatestNews latest={latest_props} />
-        <LatestInBlog posts={latest_posts_props} />
+        <LatestInBlog posts={latest_posts_props} client:load/>
     </main>
 </Layout>
 </body>

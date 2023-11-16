@@ -25,7 +25,7 @@ const BlogItemSkeleton = ({ height, rounded, latest }: Props) => {
   return (
     <>
       {latest.map((el, index) => (
-        <div key={index} className="flex items-stretch flex-row gap-6">
+        <div key={index} className="flex items-stretch flex-col lg:flex-row gap-6">
         <img 
           src={el.image.src} 
           alt={el.title} 
