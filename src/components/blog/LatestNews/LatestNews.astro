@@ -1,0 +1,34 @@
+---
+import Skeleton from './LatestNewsItem'
+
+interface News {
+  date: string
+  title: string
+  text: string
+  tags: string[]
+  image: any
+}
+
+interface Props {
+  latest: News[]
+}
+
+const { latest } = Astro.props
+---
+
+<div class='mx-auto p-4 mt-14 bg-[#DEEFFF]'>
+  <div class='w-10/12 lg:w-2/3 mx-auto py-4'>
+    <div class='flex justify-between mx-auto'>
+      <h2 class='text-2xl font-bold mb-4 text-[#484E5E]'>
+        Latest News
+      </h2>
+      <button class='text-[#0080FF]'>View All</button>
+    </div>
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
+      <Skeleton latest={latest} height={150} />
+      <Skeleton latest={latest} height={150} />
+      <Skeleton latest={latest} height={150} />
+      <Skeleton latest={latest} height={150} />
+    </div>
+  </div>
+</div>

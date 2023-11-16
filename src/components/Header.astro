@@ -1,50 +1,75 @@
 ---
-import { Image } from 'astro:assets';
-import BurgerMenu from './Burger_menu';
-import { useState } from 'react';
+import { Image } from 'astro:assets'
+import BurgerMenu from './Burger_menu'
+import { useState } from 'react'
 
 //Images
-import header from '../images/header.svg';
+import header from '../images/header.svg'
 interface Section {
-  title: string;
-  url: string;
+  title: string
+  url: string
 }
 interface Social {
-  title: string;
-  url: string;
-  icon: any;
+  title: string
+  url: string
+  icon: any
 }
 interface Props {
-	sections: Section[];
-  burgerMenuSocial: Social[];
+  sections: Section[]
+  burgerMenuSocial: Social[]
 }
 
-const { sections, burgerMenuSocial } = Astro.props;
-const activeSection = sections.find(section => section.url === Astro.url.pathname);
-
+const { sections, burgerMenuSocial } = Astro.props
+const activeSection = sections.find(
+  section => section.url === Astro.url.pathname
+)
 ---
 
-<div class="fixed flex justify-center items-center top-0 h-16 w-full bg-blue-500 z-50">
-  <div class="w-10/12 lg:w-2/3 h-full flex flex-row justify-between">
-    <Image src={header} alt="" height={50} width={50} class="w-44 lg:w-[20%]" loading="eager" />
-    <div class="hidden lg:flex lg:flex-row gap-x-20 h-full justify-center items-center">
-      <div class="flex flex-row gap-x-4 xl:gap-x-6 h-full">
-        {sections.map(section => {
-          const isActive = section === activeSection;
-          const activeClass = isActive ? 'border-b-2 border-b-white text-white' : 'hover:text-white hover:border-b-2 hover:border-b-white transition-all duration-100';
-          return (
-            <a href={section.url} class={`h-full flex justify-center items-center ${activeClass} text-sky-100 `}>
-              <p class=" text-center text-2xs xl:text-xs font-extrabold uppercase">{section.title}</p>
-            </a>
-          );
-        })}
+<div
+  class='fixed flex justify-center items-center top-0 h-16 w-full bg-blue-500 z-50'
+>
+  <div class='w-10/12 lg:w-2/3 h-full flex flex-row justify-between'>
+    <Image
+      src={header}
+      alt=''
+      height={50}
+      width={50}
+      class='w-44 lg:w-[20%]'
+      loading='eager'
+    />
+    <div
+      class='hidden lg:flex lg:flex-row gap-x-20 h-full justify-center items-center'
+    >
+      <div class='flex flex-row gap-x-4 xl:gap-x-6 h-full'>
+        {
+          sections.map(section => {
+            const isActive = section === activeSection
+            const activeClass = isActive
+              ? 'border-b-2 border-b-white text-white'
+              : 'hover:text-white hover:border-b-2 hover:border-b-white transition-all duration-100'
+            return (
+              <a
+                href={section.url}
+                class={`h-full flex justify-center items-center ${activeClass} text-sky-100 `}
+              >
+                <p class=' text-center text-2xs xl:text-xs font-extrabold uppercase'>
+                  {section.title}
+                </p>
+              </a>
+            )
+          })
+        }
       </div>
-      <div class="h-11 px-8 py-2.5 bg-blue-500 rounded-2xl border-2 border-white justify-center items-center inline-flex cursor-pointer hover:bg-white text-white hover:text-blue-500 transition-all duration-200 hover:scale-105 hover:shadow-lg">
-        <div class="text-2xs xl:text-xs font-extrabold uppercase">Connect web2/3</div>
-      </div> 
+      <div
+        class='h-11 px-8 py-2.5 bg-blue-500 rounded-2xl border-2 border-white justify-center items-center inline-flex cursor-pointer hover:bg-white text-white hover:text-blue-500 transition-all duration-200 hover:scale-105 hover:shadow-lg'
+      >
+        <div class='text-2xs xl:text-xs font-extrabold uppercase'>
+          Connect web2/3
+        </div>
+      </div>
     </div>
   </div>
-  <div class="lg:hidden absolute w-full h-full">
+  <div class='lg:hidden absolute w-full h-full'>
     <BurgerMenu social_media={burgerMenuSocial} client:load />
   </div>
 </div>

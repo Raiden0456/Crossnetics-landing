@@ -1,37 +1,40 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
 
 //Images
-import info from "../../images/icons/info.svg";
+import info from '../../images/icons/info.svg'
 interface Props {
-  title: string;
+  title: string
   body: {
-    title: string;
-    body: string;
+    title: string
+    body: string
   }[]
-
 }
 
-const {title, body} = Astro.props;
+const { title, body } = Astro.props
 ---
 
-<div class="flex flex-row gap-x-4 w-full items-start justify-start">
-  <Image src={info} class="w-4 mt-2" alt=""/>
-  <div class="flex flex-col gap-y-2">
-    <h2 class="text-blue-500 font-bold text-2xl leading-tight whitespace-pre-wrap">
+<div class='flex flex-row gap-x-4 w-full items-start justify-start'>
+  <Image src={info} class='w-4 mt-2' alt='' />
+  <div class='flex flex-col gap-y-2'>
+    <h2
+      class='text-blue-500 font-bold text-2xl leading-tight whitespace-pre-wrap'
+    >
       {title}
     </h2>
-    <div class="flex flex-col gap-y-4">
-      {body.map(({title, body}) => (
-      <div class="flex flex-col gap-y-2">
-        <h3 class="text-black font-bold text-lg leading-tight">
-          {title}
-        </h3>
-        <p class="text-gray-600 text-base leading-tight">
-          {body}
-        </p>
-      </div>
-    ))}
+    <div class='flex flex-col gap-y-4'>
+      {
+        body.map(({ title, body }) => (
+          <div class='flex flex-col gap-y-2'>
+            <h3 class='text-black font-bold text-lg leading-tight'>
+              {title}
+            </h3>
+            <p class='text-gray-600 text-base leading-tight'>
+              {body}
+            </p>
+          </div>
+        ))
+      }
     </div>
   </div>
 </div>

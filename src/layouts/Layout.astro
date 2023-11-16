@@ -1,92 +1,104 @@
---- 
-import { ViewTransitions } from 'astro:transitions';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
+---
+import { ViewTransitions } from 'astro:transitions'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
 
-//Images 
-import twitter from '../images/footer/twitter.svg';
-import instagram from '../images/footer/instagram.svg';
-import github from '../images/footer/github.svg';
-import linkedin from '../images/footer/linkedin.svg';
-import telegram from '../images/footer/telegram.svg';
+//Images
+import twitter from '../images/footer/twitter.svg'
+import instagram from '../images/footer/instagram.svg'
+import github from '../images/footer/github.svg'
+import linkedin from '../images/footer/linkedin.svg'
+import telegram from '../images/footer/telegram.svg'
 
 interface Props {
-	title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 const header_sections = {
-	sections: [
-		{
-			title: 'Home',
-			url: '/',
-		},
-		{
-			title: 'Software',
-			url: '/software',
-		},
-		{
-			title: 'Security',
-			url: '/security',
-		},
-		{
-			title: 'Blog',
-			url: '/blog',
-		},
-		{
-			title: 'Community',
-			url: '/community',
-		},
-	],
+  sections: [
+    {
+      title: 'Home',
+      url: '/',
+    },
+    {
+      title: 'Software',
+      url: '/software',
+    },
+    {
+      title: 'Security',
+      url: '/security',
+    },
+    {
+      title: 'Blog',
+      url: '/blog',
+    },
+    {
+      title: 'Community',
+      url: '/community',
+    },
+  ],
 }
 const footer = {
-	contact_us: "Contact us:",
-	discover: "Discover the full capabilities \nof Crossnetics with our Pro Package",
-	button: "View pricing",
-	social_media: [
-		{
-			title: "Twitter",
-			url: "",
-			icon: twitter
-		},
-		{
-			title: "Instagram",
-			url: "",
-			icon: instagram
-
-		},
-		{
-			title: "Github",
-			url: "",
-			icon: github
-		},
-		{
-			title: "Linkedin",
-			url: "",
-			icon: linkedin
-		},
-		{
-			title: "Telegram",
-			url: "",
-			icon: telegram
-		},
-		
-	]
+  contact_us: 'Contact us:',
+  discover:
+    'Discover the full capabilities \nof Crossnetics with our Pro Package',
+  button: 'View pricing',
+  social_media: [
+    {
+      title: 'Twitter',
+      url: '',
+      icon: twitter,
+    },
+    {
+      title: 'Instagram',
+      url: '',
+      icon: instagram,
+    },
+    {
+      title: 'Github',
+      url: '',
+      icon: github,
+    },
+    {
+      title: 'Linkedin',
+      url: '',
+      icon: linkedin,
+    },
+    {
+      title: 'Telegram',
+      url: '',
+      icon: telegram,
+    },
+  ],
 }
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
-	<body class="bg-[#2882FF]">
-		<Header sections={header_sections.sections} burgerMenuSocial={footer.social_media} transition:persist/>
-		<slot />
-		<Footer contact_us={footer.contact_us} discover={footer.discover} social_media={footer.social_media} button={footer.button} transition:persist/>
-	</body>
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='viewport'
+      content='width=device-width, initial-scale=1'
+    />
+    <link rel='icon' type='image/svg+xml' href='/logo.svg' />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class='bg-[#2882FF]'>
+    <Header
+      sections={header_sections.sections}
+      burgerMenuSocial={footer.social_media}
+      transition:persist
+    />
+    <slot />
+    <Footer
+      contact_us={footer.contact_us}
+      discover={footer.discover}
+      social_media={footer.social_media}
+      button={footer.button}
+      transition:persist
+    />
+  </body>
 </html>

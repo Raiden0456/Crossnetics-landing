@@ -1,28 +1,31 @@
 ---
-import { Image } from 'astro:assets';
-import Footer_sections from "../layouts/Footer_sections.astro";
-import Section from "../components/footer_sections/Section.astro";
+import { Image } from 'astro:assets'
+import Footer_sections from '../layouts/Footer_sections.astro'
+import Section from '../components/footer_sections/Section.astro'
 
 const data_props = {
-  title: "Influencer Opt Out",
-  button: "go back",
+  title: 'Influencer Opt Out',
+  button: 'go back',
   sections: [
     {
-      title: "Accounts and Authorization",
+      title: 'Accounts and Authorization',
       body: `This feature enables Influencers to opt out of our discovery and analytics platform. When you choose to do so, users of the Crossnetics platform won't be able to access your profile or receive analytics related to your posts. Consequently, as an influencer, you may receive fewer collaboration requests from brands and agencies.
       
 We regret to see you leave but fully respect your decision, and we look forward to the possibility of welcoming you back in the future.`,
-      italic: "The Crossnetics Team is always ready to address any complaints, suggestions, or inquiries you may have. If you wish to opt out, kindly provide us with the URLs to your Instagram, Facebook, YouTube, TikTok, and Twitter profiles."
+      italic:
+        'The Crossnetics Team is always ready to address any complaints, suggestions, or inquiries you may have. If you wish to opt out, kindly provide us with the URLs to your Instagram, Facebook, YouTube, TikTok, and Twitter profiles.',
     },
-  ]
-};
+  ],
+}
 ---
 
-<Footer_sections title="Influencer Opt Out">
-  <main class="w-full mb-20 xl:mb-52" transition:animate="fade">
-    <div class="flex flex-col lg:flex-row w-full lg:w-2/3 gap-16 justify-between items-start">
+<Footer_sections title='Influencer Opt Out'>
+  <main class='w-full mb-20 xl:mb-52' transition:animate='fade'>
+    <div
+      class='flex flex-col lg:flex-row w-full lg:w-2/3 gap-16 justify-between items-start'
+    >
       <!-- <Image src="/footer_img/knight.png" class="w-[150px] xl:w-[300px]" alt="" width={50} height={50} /> -->
-      <Section {...data_props}/>   
+      <Section {...data_props} />
     </div>
   </main>
 </Footer_sections>

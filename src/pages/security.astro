@@ -1,128 +1,141 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "@components/Hero.astro";
-import Introduction from "@components/security/Introduction.astro";
-import Pros from "@components/security/Pros.astro";
-import Dispute from "@components/security/Dispute.astro";
-import Conclusion from "@components/security/Conclusion.astro";
+import Layout from '../layouts/Layout.astro'
+import Hero from '@components/Hero.astro'
+import Introduction from '@components/security/Introduction.astro'
+import Pros from '@components/security/Pros.astro'
+import Dispute from '@components/security/Dispute.astro'
+import Conclusion from '@components/security/Conclusion.astro'
 
 // Hero images
-import computer from "../images/security_img/computer.png";
+import computer from '../images/security_img/computer.png'
 
 // Introduction images
-import poly_shield from "../images/security_img/poly_shield.svg";
-import ether_sign from "../images/security_img/ether_sign.svg";
+import poly_shield from '../images/security_img/poly_shield.svg'
+import ether_sign from '../images/security_img/ether_sign.svg'
 
 // Pros images
-import cubic from "../images/security_img/cubic.svg";
-import grad_cubic from "../images/security_img/grad_cubic.png";
-
+import cubic from '../images/security_img/cubic.svg'
+import grad_cubic from '../images/security_img/grad_cubic.png'
 
 const hero_props = {
-  header: "Key Features\nof Safety and Security",
+  header: 'Key Features\nof Safety and Security',
   body: `In an era of rapidly changing technology and market demands, the Crossnetics platform provides a set of innovative tools to effectively engage with the world of digital marketing.`,
-  button: "Get started for free",
-  gradient: ["#1B76FF", "#49E3B5"],
+  button: 'Get started for free',
+  gradient: ['#1B76FF', '#49E3B5'],
   hero_image: computer,
 }
 
-const header = "Security Section for Crossnetics Platform"
+const header = 'Security Section for Crossnetics Platform'
 
 const introduction_props = {
   introduction: {
-    title: "Introduction",
+    title: 'Introduction',
     body: `One of the security parameters of the platform is blockchain technology and Crossnetics runs on the Polygon blockchain
 
 Let us tell you why we have chosen this technology to provide security and scalability on our platform and additional security measures.
 
-Polygon enhances Ethereum scalability through a layered architecture that increases transaction throughput while minimizing costs. Here are its key technology features:`
+Polygon enhances Ethereum scalability through a layered architecture that increases transaction throughput while minimizing costs. Here are its key technology features:`,
   },
   polygon: {
-    title: "Why Poligon?",
-    body: "The choice fell on the Polygon blockchain due to its high performance, compatibility with Ethereum, and multilayer architecture. This allows the platform to process a large number of operations simultaneously, ensuring speed and low costs."
+    title: 'Why Poligon?',
+    body: 'The choice fell on the Polygon blockchain due to its high performance, compatibility with Ethereum, and multilayer architecture. This allows the platform to process a large number of operations simultaneously, ensuring speed and low costs.',
   },
   ether: {
-    title: "Compatibility and Scalability",
-    body: "Polygon offers full compatibility with Ethereum, expanding its application possibilities. The multilayer architecture accelerates transactions and makes the platform ready for scaling in the future."
+    title: 'Compatibility and Scalability',
+    body: 'Polygon offers full compatibility with Ethereum, expanding its application possibilities. The multilayer architecture accelerates transactions and makes the platform ready for scaling in the future.',
   },
   grid: [
     {
-      title: "Transaction security",
-      body: "Utilizing PoS and Plasma chains technologies, Polygon creates a secure environment for conducting transactions. These technologies provide additional layers of protection, making the platform resilient to potential threats.",
-      image: poly_shield
+      title: 'Transaction security',
+      body: 'Utilizing PoS and Plasma chains technologies, Polygon creates a secure environment for conducting transactions. These technologies provide additional layers of protection, making the platform resilient to potential threats.',
+      image: poly_shield,
     },
     {
-      title: "Benefits of Smart Contracts",
-      body: "Smart contracts on Polygon automate and simplify many processes on the platform. They ensure transparency and reliable execution of contract terms, making advertising campaigns more effective.",
-      image: ether_sign
-    }
-  ]
+      title: 'Benefits of Smart Contracts',
+      body: 'Smart contracts on Polygon automate and simplify many processes on the platform. They ensure transparency and reliable execution of contract terms, making advertising campaigns more effective.',
+      image: ether_sign,
+    },
+  ],
 }
 
 const props_props = {
-  title: "Pros of smart contracts",
+  title: 'Pros of smart contracts',
   list: [
-    "Many processes can be automated. This is one of the main benefits of smart contracts.",
-    "Smart contracts allow you to make the system of controlling the fulfillment of contract terms transparent.",
-    "The system can independently monitor the fulfillment of contract terms.",
-    "Information about smart-contracts is recorded in the blockchain The parties will not be able to change the terms of the contract after it is formalized.",
-    "Smart contracts allow you to make the system of controlling the fulfillment of contract terms transparent.",
-    "The technology, thanks to the ability to save information on the blockchain, allows financial transactions to be carried out anonymously and securely.",
-    "Information about smart-contracts is recorded in the blockchain The parties will not be able to change the terms of the contract after it is formalized.",
-    "Automating the process avoids errors.",
-    "Transferring agreements to a digital environment speeds up document flow and makes it easier."
+    'Many processes can be automated. This is one of the main benefits of smart contracts.',
+    'Smart contracts allow you to make the system of controlling the fulfillment of contract terms transparent.',
+    'The system can independently monitor the fulfillment of contract terms.',
+    'Information about smart-contracts is recorded in the blockchain The parties will not be able to change the terms of the contract after it is formalized.',
+    'Smart contracts allow you to make the system of controlling the fulfillment of contract terms transparent.',
+    'The technology, thanks to the ability to save information on the blockchain, allows financial transactions to be carried out anonymously and securely.',
+    'Information about smart-contracts is recorded in the blockchain The parties will not be able to change the terms of the contract after it is formalized.',
+    'Automating the process avoids errors.',
+    'Transferring agreements to a digital environment speeds up document flow and makes it easier.',
   ],
   grid: [
     {
-      title: "Decentralized Identity",
-      subtitle: "Identity in a decentralized environment.",
+      title: 'Decentralized Identity',
+      subtitle: 'Identity in a decentralized environment.',
       body: [
         {
-          title: "",
-          body: "Platform users receive unique identifiers that are not controlled by centralized structures. This ensures the privacy and security of each user's data."
+          title: '',
+          body: "Platform users receive unique identifiers that are not controlled by centralized structures. This ensures the privacy and security of each user's data.",
         },
       ],
       image: cubic,
-      bg_image: grad_cubic
-    }
-  ]
+      bg_image: grad_cubic,
+    },
+  ],
 }
 
 const dispute_props = {
   title: `Dispute Resolution Mechanisms`,
   body: [
     {
-      title: "",
-      body: "In case of disputes or disagreements, Crossnetics provides tools for their resolution. These mechanisms guarantee fairness and transparency in resolving conflict situations, safeguarding the interests of all parties."
+      title: '',
+      body: 'In case of disputes or disagreements, Crossnetics provides tools for their resolution. These mechanisms guarantee fairness and transparency in resolving conflict situations, safeguarding the interests of all parties.',
     },
   ],
 }
 
 const conclusion_props = {
-  title: "Conclusion:",
+  title: 'Conclusion:',
   body: `Crossnetics provides a high level of security, efficiency and compliance, making the Crossnetics platform the ideal solution for your business and personal development without having to worry about your personal data and financial relationships. The Crossnetics platform actively utilizes cutting-edge technology and innovative approaches to ensure all transactions are secure and transparent. Through integration with Polygon, users have access to a wide range of tools and features that maximize the efficiency and security of digital assets.
 
 In addition, by focusing on privacy and data protection, Crossnetics ensures that users' information remains strictly confidential and protected from any external threats. In conclusion, Crossnetics is committed to creating a sustainable and trusted space for market participants to interact. Whether investors, developers or ordinary users, everyone will find convenient and effective solutions on the Crossnetics platform. Our goal is to provide comfort, security and high performance for all our customers.`,
-  button: "try now for free"
+  button: 'try now for free',
 }
 ---
 
-<Layout title="Crossnetics security">
-  <main class="w-full" transition:animate="fade">
+<Layout title='Crossnetics security'>
+  <main class='w-full' transition:animate='fade'>
     <Hero {...hero_props} />
-      <div class="bg-gradient-to-b from-sky-200 via-sky-100 to-sky-200 flex items-center justify-center">
-        <div class="w-10/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center my-20">
-          <h1 class="font-bold text-2xl xl:text-3xl leading-tight text-gray-600 mb-10 ml-[1.9rem]">{header}</h1>
-          <div class="flex flex-col gap-y-8">
-            <Introduction {...introduction_props}  />
-            <Pros {...props_props} />
-            <Dispute {...dispute_props} />
-            <!-- <Conclusion {...conclusion_props} /> -->
-            <div class="self-center mt-16 w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-              <div class="text-blue-500 text-xs font-extrabold uppercase">Try now for free</div>
+    <div
+      class='bg-gradient-to-b from-sky-200 via-sky-100 to-sky-200 flex items-center justify-center'
+    >
+      <div
+        class='w-10/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center my-20'
+      >
+        <h1
+          class='font-bold text-2xl xl:text-3xl leading-tight text-gray-600 mb-10 ml-[1.9rem]'
+        >
+          {header}
+        </h1>
+        <div class='flex flex-col gap-y-8'>
+          <Introduction {...introduction_props} />
+          <Pros {...props_props} />
+          <Dispute {...dispute_props} />
+          <!-- <Conclusion {...conclusion_props} /> -->
+          <div
+            class='self-center mt-16 w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'
+          >
+            <div
+              class='text-blue-500 text-xs font-extrabold uppercase'
+            >
+              Try now for free
             </div>
           </div>
         </div>
       </div>
+    </div>
   </main>
 </Layout>

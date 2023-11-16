@@ -1,29 +1,27 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
 
 interface Grid_element {
-  title: string;
-  subtitle: string;
+  title: string
+  subtitle: string
   body: {
-    title: string;
-    body: string;
+    title: string
+    body: string
   }[]
-  bg_image: any;
-  image: any;
+  bg_image: any
+  image: any
 }
 
 interface Props {
-  title: string;
-  list: string[];
-  grid: Grid_element[];
+  title: string
+  list: string[]
+  grid: Grid_element[]
 }
 
-const {title, list, grid} = Astro.props;
-
+const { title, list, grid } = Astro.props
 ---
 
-<!-- Commented the list as not needed -->
-<!-- <div class="flex flex-row gap-x-4 w-full items-start justify-start">
+<!-- Commented the list as not needed --><!-- <div class="flex flex-row gap-x-4 w-full items-start justify-start">
   <Image src="/icons/star.svg" class="w-4 mt-2" alt="" width={20} height={20}/>
   <div class="flex flex-col gap-y-5">
     <h2 class="text-blue-500 font-bold text-lg xl:text-2xl leading-tight">
@@ -39,27 +37,43 @@ const {title, list, grid} = Astro.props;
     </ul>
   </div>
 </div> -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-  {grid.map((section) => (
-    <div class="relative flex flex-col md:flex-row overflow-hidden md:col-span-2 items-center justify-start p-8 xl:p-10 bg-gradient-to-r lg:bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 rounded-[50px] gap-y-2 xl:gap-y-4">
-      <div class="w-3/5 lg:w-1/5 flex items-center justify-start z-40">
-        <Image src={section.image} alt="" class="w-full rotate-90 md:rotate-0"/> 
-      </div>
-      <div class="w-full lg:w-3/5 flex flex-col gap-y-4 z-40">
-        <div class="flex flex-col gap-y-2">
-          <h1 class="text-white text-3xl font-bold">{section.title}</h1>
-          <h2 class="text-sky-100 text-2xl font-bold">{section.subtitle}</h2>
+<div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+  {
+    grid.map(section => (
+      <div class='relative flex flex-col md:flex-row overflow-hidden md:col-span-2 items-center justify-start p-8 xl:p-10 bg-gradient-to-r lg:bg-gradient-to-l from-hero_gradient_1 to-hero_gradient_2 rounded-[50px] gap-y-2 xl:gap-y-4'>
+        <div class='w-3/5 lg:w-1/5 flex items-center justify-start z-40'>
+          <Image
+            src={section.image}
+            alt=''
+            class='w-full rotate-90 md:rotate-0'
+          />
         </div>
-        <div class="flex flex-col gap-y-2 z-40">
-          {section.body.map((item) => (
-            <div class="flex flex-col gap-y-1">
-              <h3 class="text-white text-base font-bold">{item.title}</h3>
-              <p class="text-white text-base">{item.body}</p>
-            </div>
-          ))}
+        <div class='w-full lg:w-3/5 flex flex-col gap-y-4 z-40'>
+          <div class='flex flex-col gap-y-2'>
+            <h1 class='text-white text-3xl font-bold'>
+              {section.title}
+            </h1>
+            <h2 class='text-sky-100 text-2xl font-bold'>
+              {section.subtitle}
+            </h2>
+          </div>
+          <div class='flex flex-col gap-y-2 z-40'>
+            {section.body.map(item => (
+              <div class='flex flex-col gap-y-1'>
+                <h3 class='text-white text-base font-bold'>
+                  {item.title}
+                </h3>
+                <p class='text-white text-base'>{item.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
+        <Image
+          src={section.bg_image}
+          alt=''
+          class='flex w-full md:w-4/12 absolute -left-24 -top-32 rotate-90 md:rotate-0 md:top-0 md:-bottom-20 xl:-left-40 xl:-bottom-36 z-10'
+        />
       </div>
-      <Image src={section.bg_image} alt="" class="flex w-full md:w-4/12 absolute -left-24 -top-32 rotate-90 md:rotate-0 md:top-0 md:-bottom-20 xl:-left-40 xl:-bottom-36 z-10" />
-    </div>
-  ))}
+    ))
+  }
 </div>

@@ -1,42 +1,96 @@
 ---
-import { Image } from 'astro:assets';
-import Ipad_swiper from './Ipad_swiper';
+import { Image } from 'astro:assets'
+import Ipad_swiper from './Ipad_swiper'
 
 interface Props {
-	header: string;
-	body: string;
-	button: string;
+  header: string
+  body: string
+  button: string
   gradient: string[]
   ipad_slides?: any[]
   hero_image?: any
 }
-const { header, body, button, gradient, ipad_slides, hero_image } = Astro.props;
-const margin_mob = hero_image ? "mb-40" : "mb-0";
-const image_mob_width = (hero_image && hero_image.src.includes("computer.png")) ? "min-w-[150%] md:min-w-0 -left-32 md:left-auto" : ""
-const text_width = hero_image ? " lg:w-10/12 2xl:w-5/12" : "lg:w-5/12"
+const { header, body, button, gradient, ipad_slides, hero_image } =
+  Astro.props
+const margin_mob = hero_image ? 'mb-40' : 'mb-0'
+const image_mob_width =
+  hero_image && hero_image.src.includes('computer.png')
+    ? 'min-w-[150%] md:min-w-0 -left-32 md:left-auto'
+    : ''
+const text_width = hero_image ? ' lg:w-10/12 2xl:w-5/12' : 'lg:w-5/12'
 ---
 
-<div style={{background: `linear-gradient(to left, ${gradient[0]}, ${gradient[1]})`}} class="flex relative items-start md:items-center justify-center h-screen overflow-hidden">
-
-  <div class="flex flex-col lg:flex-row items-center justify-between w-10/12 lg:w-2/3 my-20 md:my-40 gap-y-5">
-    <div class={`${margin_mob} ${text_width} flex flex-col items-start justify-center w-full h-fit z-20`}>
-      <h1 class="text-white text-4xl font-black mb-4 whitespace-pre-line leading-tight">{header}</h1>
-      <p class="text-white text-xl font-medium mb-12 leading-tight whitespace-pre-line">{body}</p>
-      {ipad_slides &&
-      <div class="hidden w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 lg:inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-          <div class="text-blue-500 text-xs font-extrabold uppercase">{button}</div>
-      </div>}
-      {hero_image && 
-      <div class="w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="text-blue-500 text-xs font-extrabold uppercase">{button}</div>
-      </div>}
+<div
+  style={{
+    background: `linear-gradient(to left, ${gradient[0]}, ${gradient[1]})`,
+  }}
+  class='flex relative items-start md:items-center justify-center h-screen overflow-hidden'
+>
+  <div
+    class='flex flex-col lg:flex-row items-center justify-between w-10/12 lg:w-2/3 my-20 md:my-40 gap-y-5'
+  >
+    <div
+      class={`${margin_mob} ${text_width} flex flex-col items-start justify-center w-full h-fit z-20`}
+    >
+      <h1
+        class='text-white text-4xl font-black mb-4 whitespace-pre-line leading-tight'
+      >
+        {header}
+      </h1>
+      <p
+        class='text-white text-xl font-medium mb-12 leading-tight whitespace-pre-line'
+      >
+        {body}
+      </p>
+      {
+        ipad_slides && (
+          <div class='hidden w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 lg:inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
+            <div class='text-blue-500 text-xs font-extrabold uppercase'>
+              {button}
+            </div>
+          </div>
+        )
+      }
+      {
+        hero_image && (
+          <div class='w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
+            <div class='text-blue-500 text-xs font-extrabold uppercase'>
+              {button}
+            </div>
+          </div>
+        )
+      }
     </div>
-    <div class="flex flex-col w-full h-full md:w-2/3 md:h-2/3 lg:w-1/2 lg:h-1/2 md:static">
-      {ipad_slides && <Ipad_swiper slides={ipad_slides} pagi_active={true} client:load/>}
-      {hero_image && <Image src={hero_image} alt="" class={`${image_mob_width} w-full md:w-10/12 lg:w-7/12 bottom-0 right-0 absolute z-0`} />}
+    <div
+      class='flex flex-col w-full h-full md:w-2/3 md:h-2/3 lg:w-1/2 lg:h-1/2 md:static'
+    >
+      {
+        ipad_slides && (
+          <Ipad_swiper
+            slides={ipad_slides}
+            pagi_active={true}
+            client:load
+          />
+        )
+      }
+      {
+        hero_image && (
+          <Image
+            src={hero_image}
+            alt=''
+            class={`${image_mob_width} w-full md:w-10/12 lg:w-7/12 bottom-0 right-0 absolute z-0`}
+          />
+        )
+      }
     </div>
-    {ipad_slides && <div class="lg:hidden mt-16 w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-      <div class="text-blue-500 text-xs font-extrabold uppercase">{button}</div>
-    </div>}
+    {
+      ipad_slides && (
+        <div class='lg:hidden mt-16 w-52 h-11 px-7.5 py-2.5 bg-white rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
+          <div class='text-blue-500 text-xs font-extrabold uppercase'>
+            {button}
+          </div>
+        </div>
+      )
+    }
   </div>
 </div>
