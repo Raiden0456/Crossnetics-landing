@@ -25,11 +25,11 @@ const BlogItemSkeleton = ({ height, rounded, latest }: Props) => {
   return (
     <>
       {latest.map((el, index) => (
-        <div key={index} className="flex items-stretch flex-col lg:flex-row gap-6">
+        <div key={index} className="flex items-stretch flex-row gap-6">
         <img 
           src={el.image.src} 
           alt={el.title} 
-          className=" self-stretch object-cover max-w-[200px] h-full rounded-[40px]" 
+          className=" self-stretch object-cover max-w-[200px] h-24 lg:h-full rounded-xl lg:rounded-[40px]" 
         />
           <div className="flex flex-col h-full gap-4 justify-between">
             <p className="text-slate-300 text-2xs font-medium">{el.date}</p>
