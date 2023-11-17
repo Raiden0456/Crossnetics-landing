@@ -38,7 +38,7 @@ const latest_posts_props = [
   </head>
   <body>
     <Layout title='Blog'>
-      <main class='w-full' transition:animate='slide'>
+      <main class='w-full' transition:animate='fade'>
         <LatestNews latest={latest_props} />
         <BlogLayout
           posts={latest_posts_props}
@@ -47,21 +47,25 @@ const latest_posts_props = [
         />
         <Recommended client:load />
         <BlogLayout
+          bgColor="bg-white"
           posts={latest_posts_props}
           client:load
           title='Social Networking'
         />
         <BlogLayout
+          bgColor="bg-white"
           posts={latest_posts_props}
           client:load
           title='YouTube'
         />
         <BlogLayout
+          bgColor="bg-white"
           posts={latest_posts_props}
           client:load
           title='NFT'
         />
         <BlogLayout
+          bgColor="bg-white"
           posts={latest_posts_props}
           client:load
           title='CRYPTO'

@@ -44,7 +44,7 @@ const BlogItemSkeleton = ({
         <Skeleton style={style} />
       ) : (
         <div
-          className={`bg-white min-h-64 rounded-[40px] flex ${orientationClasses} overflow-hidden`}
+          className={`bg-white drop-shadow-lg min-h-64 rounded-[40px] flex ${orientationClasses} overflow-hidden`}
         >
           <img
             src={post.image}

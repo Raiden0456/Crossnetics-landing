@@ -18,6 +18,10 @@ const header_sections = {
       url: "/security",
     },
     {
+      title: "Blog",
+      url: "/blog",
+    },
+    {
       title: "Community",
       url: "/community",
     },

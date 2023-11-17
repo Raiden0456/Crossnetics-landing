@@ -11,10 +11,10 @@ export const DesktopTags = () => {
     'CRIPY',
   ]
   return (
-    <div className='justify-between items-center py-5 hidden md:flex'>
+    <div className='justify-between items-center hidden md:flex'>
       <div className='relative w-[160px]'>
         <label>
-          <select className='block w-full text-gray-500 bg-sky-100 font-semibold rounded-lg px-4 py-2 text-xs focus:outline-0'>
+          <select className='block w-full text-slate-400 bg-[#F1F8FF] font-semibold rounded-lg px-4 py-2 text-xs focus:outline-0'>
             <option value='' disabled selected>
               {' '}
               Popular
@@ -22,7 +22,7 @@ export const DesktopTags = () => {
             {categories.map((category, index) => (
               <option
                 value={category.toLowerCase()}
-                className='text-xs font-semibold text-gray-800'
+                className='text-xs font-semibold text-gray-600'
                 key={index}
               >
                 {category}
@@ -33,18 +33,18 @@ export const DesktopTags = () => {
       </div>
       {categories.map((tag, index) => (
         <button
-          className='bg-sky-100 text-gray-800 capitalize font-semibold px-4 py-2 rounded-lg text-xs'
+          className='bg-[#F1F8FF] text-gray-600 capitalize font-semibold px-4 py-2 rounded-lg text-xs'
           key={index}
         >
           {tag}
         </button>
       ))}
-      <div className='bg-sky-100 text-slate-300 capitalize font-semibold px-4 py-2 rounded-xl text-xs flex justify-between w-[150px] fill-current'>
+      <div className='bg-[#F1F8FF] text-slate-300 capitalize font-semibold px-4 py-2 rounded-xl text-xs flex justify-between w-[150px] fill-current'>
         <label>
           <input
             type='text'
             placeholder='Search'
-            className='w-full bg-sky-100 focus:outline-0'
+            className='w-full text-gray-600 bg-[#F1F8FF] focus:outline-0'
           />
         </label>
         <svg
@@ -55,8 +55,8 @@ export const DesktopTags = () => {
           xmlns='http://www.w3.org/2000/svg'
         >
           <path
-            fill-rule='evenodd'
-            clip-rule='evenodd'
+            fillRule='evenodd'
+            clipRule='evenodd'
             d='M11.9654 10.532L14.9654 13.532C15.232 13.7987 15.232 14.1987 14.9654 14.4654C14.832 14.5987 14.632 14.6654 14.4987 14.6654C14.3654 14.6654 14.1654 14.5987 14.032 14.4654L11.032 11.4654C10.032 12.1987 8.83203 12.6654 7.4987 12.6654C4.36536 12.6654 1.83203 10.132 1.83203 6.9987C1.83203 3.86536 4.36536 1.33203 7.4987 1.33203C10.632 1.33203 13.1654 3.86536 13.1654 6.9987C13.1654 8.33203 12.6987 9.5987 11.9654 10.532ZM7.49874 2.66406C5.09874 2.66406 3.16541 4.5974 3.16541 6.9974C3.16541 9.3974 5.09874 11.3307 7.49874 11.3307C8.69874 11.3307 9.76541 10.8641 10.5654 10.0641C11.3654 9.26406 11.8321 8.1974 11.8321 6.9974C11.8321 4.5974 9.89874 2.66406 7.49874 2.66406Z'
             fill='#CBD5E1'
           />
@@ -70,8 +70,8 @@ export const DesktopTags = () => {
             height='14'
           >
             <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
+              fillRule='evenodd'
+              clipRule='evenodd'
               d='M11.9654 10.532L14.9654 13.532C15.232 13.7987 15.232 14.1987 14.9654 14.4654C14.832 14.5987 14.632 14.6654 14.4987 14.6654C14.3654 14.6654 14.1654 14.5987 14.032 14.4654L11.032 11.4654C10.032 12.1987 8.83203 12.6654 7.4987 12.6654C4.36536 12.6654 1.83203 10.132 1.83203 6.9987C1.83203 3.86536 4.36536 1.33203 7.4987 1.33203C10.632 1.33203 13.1654 3.86536 13.1654 6.9987C13.1654 8.33203 12.6987 9.5987 11.9654 10.532ZM7.49874 2.66406C5.09874 2.66406 3.16541 4.5974 3.16541 6.9974C3.16541 9.3974 5.09874 11.3307 7.49874 11.3307C8.69874 11.3307 9.76541 10.8641 10.5654 10.0641C11.3654 9.26406 11.8321 8.1974 11.8321 6.9974C11.8321 4.5974 9.89874 2.66406 7.49874 2.66406Z'
               fill='#BEC7E1'
             />
