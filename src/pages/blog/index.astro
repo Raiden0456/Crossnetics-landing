@@ -1,0 +1,69 @@
+---
+// components
+import Layout from '../../layouts/Layout.astro'
+import LatestNews from '../../components/blog/LatestNews/LatestNews.astro'
+import BlogLayout from '../../components/blog/LatestBlog/BlogLayout.tsx'
+import { Recommended } from '../../components/blog/RecommendedForYou/Reccomended'
+
+// import image
+import blog_img from '../../../public/news.png'
+
+// data
+const latest_props = [
+  {
+    date: 'April 14, 2023',
+    title: 'Industry weighs potential of AI-designed watches',
+    text: "Small text about. If you want to find the best time to post on Instagram, you're probably trying to...",
+    tags: ['Social'],
+    image: blog_img,
+  },
+]
+const latest_posts_props = [
+  {
+    id: 1,
+    date: 'April 14, 2023',
+    title:
+      "Here's What You Need to Know About YouTube's New Shorts Creation Tools.",
+    text: "YouTube's response to the short-form video trend has taken the shape of a powerful contender: YouTube Shorts. As the popularity of platforms like TikTok continues...",
+    tags: ['Influencing'],
+    likes: 12,
+    image: '/facebook_banner.png',
+  },
+]
+---
+
+<Layout title='Blog'>
+  <main class='w-full' transition:animate='fade'>
+    <LatestNews latest={latest_props} />
+    <BlogLayout
+      posts={latest_posts_props}
+      title='Latest in Blog'
+      client:load
+    />
+    <Recommended client:load />
+    <BlogLayout
+      bgColor='bg-white'
+      posts={latest_posts_props}
+      client:load
+      title='Social Networking'
+    />
+    <BlogLayout
+      bgColor='bg-white'
+      posts={latest_posts_props}
+      client:load
+      title='YouTube'
+    />
+    <BlogLayout
+      bgColor='bg-white'
+      posts={latest_posts_props}
+      client:load
+      title='NFT'
+    />
+    <BlogLayout
+      bgColor='bg-white'
+      posts={latest_posts_props}
+      client:load
+      title='CRYPTO'
+    />
+  </main>
+</Layout>

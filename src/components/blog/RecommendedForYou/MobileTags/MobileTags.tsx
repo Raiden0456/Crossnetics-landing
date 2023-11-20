@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const MobileTags = () => {
   const categories = [
@@ -9,7 +9,7 @@ export const MobileTags = () => {
     'AI',
     'Advertising',
     'CRYPTO',
-  ];
+  ]
 
   return (
     <div className='flex flex-col md:hidden items-center py-5 space-y-4'>
@@ -79,18 +79,17 @@ export const MobileTags = () => {
       <hr className='w-full my-4' />
 
       <div className='w-full flex-shrink-0'>
-        <div className='flex overflow-x-auto space-x-2'> 
+        <div className='flex overflow-x-auto space-x-2'>
           {categories.map((tag, index) => (
             <button
               key={index}
-              className='bg-[#F1F8FF] text-gray-600 capitalize font-semibold px-4 py-2 rounded-lg text-3xs whitespace-nowrap mr-2' 
+              className='bg-[#F1F8FF] text-gray-600 capitalize font-semibold px-4 py-2 rounded-lg text-3xs whitespace-nowrap mr-2'
             >
               {tag}
             </button>
           ))}
         </div>
       </div>
-      
     </div>
   )
 }
