@@ -36,31 +36,36 @@ const latest_posts_props = [
   <main class='w-full' transition:animate='fade'>
     <LatestNews latest={latest_props} />
     <BlogLayout
-      posts={latest_posts_props}
-      title='Latest in Blog'
-      client:load
+    posts={latest_posts_props}
+    padding='py-20'
+    title='Latest in Blog'
+    client:load
     />
     <Recommended client:load />
     <BlogLayout
       bgColor='bg-white'
+      padding='pt-20'
       posts={latest_posts_props}
       client:load
       title='Social Networking'
     />
     <BlogLayout
       bgColor='bg-white'
+      padding='pt-20'
       posts={latest_posts_props}
       client:load
       title='YouTube'
     />
     <BlogLayout
       bgColor='bg-white'
+      padding='pt-20'
       posts={latest_posts_props}
       client:load
       title='NFT'
     />
     <BlogLayout
       bgColor='bg-white'
+      padding='py-20'
       posts={latest_posts_props}
       client:load
       title='CRYPTO'

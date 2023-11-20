@@ -14,12 +14,14 @@ interface Posts {
 
 interface BlogLayoutProps {
   bgColor?: string
+  padding?: string
   posts: Posts[]
   title: string
 }
 
 const BlogLayout: React.FC<BlogLayoutProps> = ({
   bgColor,
+  padding = '',
   posts,
   title,
 }) => {
@@ -27,8 +29,8 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
   const vertical = width ? width <= 1024 : true
   bgColor = bgColor ? bgColor : 'bg-sky-50'
   return (
-    <div className={bgColor}>
-      <div className='w-10/12 lg:w-2/3 mx-auto pt-20'>
+    <div className={`${bgColor} ${padding}`}>
+      <div className='w-10/12 lg:w-2/3 mx-auto'>
         <div className='flex justify-between'>
           <h2 className='text-2xl font-bold mb-4 text-[#484E5E]'>
             {title}
