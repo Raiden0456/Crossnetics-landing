@@ -1,6 +1,6 @@
 import React from 'react'
 import BlogItemSkeleton from './LatestInBlog.tsx'
-import { useWindowDimensions } from '../../../hooks/useWindowDimensions.tsx'
+import useWindowDimensions from '../../../hooks/useWindowDimensions.tsx'
 
 interface Posts {
   id: number
@@ -18,9 +18,13 @@ interface BlogLayoutProps {
   title: string
 }
 
-const BlogLayout: React.FC<BlogLayoutProps> = ({ bgColor, posts, title }) => {
+const BlogLayout: React.FC<BlogLayoutProps> = ({
+  bgColor,
+  posts,
+  title,
+}) => {
   const { width } = useWindowDimensions()
-  const vertical = width <= 1024
+  const vertical = width ? width <= 1024 : true
   bgColor = bgColor ? bgColor : 'bg-sky-50'
   return (
     <div className={bgColor}>

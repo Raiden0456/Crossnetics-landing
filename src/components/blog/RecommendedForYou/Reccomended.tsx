@@ -3,7 +3,7 @@ import { MobileTags } from './MobileTags/MobileTags'
 import { DesktopTags } from './DesktopTags/DesktopTags'
 
 // hooks
-import { useWindowDimensions } from '../../../hooks/useWindowDimensions.tsx'
+import useWindowDimensions from '../../../hooks/useWindowDimensions.tsx'
 
 export const Recommended = () => {
   const { width } = useWindowDimensions()

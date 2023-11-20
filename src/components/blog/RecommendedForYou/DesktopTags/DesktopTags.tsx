@@ -14,9 +14,11 @@ export const DesktopTags = () => {
     <div className='justify-between items-center hidden md:flex'>
       <div className='relative w-[160px]'>
         <label>
-          <select className='block w-full text-slate-400 bg-[#F1F8FF] font-semibold rounded-lg px-4 py-2 text-xs focus:outline-0'>
-            <option value='' disabled selected>
-              {' '}
+          <select
+            className='block w-full text-slate-400 bg-[#F1F8FF] font-semibold rounded-lg px-4 py-2 text-xs focus:outline-0'
+            defaultValue='lod'
+          >
+            <option disabled selected value='Popular'>
               Popular
             </option>
             {categories.map((category, index) => (

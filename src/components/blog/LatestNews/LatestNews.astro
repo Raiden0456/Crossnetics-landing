@@ -25,10 +25,10 @@ const { latest } = Astro.props
       <button class='text-[#0080FF]'>View All</button>
     </div>
     <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
-      <Skeleton latest={latest} height={150} />
-      <Skeleton latest={latest} height={150} />
-      <Skeleton latest={latest} height={150} />
-      <Skeleton latest={latest} height={150} />
+      <Skeleton latest={latest} height={150} client:load />
+      <Skeleton latest={latest} height={150} client:load />
+      <Skeleton latest={latest} height={150} client:load />
+      <Skeleton latest={latest} height={150} client:load />
     </div>
   </div>
 </div>
