@@ -79,7 +79,7 @@ export const MobileTags = () => {
       <hr className='w-full my-4' />
 
       <div className='w-full flex-shrink-0'>
-        <div className='flex overflow-x-auto space-x-2 justify-center'>
+        <div className='flex space-x-2 justify-center scroll'>
           {categories.map((tag, index) => (
             <button
               key={index}

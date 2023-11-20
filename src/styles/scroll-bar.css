@@ -1,0 +1,19 @@
+.scroll {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.scroll::-webkit-scrollbar {
+    height: 5px;
+}
+.scroll::-webkit-scrollbar-track {
+    background: #c9c9c9;
+    border-radius: 15px;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background: #6c6c6c;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #9b9b9b;
+}
