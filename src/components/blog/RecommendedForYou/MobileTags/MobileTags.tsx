@@ -12,7 +12,7 @@ export const MobileTags = () => {
   ]
 
   return (
-    <div className='flex flex-col md:hidden items-center py-5 space-y-4'>
+    <div className='flex flex-col items-center py-5 space-y-4'>
       <div className='flex flex-row gap-4'>
         <div className='relative w-fit'>
           <label>
@@ -33,7 +33,7 @@ export const MobileTags = () => {
           </label>
         </div>
 
-        <div className='flex bg-[#F1F8FF] text-slate-300 capitalize font-semibold px-4 py-2 rounded-lg text-3xs justify-between items-center w-[150px] '>
+        <div className='flex bg-[#F1F8FF] text-slate-300 capitalize font-semibold px-4 py-2 rounded-lg text-xs justify-between items-center w-fit'>
           <input
             type='text'
             placeholder='Search'
@@ -79,7 +79,7 @@ export const MobileTags = () => {
       <hr className='w-full my-4' />
 
       <div className='w-full flex-shrink-0'>
-        <div className='flex overflow-x-auto space-x-2'>
+        <div className='flex overflow-x-auto space-x-2 justify-center'>
           {categories.map((tag, index) => (
             <button
               key={index}

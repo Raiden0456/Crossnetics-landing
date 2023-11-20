@@ -1,5 +1,6 @@
 ---
 import { DesktopTags } from '../../RecommendedForYou/DesktopTags/DesktopTags'
+import { MobileTags } from '../../RecommendedForYou/MobileTags/MobileTags'
 ---
 
 <div class='w-10/12 mx-auto lg:w-2/3'>
@@ -16,6 +17,14 @@ import { DesktopTags } from '../../RecommendedForYou/DesktopTags/DesktopTags'
     </div>
   </div>
   <div class='mt-10'>
-    <DesktopTags />
+    {/* Hide DesktopTags on small screens and show on lg and larger screens */}
+    <div class='hidden lg:block'>
+      <DesktopTags searchFlag={true} client:load />
+    </div>
+
+    {/* Hide MobileTags on lg and larger screens */}
+    <div class='block lg:hidden'>
+      <MobileTags client:load />
+    </div>
   </div>
 </div>

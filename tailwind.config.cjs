@@ -24,6 +24,8 @@ export default {
       },
       dropShadow: {
         ipad: '20px 20px 20px rgba(0, 0, 0, 0.3)',
+        searchBlogBar: '0px 0px 10px rgba(0, 128, 255, 0.3)',
+        blogCard: '0px 1px 2px rgba(0, 0, 0, 0.08)',
       },
       colors: {
         hero_gradient_1: '#49D1E3',

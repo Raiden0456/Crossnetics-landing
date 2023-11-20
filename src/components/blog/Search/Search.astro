@@ -2,7 +2,7 @@
 // components
 import { Fragment } from 'react'
 import ResultSearch from './ResultSearch/ResultSearch.astro'
-import BlogItemSkeleton from '../LatestBlog/LatestInBlog'
+import BlogItemSkeleton from '../LatestBlog/BlogItemSkeleton'
 
 // data
 const latestPosts = [
@@ -23,18 +23,18 @@ const rows = Array.from({ length: 6 }, () => latestPosts)
 ---
 
 <Fragment>
-  <div class='mt-14 p-4 h-[133px] bg-sky-50 flex items-center'>
+  <div class='mt-14 p-4 h-[133px] bg-[#F1F8FF] flex items-center'>
     <div
-      class='bg-[#DEEFFF] w-6/12 mx-auto py-5 px-10 rounded-3xl relative top-16'
+      class='bg-[#DEEFFF] w-10/12 lg:w-4/12 mx-auto py-5 px-10 rounded-3xl relative top-16'
     >
       <div
-        class='bg-[#F1F8FF] text-slate-300 capitalize font-semibold p-4 rounded-2xl text-xs flex items-center max-w-full mx-auto justify-between'
+        class='bg-white text-slate-300 drop-shadow-searchBlogBar capitalize font-semibold p-4 rounded-2xl text-xs flex items-center max-w-full mx-auto justify-between'
       >
         <label>
           <input
             type='text'
             placeholder='Search'
-            class='w-full text-gray-600 bg-[#F1F8FF] focus:outline-none placeholder-gray-400'
+            class='w-full text-gray-600 bg-white focus:outline-none placeholder-gray-400'
           />
         </label>
         <svg
@@ -89,6 +89,7 @@ const rows = Array.from({ length: 6 }, () => latestPosts)
                   vertical={true}
                   height='200px'
                   rounded='20px'
+                  client:load
                   class='max-w-xs'
                 />
                 <BlogItemSkeleton
@@ -97,6 +98,7 @@ const rows = Array.from({ length: 6 }, () => latestPosts)
                   vertical={true}
                   height='200px'
                   rounded='20px'
+                  client:load
                   class='max-w-xs'
                 />
                 <BlogItemSkeleton
@@ -105,6 +107,7 @@ const rows = Array.from({ length: 6 }, () => latestPosts)
                   vertical={true}
                   height='200px'
                   rounded='20px'
+                  client:load
                   class='max-w-xs'
                 />
               </Fragment>
@@ -112,6 +115,6 @@ const rows = Array.from({ length: 6 }, () => latestPosts)
           </div>
         ))
       }
-    </div>
+    </div>../LatestBlog/BlogItemSkeleton
   </div>
 </Fragment>

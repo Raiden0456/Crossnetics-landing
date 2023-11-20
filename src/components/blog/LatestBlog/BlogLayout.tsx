@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogItemSkeleton from './LatestInBlog.tsx'
+import BlogItemSkeleton from './BlogItemSkeleton.tsx'
 import useWindowDimensions from '../../../hooks/useWindowDimensions.tsx'
 
 interface Posts {
@@ -28,7 +28,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
   bgColor = bgColor ? bgColor : 'bg-sky-50'
   return (
     <div className={bgColor}>
-      <div className='w-10/12 lg:w-2/3 mx-auto py-20'>
+      <div className='w-10/12 lg:w-2/3 mx-auto pt-20'>
         <div className='flex justify-between'>
           <h2 className='text-2xl font-bold mb-4 text-[#484E5E]'>
             {title}

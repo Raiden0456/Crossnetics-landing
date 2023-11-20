@@ -1,7 +1,14 @@
 import React from 'react'
 
-export const DesktopTags = () => {
+export const DesktopTags = ({ searchFlag = false }) => {
   const categories = [
+    'Social Networking',
+    'Youtube',
+    'Marketing',
+    'Influencing',
+    'AI',
+    'Advertising',
+    'CRIPY',
     'Social Networking',
     'Youtube',
     'Marketing',
@@ -11,14 +18,12 @@ export const DesktopTags = () => {
     'CRIPY',
   ]
   return (
-    <div className='justify-between items-center hidden md:flex'>
-      <div className='relative w-[160px]'>
+    <div className='justify-between space-x-2 items-center flex w-full'>
+      <div className='relative w-44 flex-shrink-0'>
         <label>
-          <select
-            className='block w-full text-slate-400 bg-[#F1F8FF] font-semibold rounded-lg px-4 py-2 text-xs focus:outline-0'
-            defaultValue='lod'
-          >
-            <option disabled selected value='Popular'>
+          <select className='block w-full text-slate-400 bg-[#F1F8FF] font-semibold rounded-lg px-4 py-2 text-xs focus:outline-0'>
+            <option value='' disabled selected>
+              {' '}
               Popular
             </option>
             {categories.map((category, index) => (
@@ -33,15 +38,20 @@ export const DesktopTags = () => {
           </select>
         </label>
       </div>
-      {categories.map((tag, index) => (
-        <button
-          className='bg-[#F1F8FF] text-gray-600 capitalize font-semibold px-4 py-2 rounded-lg text-xs'
-          key={index}
-        >
-          {tag}
-        </button>
-      ))}
-      <div className='bg-[#F1F8FF] text-slate-300 capitalize font-semibold px-4 py-2 rounded-xl text-xs flex justify-between w-[150px] fill-current'>
+      <div className='flex-grow flex-shrink min-w-0'>
+        <div className='flex overflow-x-auto space-x-2 justify-start'>
+          {categories.map((tag, index) => (
+          <button
+            className='bg-[#F1F8FF] text-gray-600 capitalize font-semibold px-4 py-2 rounded-lg text-xs whitespace-nowrap'
+            key={index}
+          >
+            {tag}
+          </button>
+          ))}
+        </div>
+      </div>
+      {!searchFlag && 
+      <div className='bg-[#F1F8FF] text-slate-300 capitalize font-semibold px-4 py-2 rounded-xl text-xs flex justify-between w-44 fill-current flex-shrink-0'>
         <label>
           <input
             type='text'
@@ -85,6 +95,7 @@ export const DesktopTags = () => {
           </svg>
         </a>
       </div>
+      }
     </div>
   )
 }
