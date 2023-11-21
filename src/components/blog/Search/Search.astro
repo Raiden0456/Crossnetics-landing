@@ -19,7 +19,7 @@ const latestPosts = [
 ]
 
 // для сокрщения повторения кода при выводе карточек
-const rows = Array.from({ length: 6 }, () => latestPosts)
+const rows = Array.from({ length: 20 }, () => latestPosts)
 ---
 
 <Fragment>
@@ -78,43 +78,25 @@ const rows = Array.from({ length: 6 }, () => latestPosts)
       <ResultSearch />
     </div>
     <div class='m-auto w-10/12 lg:w-2/3'>
-      {
-        rows.map(row => (
-          <div class='grid grid-cols-1 mt-14 lg:grid-cols-2 gap-5 py-10 2lg:grid-cols-3'>
-            {row.map((post, postIndex) => (
-              <Fragment>
-                <BlogItemSkeleton
-                  key={post.id || postIndex}
-                  post={post}
-                  vertical={true}
-                  height='200px'
-                  rounded='20px'
-                  client:load
-                  class='max-w-xs'
-                />
-                <BlogItemSkeleton
-                  key={post.id || postIndex}
-                  post={post}
-                  vertical={true}
-                  height='200px'
-                  rounded='20px'
-                  client:load
-                  class='max-w-xs'
-                />
-                <BlogItemSkeleton
-                  key={post.id || postIndex}
-                  post={post}
-                  vertical={true}
-                  height='200px'
-                  rounded='20px'
-                  client:load
-                  class='max-w-xs'
-                />
-              </Fragment>
-            ))}
-          </div>
-        ))
-      }
+      <div
+        class='grid grid-cols-1 mt-14 lg:grid-cols-2 gap-5 2lg:grid-cols-3'
+      >
+        {
+          Array.from({ length: 21 }, () => latestPosts[0]).map(
+            (post, index) => (
+              <BlogItemSkeleton
+                key={index}
+                post={post}
+                vertical={true}
+                height='200px'
+                rounded='20px'
+                client:load
+                class='max-w-xs'
+              />
+            )
+          )
+        }
+      </div>
     </div>
   </div>
 </Fragment>
