@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MobileTags = () => {
+export const MobileTags = ({ searchFlag = false }) => {
   const categories = [
     'Social Networking',
     'Youtube',
@@ -33,13 +33,14 @@ export const MobileTags = () => {
           </label>
         </div>
 
-        <div className='flex bg-[#F1F8FF] text-slate-300 capitalize font-semibold px-4 py-2 rounded-lg text-xs justify-between items-center w-fit'>
+        {!searchFlag && (
+          <div className='flex bg-[#F1F8FF] text-slate-300 capitalize font-semibold px-4 py-2 rounded-lg text-xs justify-between items-center w-fit'>
           <input
             type='text'
             placeholder='Search'
             className='w-full text-gray-600 bg-[#F1F8FF] focus:outline-0'
           />
-          <div>
+          <a href='/blog/search'>
             <svg
               width='25'
               height='16'
@@ -73,8 +74,10 @@ export const MobileTags = () => {
                 <rect x='0.5' width='16' height='16' fill='#BEC7E1' />
               </g>
             </svg>
-          </div>
+          </a>
         </div>
+        )}
+        
       </div>
       <hr className='w-full my-4' />
 
