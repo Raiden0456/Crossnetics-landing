@@ -32,7 +32,7 @@ const BlogItemSkeleton = ({ height, rounded, latest }: Props) => {
           className=" self-stretch object-cover max-w-[200px] h-24 lg:h-full rounded-xl lg:rounded-[40px]" 
         />
           <div className="flex flex-col h-full gap-4 justify-between">
-            <p className="text-slate-300 text-2xs font-medium">{el.date}</p>
+            <p className="text-slate-400 text-2xs font-medium">{el.date}</p>
             <h2 className="text-blue-500 text-base lg:text-sm xl:text-base font-bold leading-tight">
               {el.title}
             </h2>

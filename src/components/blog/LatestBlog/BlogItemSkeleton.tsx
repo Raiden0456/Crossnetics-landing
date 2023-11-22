@@ -52,7 +52,7 @@ const BlogItemSkeleton = ({
             className={orientationImageClasses}
           />
           <div className="p-6 xl:p-8 flex flex-col gap-y-2 xl:gap-y-4">
-            <div className=" text-slate-300 text-2xs font-medium">
+            <div className=" text-slate-400 text-2xs font-medium">
               {post.date}
             </div>
             <h1 className="text-blue-500 text-base lg:text-sm xl:text-base font-bold leading-tight">
