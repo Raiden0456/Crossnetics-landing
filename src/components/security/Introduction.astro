@@ -1,70 +1,74 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
 
 //Images
-import description_img from "../../images/icons/description.svg";
-import polygon_img from "../../images/icons/polygon.svg";
-import ether_img from "../../images/icons/ether.svg";
+import description_img from '../../images/icons/description.svg'
+import polygon_img from '../../images/icons/polygon.svg'
+import ether_img from '../../images/icons/ether.svg'
 interface Text {
-  title: string;
-  body: string;
+  title: string
+  body: string
 }
 
 interface Grid_element {
-  title: string;
-  body: string;
-  image: any;
+  title: string
+  body: string
+  image: any
 }
 
 interface Props {
-  introduction: Text;
-  polygon: Text;
-  ether: Text;
-  grid: Grid_element[];
+  introduction: Text
+  polygon: Text
+  ether: Text
+  grid: Grid_element[]
 }
 
-const {introduction, polygon, ether, grid} = Astro.props;
+const { introduction, polygon, ether, grid } = Astro.props
 ---
 
-<div class="flex flex-row gap-x-4 w-full items-start justify-start">
-  <Image src={description_img} class="w-4 mt-2" alt="" />
-  <div class="flex flex-col gap-y-5">
-    <h2 class="text-blue-500 font-bold text-2xl leading-tight">
+<div class='flex flex-row gap-x-4 w-full items-start justify-start'>
+  <Image src={description_img} class='w-4 mt-2' alt='' />
+  <div class='flex flex-col gap-y-5'>
+    <h2 class='text-blue-500 font-bold text-2xl leading-tight'>
       {introduction.title}
     </h2>
-    <p class="text-gray-600 text-base whitespace-pre-wrap">
+    <p class='text-gray-600 text-base whitespace-pre-wrap'>
       {introduction.body}
     </p>
   </div>
 </div>
-<div class="flex flex-row gap-x-4 w-full items-start justify-start">
-  <Image src={polygon_img} class="w-5 mt-2" alt="" />
-  <div class="flex flex-col gap-y-5">
-    <h2 class="text-gray-600 font-bold text-2xl leading-tight">
+<div class='flex flex-row gap-x-4 w-full items-start justify-start'>
+  <Image src={polygon_img} class='w-5 mt-2' alt='' />
+  <div class='flex flex-col gap-y-5'>
+    <h2 class='text-gray-600 font-bold text-2xl leading-tight'>
       {polygon.title}
     </h2>
-    <p class="text-gray-600 text-base whitespace-pre-wrap">
+    <p class='text-gray-600 text-base whitespace-pre-wrap'>
       {polygon.body}
     </p>
   </div>
 </div>
-<div class="flex flex-row gap-x-4 w-full items-start justify-start">
-  <Image src={ether_img} class="w-5" alt="" />
-  <div class="flex flex-col gap-y-5">
-    <h2 class="text-gray-600 font-bold text-2xl leading-tight">
+<div class='flex flex-row gap-x-4 w-full items-start justify-start'>
+  <Image src={ether_img} class='w-5' alt='' />
+  <div class='flex flex-col gap-y-5'>
+    <h2 class='text-gray-600 font-bold text-2xl leading-tight'>
       {ether.title}
     </h2>
-    <p class="text-gray-600 text-base whitespace-pre-wrap">
+    <p class='text-gray-600 text-base whitespace-pre-wrap'>
       {ether.body}
     </p>
   </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-  {grid.map((section, index) => (
-    <div class="flex flex-col items-start justify-start p-8 xl:p-10 bg-white rounded-[50px] gap-y-2 xl:gap-y-4">
-      <Image src={section.image} alt=""  class="w-10 h-10"/> 
-      <h1 class="text-gray-600 text-base font-bold uppercase leading-tight">{section.title}</h1>
-      <p class="text-gray-600 text-sm">{section.body}</p>
-    </div>
-  ))}
+<div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+  {
+    grid.map((section, index) => (
+      <div class='flex flex-col items-start justify-start p-8 xl:p-10 bg-white rounded-[50px] gap-y-2 xl:gap-y-4'>
+        <Image src={section.image} alt='' class='w-10 h-10' />
+        <h1 class='text-gray-600 text-base font-bold uppercase leading-tight'>
+          {section.title}
+        </h1>
+        <p class='text-gray-600 text-sm'>{section.body}</p>
+      </div>
+    ))
+  }
 </div>

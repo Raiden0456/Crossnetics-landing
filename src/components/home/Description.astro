@@ -1,13 +1,21 @@
 ---
 interface Props {
-  description: string;
+  description: string
 }
 
-const { description } = Astro.props;
+const { description } = Astro.props
 ---
 
-<div class="bg-gradient-to-b from-sky-200 to-sky-100 flex items-center justify-center">
-  <div class="w-10/12 lg:w-2/3 flex items-center justify-center my-24">
-    <p class="text-center text-blue-500 text-3xl 2xl:text-4xl font-bold w-full 2lg:w-4/5 leading-tight">{description}</p>
+<div
+  class='bg-gradient-to-b from-sky-200 to-sky-100 flex items-center justify-center'
+>
+  <div
+    class='w-10/12 lg:w-2/3 flex items-center justify-center my-24'
+  >
+    <p
+      class='text-center text-blue-500 text-3xl 2xl:text-4xl font-bold w-full 2lg:w-4/5 leading-tight'
+    >
+      {description}
+    </p>
   </div>
 </div>

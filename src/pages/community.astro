@@ -1,109 +1,105 @@
 ---
-import { Image } from "astro:assets";
-import Layout from "../layouts/Layout.astro";
-import LatestBlog from "@components/Latest_blog.astro";
-import WhatIs from "@components/community/WhatIs.astro";
+import { Image } from 'astro:assets'
+import Layout from '../layouts/Layout.astro'
+import LatestBlog from '@components/Latest_blog.astro'
+import WhatIs from '@components/community/WhatIs.astro'
 
 //top banner image
-import top from "../images/community_img/top.png";
+import top from '../images/community_img/top.png'
 
-
-//Groups images 
-import comp from "../images/community_img/comp.png";
-import highFive from "../images/community_img/high-five.png";
-import look from "../images/community_img/look.png";
+//Groups images
+import comp from '../images/community_img/comp.png'
+import highFive from '../images/community_img/high-five.png'
+import look from '../images/community_img/look.png'
 
 const group_images = {
   comp,
   highFive,
-  look
+  look,
 }
 
 //What is images
-import groups from "../images/community_img/groups.svg";
-import update from "../images/community_img/update.svg";
-import testing from "../images/community_img/testing.svg";
-import partner from "../images/community_img/partner.svg";
+import groups from '../images/community_img/groups.svg'
+import update from '../images/community_img/update.svg'
+import testing from '../images/community_img/testing.svg'
+import partner from '../images/community_img/partner.svg'
 
 const whatIs_images = {
   groups,
   update,
   testing,
-  partner
+  partner,
 }
 
-
-
 const groups_props = {
-  title: "User Groups",
+  title: 'User Groups',
   posts: [
     {
-      title: "Job Board",
-      body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
+      title: 'Job Board',
+      body: 'Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.',
       image: group_images.comp,
       group: {
-        type: "Public",
+        type: 'Public',
         members: 123,
-      }
+      },
     },
     {
-      title: "Crossnetics Academy Group",
-      body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
+      title: 'Crossnetics Academy Group',
+      body: 'Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.',
       image: group_images.highFive,
       group: {
-        type: "Public",
+        type: 'Public',
         members: 123,
-      }
+      },
     },
     {
-      title: "Networking Group",
-      body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
+      title: 'Networking Group',
+      body: 'Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.',
       image: group_images.look,
       group: {
-        type: "Public",
+        type: 'Public',
         members: 123,
-      }
-    }
+      },
+    },
   ],
-  button: "Show more groups"
+  button: 'Show more groups',
 }
 
 const whatIs_props = {
-  title: "What is Community?",
+  title: 'What is Community?',
   body: `Community Crossnetics is a place where you can connect, learn and get inspired with like-minded people. Here you will discover all the possibilities of our products and methodologies. Join us at #FriendsCrossnetics and take your business to the next level together with the best industry professionals.
   
 Use your Crossnetics username and password to log in.`,
   sections: [
     {
-      title: "USERS GROUPS",
-      body: "Find a Chapter by city, language or topic",
-      image: whatIs_images.groups
+      title: 'USERS GROUPS',
+      body: 'Find a Chapter by city, language or topic',
+      image: whatIs_images.groups,
     },
     {
-      title: "PRODUCT UPDATES",
-      body: "Stay up to date on the latest releases",
-      image: whatIs_images.update
+      title: 'PRODUCT UPDATES',
+      body: 'Stay up to date on the latest releases',
+      image: whatIs_images.update,
     },
     {
-      title: "Become a TESTER",
-      body: "Have a say in our product development",
-      image: whatIs_images.testing
+      title: 'Become a TESTER',
+      body: 'Have a say in our product development',
+      image: whatIs_images.testing,
     },
     {
-      title: "Become a partner",
-      body: "Have a say in our product development",
-      image: whatIs_images.partner
+      title: 'Become a partner',
+      body: 'Have a say in our product development',
+      image: whatIs_images.partner,
     },
   ],
-  button: "LOG IN to CROSSNETICS"
- 
+  button: 'LOG IN to CROSSNETICS',
 }
 ---
 
-<Layout title="Crossnetics security">
-  <main class="w-full" transition:animate="fade">
-    <Image src={top} alt="" class="w-full mt-16" />
-    <WhatIs {...whatIs_props} /> 
-    <LatestBlog {...groups_props} />    
+<Layout title='Crossnetics security'>
+  <main class='w-full' transition:animate='fade'>
+    <Image src={top} alt='' class='w-full mt-16' />
+    <WhatIs {...whatIs_props} />
+    <LatestBlog {...groups_props} />
   </main>
 </Layout>

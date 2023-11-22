@@ -1,267 +1,317 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "@components/Hero.astro";
-import Collapse from "@components/software/Collapse";
-
+import Layout from '../layouts/Layout.astro'
+import Hero from '@components/Hero.astro'
+import Collapse from '@components/software/Collapse'
 
 //Images
-import hero_img from "../images/software_img/hero.png";
+import hero_img from '../images/software_img/hero.png'
 
 const hero_props = {
-  header: "Key Features\nof Crossnetics Platform",
+  header: 'Key Features\nof Crossnetics Platform',
   body: `In an era of rapidly changing technology and market demands, the Crossnetics platform provides a set of innovative tools to effectively engage with the world of digital marketing.
   
 Below are the platform's key capabilities, each designed to meet the needs of advertisers, execs and other digital advertising marketers.`,
-  button: "Get started for free",
-  gradient: ["#1F3266", "#2882FF"],
+  button: 'Get started for free',
+  gradient: ['#1F3266', '#2882FF'],
   hero_image: hero_img,
 }
 
 const collapse_sections = [
-    {
-      title: "Connecting to Social Networks",
-      description: "The Crossnetics platform provides a powerful tool to integrate with major social media platforms such as YouTube, Telegram, Instagram, Facebook, TikTok, and Twitch. This opens up unique opportunities for analyzing and monitoring influence.",
-      key_capabilities: [
-        {
-          title: "Metrics Analysis",
-          description: "Collect and process all available metrics by account to deeply analyze interactions and impact.",
-        },
-        {
-          title: "Influencer Database",
-          description: "Ability to search and analyze potential partners among a wide range of known influencers.",
-        },
-        {
-          title: "Crossrating",
-          description: "An innovative approach to evaluating influencers by rating, making it easier to select the best candidates for collaboration.",
-        },
-        {
-          title: "Application to Digital Advertising",
-          description: "Given the current stage of digital advertising, social media integration is a vital tool. It allows advertisers and execs to get to the heart of social interactions, understand their audiences, and create effective strategies based on real data.",
-        }
-      ],
-      benefits: {
-          details: [
-            {
-              title: "Efficiency",
-              description: "Quick access to key social account information.",
-            },
-            {
-              title: "Targeting",
-              description: "Targeting advertising to specific audiences using accurate data.",
-            },
-            {
-              title: "Flexibility and Scalability",
-              description: "Flexibility and Scalability: Ability to adapt strategies in real-time based on direct data.",
-            }
-          ],
-          testimonial: "Overall, this tool is the foundation for modern advertising campaigns, blending perfectly with the principles of transparency, convenience, and efficiency at the heart of Crossnetics."
-        }
-      ,
-    },
-    {
-      title: "Web Analytics",
-      description: "Web analytics on the Crossnetics platform is a feature-rich tool provided thanks to our partners from Similarweb, which allows you to analyze websites on a number of key parameters. This tool gives advertisers and marketers a valuable insight into the current position and growth dynamics of their web resources.",
-      key_capabilities: [
-        {
-          title: "Visits Analysis",
-          description: "Monitor website traffic, number of visits and user behavior.",
-        },
-        {
-          title: "Rating",
-          description: "Identify global rankings, country rankings and industry rankings.",
-        },
-        {
-          title: "Industry Analysis",
-          description: "Identify top countries by industry, most popular industries, and social traffic and keyword research.",
-        },
-        {
-          title: "Application to Digital Advertising",
-          description: "Today, understanding and analyzing web traffic is key to success in digital advertising. Crossnetics Web analytics helps in understanding the dynamics of audience interaction and enables informed business decisions.",
-        }
-      ],
-      benefits: {
-          details: [
-            {
-              title: "Deep Analytics",
-              description: "The ability to deeply analyze web traffic and site audiences.",
-            },
-            {
-              title: "Decision Making",
-              description: "Informed decisions based on accurate data and insights.",
-            },
-            {
-              title: "Competitive Analysis",
-              description: "The ability to assess your website's position compared to industry competitors.",
-            }
-          ],
-          testimonial: "As part of Crossnetics' strategic goals of resource allocation efficiency and transparency, the Web analytics tool plays an important role in creating personalized and effective advertising campaigns, taking into account the current requirements and trends of the digital advertising market."
+  {
+    title: 'Connecting to Social Networks',
+    description:
+      'The Crossnetics platform provides a powerful tool to integrate with major social media platforms such as YouTube, Telegram, Instagram, Facebook, TikTok, and Twitch. This opens up unique opportunities for analyzing and monitoring influence.',
+    key_capabilities: [
+      {
+        title: 'Metrics Analysis',
+        description:
+          'Collect and process all available metrics by account to deeply analyze interactions and impact.',
       },
-
-    },
-    {
-      title: "Ability to Select and Save Influencers",
-      description: "Crossnetics provides a unique tool to select, save, and report on Influencers in different formats. This facilitates the process of finding the right partners and interacting with them.",
-      key_capabilities: [
-        {
-          title: "Influencer Selection",
-          description: "Search and select influencers based on various criteria and metrics.",
-        },
-        {
-          title: "Save to Favorites",
-          description: "Ability to save selected influencers for future analysis and collaboration.",
-        },
-        {
-          title: "Create reports",
-          description: "Generate reports on selected Influencers in convenient formats for further analysis.",
-        },
-        {
-          title: "Application to Digital Advertising",
-          description: "In the current market conditions, Influencers play a key role in brand promotion. Crossnetics tool allows you to effectively identify, analyze, and manage cooperation with them.",
-        }
-      ],
-      benefits: {
-          details: [
-            {
-              title: "Centralized Management",
-              description: "All Influencer data is collected in one place, making it easy to manage processes.",
-            },
-            {
-              title: "Quick Decision-Making",
-              description: "Intuitive interface and the ability to save speed up the process of selecting the right partners.",
-            },
-            {
-              title: "Increased Transparency",
-              description: "Clear and objective metrics provide transparency and enable informed decision-making.",
-            }
-          ],
-          testimonial: "In the context of Crossnetics' commitment to convenience and efficiency, this tool represents an important step towards simplifying interactions with key influencer marketers, in line with today's advertising campaign needs."
+      {
+        title: 'Influencer Database',
+        description:
+          'Ability to search and analyze potential partners among a wide range of known influencers.',
       },
-    },
-    {
-      title: "Decentralized Marketplace",
-      description: "Crossnetics' decentralized marketplace is an innovative marketplace where users can create orders to buy and sell ads on their social networks. Running on the Polygon blockchain, this macro marketplace provides high transparency and efficiency using stable USDT and USDC coins for settlement.",
-      key_capabilities: [
-        {
-          title: "Creating Orders",
-          description: "Users can place orders to buy and sell advertising by setting their conditions.",
-        },
-        {
-          title: "Working on the Polygon Blockchain",
-          description: "Increased transparency and security of transactions through the use of blockchain technology.",
-        },
-        {
-          title: "Using Stablecoin",
-          description: "Settlements within the platform are made through stablecoins USDT, ensuring stability and reliability.",
-        },
-        {
-          title: "Application to Digital Advertising",
-          description: "This feature enhances control and flexibility in the advertising process by allowing advertisers and social media owners to interact directly with each other.",
-        }
-      ],
-      benefits: {
-          details: [
-            {
-              title: "Direct Deals",
-              description: "No middlemen, reducing costs and increasing profitability.",
-            },
-            {
-              title: "Security and Transparency",
-              description: "Thanks to blockchain technology, transactions are transparent and secure.",
-            },
-            {
-              title: "Flexibility",
-              description: "Ability to set your conditions for orders.",
-            }
-          ],
-          testimonial: "In line with Crossnetics' core principles of decentralized collaboration and efficient resource allocation, the decentralized macrocell acts as a powerful tool that facilitates interaction between advertisers and social media owners, making advertising campaigns more transparent and efficient."
+      {
+        title: 'Crossrating',
+        description:
+          'An innovative approach to evaluating influencers by rating, making it easier to select the best candidates for collaboration.',
       },
-    },
-    {
-      title: "Integrated Artificial Intelligence in GPT Chat View",
-      description: "Crossnetics has integrated artificial intelligence in the form of a GPT chatbot with additional prompts to facilitate interaction with AI. This intelligent chatbot provides users with dynamic and intuitive responses on various digital marketing topics.",
-      key_capabilities: [
-        {
-          title: "Dynamic Prompts",
-          description: "Constantly updating and adding different themed prompts according to digital marketing trends.",
-        },
-        {
-          title: "Ease of Interaction",
-          description: "A user-friendly chat interface for direct communication with artificial intelligence.",
-        },
-        {
-          title: "Application to Digital Advertising",
-          description: "Through integrated AI, users can get quick and accurate answers to questions regarding marketing strategies, data analysis, and other key aspects of digital advertising.",
-        },
-      ],
-      benefits: {
-          details: [
-            {
-              title: "Quick Answers",
-              description: "AI provides instant and informative answers to user questions.",
-            },
-            {
-              title: "Adaptability",
-              description: "Constantly updating prompts ensures up-to-date information and keeping up with industry trends.",
-            },
-          ],
-          testimonial: "In keeping with Crossnetics' commitment to innovation and convenience, GPT's integrated artificial intelligence in the form of chat acts as a powerful and easy-to-use tool for digital advertisers, helping them make informed decisions based on relevant data and trends."
+      {
+        title: 'Application to Digital Advertising',
+        description:
+          'Given the current stage of digital advertising, social media integration is a vital tool. It allows advertisers and execs to get to the heart of social interactions, understand their audiences, and create effective strategies based on real data.',
       },
-    },
-    {
-      title: "Subscribe via Web3 or Web2",
-      description: "Crossnetics provides a convenient and flexible subscription system both via Web3, using decentralized wallets, and via Web2, using fiat funds through payment systems such as PayPal and Stripe.",
-      key_capabilities: [
+    ],
+    benefits: {
+      details: [
         {
-          title: "Web3 Subscription",
-          description: "Using decentralized wallets, users can subscribe to services using cryptocurrencies.",
+          title: 'Efficiency',
+          description:
+            'Quick access to key social account information.',
         },
         {
-          title: "Web2 Subscription",
-          description: "For those who prefer traditional payment methods, there is an option to use PayPal and Stripe payment system",
+          title: 'Targeting',
+          description:
+            'Targeting advertising to specific audiences using accurate data.',
         },
         {
-          title: "Application to Digital Advertising",
-          description: "This approach provides convenience and choice for advertisers and other users by providing flexible payment options to access the platform's valuable tools and data.",
+          title: 'Flexibility and Scalability',
+          description:
+            'Flexibility and Scalability: Ability to adapt strategies in real-time based on direct data.',
         },
       ],
-      benefits: {
-          details: [
-            {
-              title: "Quick Answers",
-              description: "The choice between cryptocurrency and traditional fiat money allows each user to find the right option for them.",
-            },
-            {
-              title: "Adaptability",
-              description: "The use of reliable payment systems and decentralized wallets ensures secure transactions.",
-            },
-          ],
-          testimonial: "In keeping with Crossnetics' commitment to convenience and efficiency, the ability to subscribe via Web3 and Web2 allows advertisers and partners to easily access the platform's powerful tools and services focused on various aspects of digital advertising using their preferred payment method. This feature emphasizes the adaptability and customer focus that are key success factors in today's advertising industry."
+      testimonial:
+        'Overall, this tool is the foundation for modern advertising campaigns, blending perfectly with the principles of transparency, convenience, and efficiency at the heart of Crossnetics.',
+    },
+  },
+  {
+    title: 'Web Analytics',
+    description:
+      'Web analytics on the Crossnetics platform is a feature-rich tool provided thanks to our partners from Similarweb, which allows you to analyze websites on a number of key parameters. This tool gives advertisers and marketers a valuable insight into the current position and growth dynamics of their web resources.',
+    key_capabilities: [
+      {
+        title: 'Visits Analysis',
+        description:
+          'Monitor website traffic, number of visits and user behavior.',
       },
-    },
-    {
-      title: "Blog about Trends in Digital Marketing",
-      description: "The Digital Marketing Trends blog on the Crossnetics platform is the central resource for everything related to digital marketing. It offers:",
-      key_capabilities: [
+      {
+        title: 'Rating',
+        description:
+          'Identify global rankings, country rankings and industry rankings.',
+      },
+      {
+        title: 'Industry Analysis',
+        description:
+          'Identify top countries by industry, most popular industries, and social traffic and keyword research.',
+      },
+      {
+        title: 'Application to Digital Advertising',
+        description:
+          'Today, understanding and analyzing web traffic is key to success in digital advertising. Crossnetics Web analytics helps in understanding the dynamics of audience interaction and enables informed business decisions.',
+      },
+    ],
+    benefits: {
+      details: [
         {
-          title: "Current Trends",
-          description: "The newest and hottest trends in digital marketing.",
+          title: 'Deep Analytics',
+          description:
+            'The ability to deeply analyze web traffic and site audiences.',
         },
         {
-          title: "Expert Opinions",
-          description: "Insights and analysis from leading industry experts.",
+          title: 'Decision Making',
+          description:
+            'Informed decisions based on accurate data and insights.',
         },
         {
-          title: "Discussing with the Community",
-          description: "A platform for sharing and discussing articles with colleagues and partners.",
+          title: 'Competitive Analysis',
+          description:
+            "The ability to assess your website's position compared to industry competitors.",
         },
       ],
+      testimonial:
+        "As part of Crossnetics' strategic goals of resource allocation efficiency and transparency, the Web analytics tool plays an important role in creating personalized and effective advertising campaigns, taking into account the current requirements and trends of the digital advertising market.",
     },
-  ]
+  },
+  {
+    title: 'Ability to Select and Save Influencers',
+    description:
+      'Crossnetics provides a unique tool to select, save, and report on Influencers in different formats. This facilitates the process of finding the right partners and interacting with them.',
+    key_capabilities: [
+      {
+        title: 'Influencer Selection',
+        description:
+          'Search and select influencers based on various criteria and metrics.',
+      },
+      {
+        title: 'Save to Favorites',
+        description:
+          'Ability to save selected influencers for future analysis and collaboration.',
+      },
+      {
+        title: 'Create reports',
+        description:
+          'Generate reports on selected Influencers in convenient formats for further analysis.',
+      },
+      {
+        title: 'Application to Digital Advertising',
+        description:
+          'In the current market conditions, Influencers play a key role in brand promotion. Crossnetics tool allows you to effectively identify, analyze, and manage cooperation with them.',
+      },
+    ],
+    benefits: {
+      details: [
+        {
+          title: 'Centralized Management',
+          description:
+            'All Influencer data is collected in one place, making it easy to manage processes.',
+        },
+        {
+          title: 'Quick Decision-Making',
+          description:
+            'Intuitive interface and the ability to save speed up the process of selecting the right partners.',
+        },
+        {
+          title: 'Increased Transparency',
+          description:
+            'Clear and objective metrics provide transparency and enable informed decision-making.',
+        },
+      ],
+      testimonial:
+        "In the context of Crossnetics' commitment to convenience and efficiency, this tool represents an important step towards simplifying interactions with key influencer marketers, in line with today's advertising campaign needs.",
+    },
+  },
+  {
+    title: 'Decentralized Marketplace',
+    description:
+      "Crossnetics' decentralized marketplace is an innovative marketplace where users can create orders to buy and sell ads on their social networks. Running on the Polygon blockchain, this macro marketplace provides high transparency and efficiency using stable USDT and USDC coins for settlement.",
+    key_capabilities: [
+      {
+        title: 'Creating Orders',
+        description:
+          'Users can place orders to buy and sell advertising by setting their conditions.',
+      },
+      {
+        title: 'Working on the Polygon Blockchain',
+        description:
+          'Increased transparency and security of transactions through the use of blockchain technology.',
+      },
+      {
+        title: 'Using Stablecoin',
+        description:
+          'Settlements within the platform are made through stablecoins USDT, ensuring stability and reliability.',
+      },
+      {
+        title: 'Application to Digital Advertising',
+        description:
+          'This feature enhances control and flexibility in the advertising process by allowing advertisers and social media owners to interact directly with each other.',
+      },
+    ],
+    benefits: {
+      details: [
+        {
+          title: 'Direct Deals',
+          description:
+            'No middlemen, reducing costs and increasing profitability.',
+        },
+        {
+          title: 'Security and Transparency',
+          description:
+            'Thanks to blockchain technology, transactions are transparent and secure.',
+        },
+        {
+          title: 'Flexibility',
+          description: 'Ability to set your conditions for orders.',
+        },
+      ],
+      testimonial:
+        "In line with Crossnetics' core principles of decentralized collaboration and efficient resource allocation, the decentralized macrocell acts as a powerful tool that facilitates interaction between advertisers and social media owners, making advertising campaigns more transparent and efficient.",
+    },
+  },
+  {
+    title: 'Integrated Artificial Intelligence in GPT Chat View',
+    description:
+      'Crossnetics has integrated artificial intelligence in the form of a GPT chatbot with additional prompts to facilitate interaction with AI. This intelligent chatbot provides users with dynamic and intuitive responses on various digital marketing topics.',
+    key_capabilities: [
+      {
+        title: 'Dynamic Prompts',
+        description:
+          'Constantly updating and adding different themed prompts according to digital marketing trends.',
+      },
+      {
+        title: 'Ease of Interaction',
+        description:
+          'A user-friendly chat interface for direct communication with artificial intelligence.',
+      },
+      {
+        title: 'Application to Digital Advertising',
+        description:
+          'Through integrated AI, users can get quick and accurate answers to questions regarding marketing strategies, data analysis, and other key aspects of digital advertising.',
+      },
+    ],
+    benefits: {
+      details: [
+        {
+          title: 'Quick Answers',
+          description:
+            'AI provides instant and informative answers to user questions.',
+        },
+        {
+          title: 'Adaptability',
+          description:
+            'Constantly updating prompts ensures up-to-date information and keeping up with industry trends.',
+        },
+      ],
+      testimonial:
+        "In keeping with Crossnetics' commitment to innovation and convenience, GPT's integrated artificial intelligence in the form of chat acts as a powerful and easy-to-use tool for digital advertisers, helping them make informed decisions based on relevant data and trends.",
+    },
+  },
+  {
+    title: 'Subscribe via Web3 or Web2',
+    description:
+      'Crossnetics provides a convenient and flexible subscription system both via Web3, using decentralized wallets, and via Web2, using fiat funds through payment systems such as PayPal and Stripe.',
+    key_capabilities: [
+      {
+        title: 'Web3 Subscription',
+        description:
+          'Using decentralized wallets, users can subscribe to services using cryptocurrencies.',
+      },
+      {
+        title: 'Web2 Subscription',
+        description:
+          'For those who prefer traditional payment methods, there is an option to use PayPal and Stripe payment system',
+      },
+      {
+        title: 'Application to Digital Advertising',
+        description:
+          "This approach provides convenience and choice for advertisers and other users by providing flexible payment options to access the platform's valuable tools and data.",
+      },
+    ],
+    benefits: {
+      details: [
+        {
+          title: 'Quick Answers',
+          description:
+            'The choice between cryptocurrency and traditional fiat money allows each user to find the right option for them.',
+        },
+        {
+          title: 'Adaptability',
+          description:
+            'The use of reliable payment systems and decentralized wallets ensures secure transactions.',
+        },
+      ],
+      testimonial:
+        "In keeping with Crossnetics' commitment to convenience and efficiency, the ability to subscribe via Web3 and Web2 allows advertisers and partners to easily access the platform's powerful tools and services focused on various aspects of digital advertising using their preferred payment method. This feature emphasizes the adaptability and customer focus that are key success factors in today's advertising industry.",
+    },
+  },
+  {
+    title: 'Blog about Trends in Digital Marketing',
+    description:
+      'The Digital Marketing Trends blog on the Crossnetics platform is the central resource for everything related to digital marketing. It offers:',
+    key_capabilities: [
+      {
+        title: 'Current Trends',
+        description:
+          'The newest and hottest trends in digital marketing.',
+      },
+      {
+        title: 'Expert Opinions',
+        description:
+          'Insights and analysis from leading industry experts.',
+      },
+      {
+        title: 'Discussing with the Community',
+        description:
+          'A platform for sharing and discussing articles with colleagues and partners.',
+      },
+    ],
+  },
+]
 ---
 
-<Layout title="Crossnetics software">
-  <main class="w-full" transition:animate="fade">
+<Layout title='Crossnetics software'>
+  <main class='w-full' transition:animate='fade'>
     <Hero {...hero_props} />
-    <Collapse sections={collapse_sections} client:load/>
+    <Collapse sections={collapse_sections} client:load />
   </main>
 </Layout>

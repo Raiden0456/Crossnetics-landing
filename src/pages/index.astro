@@ -1,29 +1,28 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "@components/Hero.astro";
-import Description from "@components/home/Description.astro";
-import Analytics from "@components/home/Analytics.astro";
-import Social_swiper from "@components/home/Social_swiper";
-import Web3 from "@components/home/Web3.astro";
-import AI from "@components/home/AI.astro";
-import Blog from "@components/home/Blog.astro";
-import LatestBlog from "@components/Latest_blog.astro";
-import Partners from "@components/home/Partners.astro";
-
+import Layout from '../layouts/Layout.astro'
+import Hero from '@components/Hero.astro'
+import Description from '@components/home/Description.astro'
+import Analytics from '@components/home/Analytics.astro'
+import Social_swiper from '@components/home/Social_swiper'
+import Web3 from '@components/home/Web3.astro'
+import AI from '@components/home/AI.astro'
+import Blog from '@components/home/Blog.astro'
+import LatestBlog from '@components/Latest_blog.astro'
+import Partners from '@components/home/Partners.astro'
 
 // Ipad slides images
-import slide1 from '../images/slide1.png';
-import slide2 from '../images/slide2.png';
-import slide3 from '../images/slide3.png';
-import slide4 from '../images/slide4.png';
+import slide1 from '../images/slide1.png'
+import slide2 from '../images/slide2.png'
+import slide3 from '../images/slide3.png'
+import slide4 from '../images/slide4.png'
 
 // Social images
-import tiktok from '../images/3d_images/tiktok.png';
-import youtube from '../images/3d_images/youtube.png';
-import instagram from '../images/3d_images/instagram.png';
-import facebook from '../images/3d_images/facebook.png';
-import twitch from '../images/3d_images/twitch.png';
-import telegram from '../images/3d_images/telegram.png';
+import tiktok from '../images/3d_images/tiktok.png'
+import youtube from '../images/3d_images/youtube.png'
+import instagram from '../images/3d_images/instagram.png'
+import facebook from '../images/3d_images/facebook.png'
+import twitch from '../images/3d_images/twitch.png'
+import telegram from '../images/3d_images/telegram.png'
 
 const social_images = {
   tiktok,
@@ -31,325 +30,359 @@ const social_images = {
   instagram,
   facebook,
   twitch,
-  telegram
+  telegram,
 }
 
 // Analytics images
-import metrics from '../images/analytics/metrics.svg';
-import graphs from '../images/analytics/graphs.svg';
-import api from '../images/analytics/api.svg';
-import web from '../images/analytics/web.svg';
+import metrics from '../images/analytics/metrics.svg'
+import graphs from '../images/analytics/graphs.svg'
+import api from '../images/analytics/api.svg'
+import web from '../images/analytics/web.svg'
 
 const analytics_images = {
   metrics,
   graphs,
   api,
-  web
+  web,
 }
 
 // Web3 images
-import gromofon from '../images/web3/gromofon.svg';
-import person from '../images/web3/person.svg';
-import crypto from '../images/web3/crypto.svg';
-import nft from '../images/web3/nft.svg';
+import gromofon from '../images/web3/gromofon.svg'
+import person from '../images/web3/person.svg'
+import crypto from '../images/web3/crypto.svg'
+import nft from '../images/web3/nft.svg'
 
 const web3_images = {
   gromofon,
   person,
   crypto,
-  nft
+  nft,
 }
 
 // AI images
-import idea from '../images/blog_img/idea.svg';
-import study from '../images/blog_img/study.svg';
-import news from '../images/blog_img/news.svg';
-import graphic from '../images/blog_img/graphic.svg';
+import idea from '../images/blog_img/idea.svg'
+import study from '../images/blog_img/study.svg'
+import news from '../images/blog_img/news.svg'
+import graphic from '../images/blog_img/graphic.svg'
 
 const blog_images = {
   idea,
   study,
   news,
-  graphic
+  graphic,
 }
 
 // Partners images
-import similarweb from '../images/partners/similarweb.png';
-import polygon from '../images/partners/polygon.png';
-import openai from '../images/partners/openai.svg';
+import similarweb from '../images/partners/similarweb.png'
+import polygon from '../images/partners/polygon.png'
+import openai from '../images/partners/openai.svg'
 
 const partners_images = {
   similarweb,
   polygon,
-  openai
+  openai,
 }
 
 // Latest blog images
-import comp from '../images/latest_blog/comp.png';
-import camera from '../images/latest_blog/camera.png';
-import cloud from '../images/latest_blog/cloud.png';
+import comp from '../images/latest_blog/comp.png'
+import camera from '../images/latest_blog/camera.png'
+import cloud from '../images/latest_blog/cloud.png'
 
 const latest_blog_images = {
   comp,
   camera,
-  cloud
+  cloud,
 }
 
 const hero_props = {
-  header: "Welcome \n to Crossnetics!",
-  body: "A unique platform with a suite of digital tools for marketing, analytics and social media, enhanced by AI and decentralized finance.",
-  button: "Get started for free",
-  gradient: ["#49D1E3", "#2782FF"],
+  header: 'Welcome \n to Crossnetics!',
+  body: 'A unique platform with a suite of digital tools for marketing, analytics and social media, enhanced by AI and decentralized finance.',
+  button: 'Get started for free',
+  gradient: ['#49D1E3', '#2782FF'],
   ipad_slides: [slide1, slide2, slide3, slide4],
 }
 
-const description_text = "Experience the world of our ecosystem, where advanced marketing tools make it easy and effective to realize all your strategic goals."
+const description_text =
+  'Experience the world of our ecosystem, where advanced marketing tools make it easy and effective to realize all your strategic goals.'
 
 const analytics_text = {
-  title: "Analytics",
-  body: "Our analytical solution offers a wide range of tools that will help you draw accurate conclusions from social statistics to inform your strategy, thanks to the integration of advanced social networks through API and precise web metrics of the global internet.",
+  title: 'Analytics',
+  body: 'Our analytical solution offers a wide range of tools that will help you draw accurate conclusions from social statistics to inform your strategy, thanks to the integration of advanced social networks through API and precise web metrics of the global internet.',
   sections: [
     {
-      title: "Cutting-Edge Metrics",
-      body: "We offer advanced metrics to evaluate key aspects of your social media presence. This allows you to analyze the impact on your audience and the effectiveness of strategies and campaigns.",
-      image: analytics_images.metrics
+      title: 'Cutting-Edge Metrics',
+      body: 'We offer advanced metrics to evaluate key aspects of your social media presence. This allows you to analyze the impact on your audience and the effectiveness of strategies and campaigns.',
+      image: analytics_images.metrics,
     },
     {
-      title: "Detailed Graphs",
-      body: "Turn data into actionable insights with our visual graphs. Visualize key metrics, making it easy to understand trends and relationships between metrics.",
-      image: analytics_images.graphs
+      title: 'Detailed Graphs',
+      body: 'Turn data into actionable insights with our visual graphs. Visualize key metrics, making it easy to understand trends and relationships between metrics.',
+      image: analytics_images.graphs,
     },
     {
-      title: "Official Social Network APIs",
-      body: "Integration of official social media APIs allow a reliable and up-to-date data access, providing accurate and complete information about your social media presence.",
-      image: analytics_images.api
+      title: 'Official Social Network APIs',
+      body: 'Integration of official social media APIs allow a reliable and up-to-date data access, providing accurate and complete information about your social media presence.',
+      image: analytics_images.api,
     },
     {
-      title: "WEB analytics",
-      body: "We provide detailed web site analytics so you can study your competitors by marketing strategies, visits, global rankings, country rankings, industry rankings, social traffic, keywords and inbound traffic.",
-      image: analytics_images.web
-    }
+      title: 'WEB analytics',
+      body: 'We provide detailed web site analytics so you can study your competitors by marketing strategies, visits, global rankings, country rankings, industry rankings, social traffic, keywords and inbound traffic.',
+      image: analytics_images.web,
+    },
   ],
   general: {
-    title: "We strive to make analytics intuitive and helpful",
-    body: "Our tools are designed so that you can interpret the numbers and grasp their impact on your business. Our platform provides all the necessary instruments for making informed decisions grounded in specific analytical data. This ensures the making of proactive, strategic decisions for achieving the best results.",
-  }
+    title: 'We strive to make analytics intuitive and helpful',
+    body: 'Our tools are designed so that you can interpret the numbers and grasp their impact on your business. Our platform provides all the necessary instruments for making informed decisions grounded in specific analytical data. This ensures the making of proactive, strategic decisions for achieving the best results.',
+  },
 }
-
 
 const social = [
   {
-    header:"Tik-Tok Analytics",
-    title: "Analyzing TikTok metrics is a powerful tool for marketers and meaningful content creation. Use the data to:",
-    button: "TikTok",
-    description: 
-    `• Determine what content is popular with your audience and create more of that content.
+    header: 'Tik-Tok Analytics',
+    title:
+      'Analyzing TikTok metrics is a powerful tool for marketers and meaningful content creation. Use the data to:',
+    button: 'TikTok',
+    description: `• Determine what content is popular with your audience and create more of that content.
     • Evaluate audience engagement and tailor your publishing strategy.
     • Monitor campaign results and adjust budgets.
     • Research competitors and identify the strengths and weaknesses of their strategy.`,
     image: social_images.tiktok,
-    testimonial: "Based on TikTok's metrics, you'll be able to create more engaging content and get more attention from your audience.",
-    gradient: ["#FF78B9", "#3DB4EE"]
+    testimonial:
+      "Based on TikTok's metrics, you'll be able to create more engaging content and get more attention from your audience.",
+    gradient: ['#FF78B9', '#3DB4EE'],
   },
   {
-    header:"YouTube Analytics",
-    title: "Analyzing YouTube metrics can help you optimize your channel.\nUse the data to:",
-    button: "YouTube",
-    description: 
-    `• Understand how videos are perceived by your audience and optimize content.
+    header: 'YouTube Analytics',
+    title:
+      'Analyzing YouTube metrics can help you optimize your channel.\nUse the data to:',
+    button: 'YouTube',
+    description: `• Understand how videos are perceived by your audience and optimize content.
     • Evaluate engagement to determine the best time to post videos.
     • Track the effectiveness of ad campaigns and calculate ROI.
     • Analyze competitors and develop a strategy based on best practices.`,
     image: social_images.youtube,
-    testimonial: "Using YouTube metrics, you can easily determine how to make your channel more successful and interesting for subscribers.",
-    gradient: ["#E24478", "#FF7C94"]
+    testimonial:
+      'Using YouTube metrics, you can easily determine how to make your channel more successful and interesting for subscribers.',
+    gradient: ['#E24478', '#FF7C94'],
   },
   {
-    header:"Instagram Analytics",
-    title: "Instagram metrics will help you:",
-    button: "Instagram",
-    description: 
-    `• Analyze your audience's interaction with your content.
+    header: 'Instagram Analytics',
+    title: 'Instagram metrics will help you:',
+    button: 'Instagram',
+    description: `• Analyze your audience's interaction with your content.
     • Evaluate the effectiveness of posts and ads.
     • Research trends and adapt your strategy to the changing interests of your users.`,
     image: social_images.instagram,
-    testimonial: "Using Instagram metrics, you'll create more interesting content and keep up with trends on the platform.",
-    gradient: ["#B458BA", "#FF9960"]
+    testimonial:
+      "Using Instagram metrics, you'll create more interesting content and keep up with trends on the platform.",
+    gradient: ['#B458BA', '#FF9960'],
   },
   {
-    header:"FaceBook Analytics",
-    title: "Facebook metrics, help refine your strategy on the platform:",
-    button: "FaceBook",
-    description: 
-    `• Understand your audience and create content that is relevant to their interests.
+    header: 'FaceBook Analytics',
+    title:
+      'Facebook metrics, help refine your strategy on the platform:',
+    button: 'FaceBook',
+    description: `• Understand your audience and create content that is relevant to their interests.
     • Evaluate the effectiveness of posts and ad campaigns.
     • Monitor competitor results and find opportunities for improvement.`,
     image: social_images.facebook,
-    testimonial: "Facebook metrics can help you better understand your followers and measure the results of your posts and ad campaigns.",
-    gradient: ["#288BFF", "#75B6F3"]
+    testimonial:
+      'Facebook metrics can help you better understand your followers and measure the results of your posts and ad campaigns.',
+    gradient: ['#288BFF', '#75B6F3'],
   },
   {
-    header:"Twitch Analytics",
-    title: "Twitch metrics, help streamers and marketers:",
-    button: "Twitch",
-    description: 
-    `• Analyze viewer engagement and optimize your streamers.
+    header: 'Twitch Analytics',
+    title: 'Twitch metrics, help streamers and marketers:',
+    button: 'Twitch',
+    description: `• Analyze viewer engagement and optimize your streamers.
     • Evaluate the effectiveness of advertising and sponsorship contracts.
     • Compare your results with other streamers and grow.`,
     image: social_images.twitch,
-    testimonial: "With the use of Twitch metrics, you can better understand your audience activity and grow as a streamer.",
-    gradient: ["#9357B5", "#CFAFEB"]
+    testimonial:
+      'With the use of Twitch metrics, you can better understand your audience activity and grow as a streamer.',
+    gradient: ['#9357B5', '#CFAFEB'],
   },
   {
-    header:"Telegram Analytics",
-    title: "Use Telegram metrics to better understand the channel's impact on the audience using an analytical bot:",
-    button: "Telegram",
-    description: 
-    `• Analyze subscriber activity and create content that attracts more attention.
+    header: 'Telegram Analytics',
+    title:
+      "Use Telegram metrics to better understand the channel's impact on the audience using an analytical bot:",
+    button: 'Telegram',
+    description: `• Analyze subscriber activity and create content that attracts more attention.
     • Evaluate the results of your publications and channels.
     • Develop a strategy taking into account the trends and interests of your audience.`,
     image: social_images.telegram,
-    testimonial: "Analyzing Telegram metrics will help you create more engaging posts and improve your interaction with your audience.",
-    gradient: ["#43CEF3", "#00A3E9"]
+    testimonial:
+      'Analyzing Telegram metrics will help you create more engaging posts and improve your interaction with your audience.',
+    gradient: ['#43CEF3', '#00A3E9'],
   },
 ]
 
 const Web3_text = {
-  title: "Decentralized Advertising Marketplace",
-  body: "The platform facilitates a collaborative environment for advertisers and performers, utilizing decentralized financial technologies to ensure transparency and efficiency in advertising campaigns.\nThis approach streamlines the advertising process, fosters trust, and ensures accountability between all parties involved.",
+  title: 'Decentralized Advertising Marketplace',
+  body: 'The platform facilitates a collaborative environment for advertisers and performers, utilizing decentralized financial technologies to ensure transparency and efficiency in advertising campaigns.\nThis approach streamlines the advertising process, fosters trust, and ensures accountability between all parties involved.',
   sections: [
     {
-      title: "Advertising exchange",
-      body: "Your product deserves attention. Marketplace offers you the opportunity to elevate its presence. You can buy advertising space and reach wider audiences, as well as sell your space to those who appreciate your community.",
-      image: web3_images.gromofon
+      title: 'Advertising exchange',
+      body: 'Your product deserves attention. Marketplace offers you the opportunity to elevate its presence. You can buy advertising space and reach wider audiences, as well as sell your space to those who appreciate your community.',
+      image: web3_images.gromofon,
     },
     {
-      title: "Communications",
+      title: 'Communications',
       body: "With the integration of Web 3.0 technology, we've made influencer search and collaboration more transparent and lucrative. Find suitable influencers for your niche and establish long-term partnerships.",
-      image: web3_images.person
+      image: web3_images.person,
     },
     {
-      title: "Cryptocurrency Payment",
-      body: " The future of digital finance is reflected in the ability to conduct transactions using cryptocurrencies worldwide. This method speeds up transactions and emphasizes the security of transactions.",
-      image: web3_images.crypto
+      title: 'Cryptocurrency Payment',
+      body: ' The future of digital finance is reflected in the ability to conduct transactions using cryptocurrencies worldwide. This method speeds up transactions and emphasizes the security of transactions.',
+      image: web3_images.crypto,
     },
     {
-      title: "NFT Rewards",
-      body: "Your active role and success in the Crossnetics ecosystem does not go unnoticed. For successfully executing orders on the marketplace, you receive unique NFTs that validate your contribution and value in the system.",
-      image: web3_images.nft
-    }
+      title: 'NFT Rewards',
+      body: 'Your active role and success in the Crossnetics ecosystem does not go unnoticed. For successfully executing orders on the marketplace, you receive unique NFTs that validate your contribution and value in the system.',
+      image: web3_images.nft,
+    },
   ],
-  testimonial: "Crossnetics transforms your online actions into valuable digital assets while making your community contributions meaningfully rewarding. Embark on your Web 3.0 journey with us."
+  testimonial:
+    'Crossnetics transforms your online actions into valuable digital assets while making your community contributions meaningfully rewarding. Embark on your Web 3.0 journey with us.',
 }
 
 const AI_text = {
-  header: "Optimize your growth with advanced AI technology",
+  header: 'Optimize your growth with advanced AI technology',
   paragraphs: [
     {
-      header: "Assistance and management:",
+      header: 'Assistance and management:',
       body: `Testing several advertising options through A/B testing to identify the most attractive topics for the audience.
 Drawing up an action plan. 
 Analyzing the effectiveness of advertising.
-Assisting in adjusting the budget across different advertising channels.`
+Assisting in adjusting the budget across different advertising channels.`,
     },
     {
-      header: "Advertisement Post Generation:",
-      body: 
-      `Creation and adaptation of text content for different platforms and formats.
+      header: 'Advertisement Post Generation:',
+      body: `Creation and adaptation of text content for different platforms and formats.
 Generation of creative headlines and texts for advertising based on the analysis of the target audience's interests.
-Recommendations on the choice of color palette and design style, based on the psychological impact on the consumer.`
+Recommendations on the choice of color palette and design style, based on the psychological impact on the consumer.`,
     },
     {
-      header: "Content Storyline Creation:",
-      body: 
-      `Generation of ideas for articles, videos, and other content formats based on audience interests.
+      header: 'Content Storyline Creation:',
+      body: `Generation of ideas for articles, videos, and other content formats based on audience interests.
 Creation of scripts for videos or podcasts.
-Recommendations on the structure and sequence of information presentation for maximum audience engagement.`
+Recommendations on the structure and sequence of information presentation for maximum audience engagement.`,
     },
   ],
-  testimonial: "",
-  button: "TRY NOW FOR FREE",
+  testimonial: '',
+  button: 'TRY NOW FOR FREE',
 }
 
 const blog = {
-  title: "Blog. Unveiling Knowledge in the Realm of Marketing and Technology",
-  blog: "Our blog is a useful resource for professional growth and achievements in the constantly evolving landscape of digital marketing. Join us on this journey to knowledge today!",
+  title:
+    'Blog. Unveiling Knowledge in the Realm of Marketing and Technology',
+  blog: 'Our blog is a useful resource for professional growth and achievements in the constantly evolving landscape of digital marketing. Join us on this journey to knowledge today!',
   sections: [
     {
-      title: "Information and Trends",
-      body: "Stay up to date with the latest trends and news in the world of marketing and technology, thanks to our blog. We provide an extensive collection of articles and resources that will help you stay informed and improve your professional path.",
-      image: blog_images.idea
+      title: 'Information and Trends',
+      body: 'Stay up to date with the latest trends and news in the world of marketing and technology, thanks to our blog. We provide an extensive collection of articles and resources that will help you stay informed and improve your professional path.',
+      image: blog_images.idea,
     },
     {
-      title: "Educational Materials",
-      body: "Do you want to improve your skills or acquire new knowledge? We offer step-by-step guides, video tutorials, and informative webinars that will help you master the basics of marketing and social networks.",
-      image: blog_images.study
+      title: 'Educational Materials',
+      body: 'Do you want to improve your skills or acquire new knowledge? We offer step-by-step guides, video tutorials, and informative webinars that will help you master the basics of marketing and social networks.',
+      image: blog_images.study,
     },
     {
-      title: "Latest news",
-      body: "Stay connected with important news and events related to marketing, social networks, and technological innovations. We are always aware of any changes that may affect your business.",
-      image: blog_images.news
+      title: 'Latest news',
+      body: 'Stay connected with important news and events related to marketing, social networks, and technological innovations. We are always aware of any changes that may affect your business.',
+      image: blog_images.news,
     },
     {
-      title: "Expert opinions",
-      body: "Listen to the opinions of outstanding industry experts who are ready to share their knowledge and experience with you. Discover unique strategies and approaches that will help you stand out in the market. Our experts are always ready to share valuable tips.",
-      image: blog_images.graphic
-    }
+      title: 'Expert opinions',
+      body: 'Listen to the opinions of outstanding industry experts who are ready to share their knowledge and experience with you. Discover unique strategies and approaches that will help you stand out in the market. Our experts are always ready to share valuable tips.',
+      image: blog_images.graphic,
+    },
   ],
   general: {
-    title: "Welcome to our unique Blog",
-    body: "We are pleased to present you a reliable guide in the field of marketing, social networks, and technology. Here we strive to provide you with the most relevant and useful information that will help you stay informed about the latest trends and reach new heights in your professional development.",
-  }
+    title: 'Welcome to our unique Blog',
+    body: 'We are pleased to present you a reliable guide in the field of marketing, social networks, and technology. Here we strive to provide you with the most relevant and useful information that will help you stay informed about the latest trends and reach new heights in your professional development.',
+  },
 }
 
 const latest_blog = {
-  title: "Latest in blog",
+  title: 'Latest in blog',
   posts: [
     {
-      date: "May 12, 2023",
-      title: "Unleashing the Power of Influencer Marketplaces: A Deep Dive into Social Media Strategies",
-      body: "Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.",
+      date: 'May 12, 2023',
+      title:
+        'Unleashing the Power of Influencer Marketplaces: A Deep Dive into Social Media Strategies',
+      body: 'Hear from leading industry experts who share their knowledge and experience. Discover unique strategies and approaches to help you stand out in the market.',
       image: latest_blog_images.comp,
-      tags: ["Social networking"]
+      tags: ['Social networking'],
     },
     {
-      date: "July 13, 2023",
-      title: "Connecting Brands and Influencers: The Evolution and Impact of Social Media Marketplaces",
-      body: "Aspiring to enhance your skills or embrace new knowledge? Our step-by-step guides, video tutorials, and enlightening webinars are designed to help you master essential marketing and social media skills.",
+      date: 'July 13, 2023',
+      title:
+        'Connecting Brands and Influencers: The Evolution and Impact of Social Media Marketplaces',
+      body: 'Aspiring to enhance your skills or embrace new knowledge? Our step-by-step guides, video tutorials, and enlightening webinars are designed to help you master essential marketing and social media skills.',
       image: latest_blog_images.camera,
-      tags: ["Social networking"]
+      tags: ['Social networking'],
     },
     {
-      date: "August 1, 2023",
-      title: "From Engagement to Success: How Influencer Marketplaces Shape Social Media Marketing",
-      body: "Stay connected to significant news and events spanning marketing, social media, and technological innovation. Remain current with any shifts that could impact your business.",
+      date: 'August 1, 2023',
+      title:
+        'From Engagement to Success: How Influencer Marketplaces Shape Social Media Marketing',
+      body: 'Stay connected to significant news and events spanning marketing, social media, and technological innovation. Remain current with any shifts that could impact your business.',
       image: latest_blog_images.cloud,
-      tags: ["Social networking"]
-    }
+      tags: ['Social networking'],
+    },
   ],
-  button: "Read full blog"
+  button: 'Read full blog',
 }
 
 const partners = {
-  title: "Our Partners",
+  title: 'Our Partners',
   partner_images: [
     partners_images.similarweb,
     partners_images.polygon,
     partners_images.openai,
-  ]
+  ],
 }
 ---
 
-<Layout title="Welcome to Crossnetics.">
-  <main class="w-full" transition:animate="fade">
+<Layout title='Welcome to Crossnetics.'>
+  <main class='w-full' transition:animate='fade'>
     <Hero {...hero_props} />
     <Description description={description_text} />
-    <Analytics title={analytics_text.title} body={analytics_text.body} sections={analytics_text.sections} general={analytics_text.general} />
-    <Social_swiper {social} client:load/>
-    <Web3 title={Web3_text.title} body={Web3_text.body} sections={Web3_text.sections} testimonial={Web3_text.testimonial} />
-    <AI header={AI_text.header} paragraphs={AI_text.paragraphs} testimonial={AI_text.testimonial} button={AI_text.button} />
-    <Blog title={blog.title} blog={blog.blog} sections={blog.sections} general={blog.general} />
-    <LatestBlog title={latest_blog.title} posts={latest_blog.posts} button={latest_blog.button} />
-    <Partners title={partners.title} partner_images={partners.partner_images} />
+    <Analytics
+      title={analytics_text.title}
+      body={analytics_text.body}
+      sections={analytics_text.sections}
+      general={analytics_text.general}
+    />
+    <Social_swiper {social} client:load />
+    <Web3
+      title={Web3_text.title}
+      body={Web3_text.body}
+      sections={Web3_text.sections}
+      testimonial={Web3_text.testimonial}
+    />
+    <AI
+      header={AI_text.header}
+      paragraphs={AI_text.paragraphs}
+      testimonial={AI_text.testimonial}
+      button={AI_text.button}
+    />
+    <Blog
+      title={blog.title}
+      blog={blog.blog}
+      sections={blog.sections}
+      general={blog.general}
+    />
+    <LatestBlog
+      title={latest_blog.title}
+      posts={latest_blog.posts}
+      button={latest_blog.button}
+    />
+    <Partners
+      title={partners.title}
+      partner_images={partners.partner_images}
+    />
   </main>
 </Layout>

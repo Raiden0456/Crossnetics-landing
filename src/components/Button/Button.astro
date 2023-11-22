@@ -1,0 +1,20 @@
+---
+//interface
+interface Props {
+  paddingX: string
+  paddingY: string
+  bgColor: string
+  textColor: string
+}
+
+// data
+const { paddingX, paddingY, textColor, bgColor } = Astro.props
+---
+
+<div
+  class={`${paddingX} ${paddingY} ${bgColor} rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg`}
+>
+  <div class={`${textColor} text-xs font-extrabold uppercase`}>
+    Load More
+  </div>
+</div>

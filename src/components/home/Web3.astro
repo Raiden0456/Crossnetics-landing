@@ -1,51 +1,81 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from 'astro:assets'
 
-//Images 
-import logo from '../../images/logo.svg';
-import web3 from '../../images/web3/WEB3.0.svg';
+//Images
+import logo from '../../images/logo.svg'
+import web3 from '../../images/web3/WEB3.0.svg'
 
 interface Section {
-  title: string;
-  body: string;
-  image: any;
+  title: string
+  body: string
+  image: any
 }
 
 interface Props {
-  title: string;
-  body: string;
-  sections: Section[];
-  testimonial: string;
+  title: string
+  body: string
+  sections: Section[]
+  testimonial: string
 }
 
-const { title, body, sections, testimonial } = Astro.props;
+const { title, body, sections, testimonial } = Astro.props
 ---
 
-<div class="h-fit bg-gradient-to-b from-gray-700 to-blue-500 flex flex-col items-center justify-center">
-  <div class="w-10/12 lg:w-2/3 flex flex-col items-start justify-center gap-y-16 my-20">
-    <div class="w-full md:w-3/4 flex flex-col items-start justify-start gap-y-4">
-      <h1 class="text-3xl 2xl:text-4xl font-bold text-start text-sky-100 capitalize">{ title }</h1>
-      <p class="text-web3-body text-base font-normal">{ body }</p>
+<div
+  class='h-fit bg-gradient-to-b from-gray-700 to-blue-500 flex flex-col items-center justify-center'
+>
+  <div
+    class='w-10/12 lg:w-2/3 flex flex-col items-start justify-center gap-y-16 my-20'
+  >
+    <div
+      class='w-full md:w-3/4 flex flex-col items-start justify-start gap-y-4'
+    >
+      <h1
+        class='text-3xl 2xl:text-4xl font-bold text-start text-sky-100 capitalize'
+      >
+        {title}
+      </h1>
+      <p class='text-web3-body text-base font-normal'>{body}</p>
     </div>
-    <div class="grid grid-cols-1 2lg:grid-cols-2 gap-6">
-      {sections.map ((section) => (
-        <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 p-7 rounded-[50px] bg-web3-grid">
-          <Image src={section.image} alt=""  class="flex w-32 xl:w-60" />
-          <div class="flex flex-col items-center justify-center text-center md:text-start md:items-start md:justify-start gap-y-2 xl:gap-y-4">
-            <h1 class="text-base font-bold uppercase text-sky-100 ">{ section.title }</h1>
-            <p class="text-Web3-body text-sm font-normal text-sky-100">{ section.body }</p>
+    <div class='grid grid-cols-1 2lg:grid-cols-2 gap-6'>
+      {
+        sections.map(section => (
+          <div class='flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 p-7 rounded-[50px] bg-web3-grid'>
+            <Image
+              src={section.image}
+              alt=''
+              class='flex w-32 xl:w-60'
+            />
+            <div class='flex flex-col items-center justify-center text-center md:text-start md:items-start md:justify-start gap-y-2 xl:gap-y-4'>
+              <h1 class='text-base font-bold uppercase text-sky-100 '>
+                {section.title}
+              </h1>
+              <p class='text-Web3-body text-sm font-normal text-sky-100'>
+                {section.body}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
-    <div class="flex flex-col md:flex-row w-full gap-5 md:gap-10 items-center justify-start">
-      <div class="md:hidden flex flex-row gap-5 md:gap-10 self-start">
-        <Image src={logo} alt=""  class="w-10 lg:w-40 self-start md:self-auto" />
-        <Image src={web3} alt=""  class="flex w-32" />
+    <div
+      class='flex flex-col md:flex-row w-full gap-5 md:gap-10 items-center justify-start'
+    >
+      <div class='md:hidden flex flex-row gap-5 md:gap-10 self-start'>
+        <Image
+          src={logo}
+          alt=''
+          class='w-10 lg:w-40 self-start md:self-auto'
+        />
+        <Image src={web3} alt='' class='flex w-32' />
       </div>
-      <Image src={logo} alt=""  class="hidden md:flex w-20 self-start md:self-auto" />
-      <p class="text-web3-body text-sm font-normal">{ testimonial }</p>
-      <Image src={web3} alt=""  class="hidden md:flex w-60" />
+      <Image
+        src={logo}
+        alt=''
+        class='hidden md:flex w-20 self-start md:self-auto'
+      />
+      <p class='text-web3-body text-sm font-normal'>{testimonial}</p>
+      <Image src={web3} alt='' class='hidden md:flex w-60' />
     </div>
   </div>
 </div>

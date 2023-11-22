@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write \"src/**/*.astro\""
   },
   "dependencies": {
     "@astrojs/react": "^3.0.2",
@@ -19,10 +20,13 @@
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
+    "react-loading-skeleton": "^3.3.1",
     "swiper": "^10.2.0",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "@types/react-burger-menu": "^2.8.4"
+    "@types/react-burger-menu": "^2.8.4",
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2"
   }
 }

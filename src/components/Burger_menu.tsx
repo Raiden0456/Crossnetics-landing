@@ -18,6 +18,10 @@ const header_sections = {
       url: "/security",
     },
     {
+      title: "Blog",
+      url: "/blog",
+    },
+    {
       title: "Community",
       url: "/community",
     },
@@ -33,6 +37,7 @@ interface Social {
     height?: number;
     format?: string;
   };
+
 }
 
 // BurgerMenu component
@@ -48,7 +53,7 @@ const BurgerMenu = ({ social_media = [] }: { social_media?: Social[] }) => {
         </div>
       </>
       <>
-        <div className="flex flex-col gap-10 justify-center items-center text-[#DEEFFF] font-bold uppercase text-lg">
+        <div className="flex flex-col gap-10 justify-center items-center text-[#DEEFFF] font-bold uppercase text-lg mb-[70px]">
           {header_sections.sections.map((section, index) => (
             <a key={index} className="menu-item" href={section.url}>
               {section.title}
@@ -57,17 +62,17 @@ const BurgerMenu = ({ social_media = [] }: { social_media?: Social[] }) => {
         </div>
       </>
       <>
-        <div className="lg:hidden h-11 px-7 py-2.5 bg-blue-500 rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer shadow-[0_0_50px_0px] shadow-blue-500">
+        <div className="lg:hidden h-11 px-7 py-2.5 bg-blue-500 rounded-2xl justify-center items-center gap-4 inline-flex cursor-pointer shadow-[0_0_50px_0px] shadow-blue-500 mb-10 flex-shrink-0">
           <div className="text-white text-xs font-extrabold uppercase">
             View pricing
           </div>
         </div>
       </>
       <>
-        <div className="w-full bg-gray-200 h-px" />
+        <div className="w-full bg-gray-200 h-px mb-10 flex-shrink-0" />
       </>
       <>
-        <div className="w-full flex flex-row items-center lg:flex-col justify-between mb-10">
+        <div className="w-full flex flex-row items-center lg:flex-col justify-between pb-10 gap-5">
           <div className="w-full flex flex-row items-start gap-6">
             <div className="w-full flex flex-row md:justify-between gap-6">
               <div className="flex flex-row flex-wrap items-center right-0 justify-start md:justify-end gap-4 w-fit">

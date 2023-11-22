@@ -1,0 +1,16 @@
+.scroll {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.scroll::-webkit-scrollbar {
+    height: 5px;
+}
+.scroll::-webkit-scrollbar-track {
+    background: #ddebfd;
+    border-radius: 15px;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background: #57bbfc;
+    border-radius: 15px;
+    margin-top: 10px;
+}
