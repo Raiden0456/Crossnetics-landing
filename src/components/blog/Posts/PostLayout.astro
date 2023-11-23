@@ -1,0 +1,48 @@
+---
+import PostDescription from './PostDescription.astro';
+import PostContent from './PostContent.astro';
+
+interface DescriptionData {
+  image: {
+    url: string;
+    copyright: string;
+  };
+  title: string;
+  author: string;
+  tags: string[];
+}
+
+interface ContentData {
+  titleType: boolean;
+  title: string;
+  text: string;
+  images: {
+    url: string;
+    copyright: string;
+  }[];
+}
+
+interface PostData {
+  description: DescriptionData;
+  content: ContentData[];
+}
+
+interface Props {
+  data: PostData;
+}
+
+const { data } = Astro.props
+
+const descriptionData = data.description;
+console.log(descriptionData);
+const contentData = data.content;
+---
+
+<!-- Layout component -->
+<div class="layout">
+  <PostDescription {...descriptionData} />
+
+  {contentData.map((content) => (
+    <PostContent {...content} />
+  ))
+</div>

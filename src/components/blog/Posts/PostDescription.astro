@@ -1,0 +1,24 @@
+---
+interface Props {
+  image: {
+    url: string;
+    copyright: string;
+  };
+  title: string;
+  author: string;
+  tags: string[];
+}
+
+const { image, title, author, tags } = Astro.props;
+---
+
+<div>
+  <img src={image.url} />
+  <h1>{title}</h1>
+  <p>By {author}</p>
+  <ul>
+    {tags.map((tag) => (
+      <li>{tag}</li>
+    ))}
+  </ul>
+</div>
