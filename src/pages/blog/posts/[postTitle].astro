@@ -5,6 +5,7 @@ import Post from '../../../mock/mock-date-news.json'
 import Layout from '../../../layouts/Post_Layout.astro'
 import PostLayout from '@components/blog/Posts/PostLayout.astro';
 
+export const prerender = true;
 
 export async function getStaticPaths() {
 // Fetch data from your backend

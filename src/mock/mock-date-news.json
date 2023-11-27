@@ -2,10 +2,10 @@
     "description": {
         "image": {
             "url": "https://klike.net/uploads/posts/2023-01/1674629938_3-125.jpg",
-            "copyright": "сюреализм"
+            "copyright": "Source: какой то бедный художник с апворка"
         },
-        "title": "Сюреализм",
-        "author": "Неизвестен",
+        "title": "Сюреализм в художстве совремменного мира полным необразованных дЭбилов",
+        "author": "хрен с горы",
         "tags": [
             "Daily",
             "Article",
@@ -15,15 +15,48 @@
     },
     "content": [
         {
-            "titleType": false,
+            "id": "1",
+            "titleType": true,
             "title": "Сюреализм в модельной жизни",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.",
-            "images": [
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.",
+            "image":
                 {
                     "url": "https://klike.net/uploads/posts/2023-01/1674629938_3-125.jpg",
-                    "copyright": "сюреализм"
+                    "copyright": "Source: какой то бедный художник с апворка"
                 }
-            ]
+        },
+        {
+            "id": "2",
+            "titleType": false,
+            "title": "Сюреализм в целом",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.",
+            "image":
+                {
+                    "url": "https://klike.net/uploads/posts/2023-01/1674629938_3-125.jpg",
+                    "copyright": "Source: какой то бедный художник с апворка"
+                }
+        },
+        {
+            "id": "3",
+            "titleType": false,
+            "title": "Сюреализм в целом где то",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.",
+            "image":
+                {
+                    "url": "https://klike.net/uploads/posts/2023-01/1674629938_3-125.jpg",
+                    "copyright": "Source: какой то бедный художник с апворка"
+                }
+        },
+        {
+            "id": "4",
+            "titleType": false,
+            "title": "Сюреализм в целом где то там да да",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet purus gravida quis. Arcu dui vivamus arcu felis bibendum ut. Morbi tincidunt augue interdum velit euismod.",
+            "image":
+                {
+                    "url": "https://klike.net/uploads/posts/2023-01/1674629938_3-125.jpg",
+                    "copyright": "Source: какой то бедный художник с апворка"
+                }
         }
     ]
 }

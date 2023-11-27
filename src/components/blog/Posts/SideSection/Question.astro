@@ -1,0 +1,17 @@
+---
+import Button from '@components/Button/Button.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  buttonText: string;
+}
+
+const { title, description, buttonText } = Astro.props;
+---
+
+<div class="rounded-[40px] flex flex-col min-w-[250px] h-fit gap-4 p-6 bg-sky-50 items-center">
+  <h3 class="text-base font-bold text-blue-500">{title}</h3>
+  <p class="text-sm text-gray-400">{description}</p>
+  <Button buttonText={buttonText} paddingY='py-3' paddingX='px-6' width='w-fit'/>
+</div>
