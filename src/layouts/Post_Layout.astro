@@ -87,15 +87,16 @@ const footer = {
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class='bg-white'>
+  <body class='bg-white h-screen flex flex-col justify-between'>
     <Header
       sections={header_sections.sections}
       burgerMenuSocial={footer.social_media}
+      bgColor={headerColor}
       transition:persist
     />
     <div class='flex items-center justify-center'>
       <div
-        class='w-10/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center mt-40 mb-20'
+        class='w-10/12 lg:w-2/3 flex flex-col items-start justify-start 2lg:justify-center mt-28 md:mt-40 mb-20'
       >
         <slot />
       </div>

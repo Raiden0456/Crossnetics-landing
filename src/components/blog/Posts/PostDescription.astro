@@ -7,18 +7,37 @@ interface Props {
   title: string;
   author: string;
   tags: string[];
+  date: string; // Assuming you have a 'date' property
 }
 
-const { image, title, author, tags } = Astro.props;
+const { image, title, author, tags, date } = Astro.props;
 ---
 
-<div>
-  <img src={image.url} />
-  <h1>{title}</h1>
-  <p>By {author}</p>
-  <ul>
-    {tags.map((tag) => (
-      <li>{tag}</li>
-    ))}
-  </ul>
+<div class='flex mb-20 gap-10 md:gap-20 flex-col md:flex-row'>
+  <div class='flex flex-col items-start w-full md:w-1/2 gap-4'>
+    <div class='w-full h-56 xl:h-80 overflow-hidden rounded-[25px] xl:rounded-[40px]'>
+      <img src={image.url} class='w-full h-full object-cover' />
+    </div>    
+    <p class='text-sm italic text-gray-600 w-full '>{image.copyright}</p>
+  </div>
+
+  <div class='flex flex-col justify-start w-full md:w-1/2'>
+    <p class="text-slate-400 text-2xs font-medium mb-3">By {author}</p>
+    <h1 class="text-gray-600 font-bold text-3xl mb-6">{title}</h1>
+    <div class='flex justify-between'>
+      {tags && (
+        <div class="flex flex-row gap-2 w-2/3 flex-wrap bottom-0">
+          {tags.map((tag, index) => (
+            <div
+              key={index}
+              class="px-2 py-1 bg-pink-100 rounded-xl justify-center items-center"
+            >
+              <div class="text-blue-500 text-2xs">{tag}</div>
+            </div>
+          ))}
+        </div>
+      )}
+      <p class="text-slate-400 text-2xs font-medium">{date}</p>
+    </div>
+  </div>
 </div>

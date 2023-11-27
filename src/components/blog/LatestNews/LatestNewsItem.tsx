@@ -29,14 +29,14 @@ const BlogItemSkeleton = ({ height, rounded, latest }: Props) => {
         <img 
           src={el.image.src} 
           alt={el.title} 
-          className=" self-stretch object-cover max-w-[200px] h-24 lg:h-full rounded-xl lg:rounded-[40px]" 
+          className=" self-stretch object-cover max-w-[200px] lg:max-w-[150px] xl:max-w-[200px] h-24 lg:h-28 xl:h-full rounded-xl lg:rounded-[25px]" 
         />
-          <div className="flex flex-col h-full gap-4 justify-between">
+          <div className="flex flex-col h-full justify-between">
             <p className="text-slate-400 text-2xs font-medium">{el.date}</p>
             <h2 className="text-blue-500 text-base lg:text-sm xl:text-base font-bold leading-tight">
               {el.title}
             </h2>
-            <p className="text-gray-400 text-sm lg:text-xs xl:text-sm leading-tight">
+            <p className="text-gray-400 text-sm lg:text-xs xl:text-sm leading-tight mb-2">
               {el.text}
             </p>
             {el.tags && (

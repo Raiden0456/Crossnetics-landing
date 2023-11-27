@@ -10,6 +10,7 @@ interface DescriptionData {
   title: string;
   author: string;
   tags: string[];
+  date: string;
 }
 
 interface ContentData {
@@ -34,12 +35,11 @@ interface Props {
 const { data } = Astro.props
 
 const descriptionData = data.description;
-console.log(descriptionData);
 const contentData = data.content;
 ---
 
 <!-- Layout component -->
-<div class="layout">
+<div>
   <PostDescription {...descriptionData} />
 
   {contentData.map((content) => (

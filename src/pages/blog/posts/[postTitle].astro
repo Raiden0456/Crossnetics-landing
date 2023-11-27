@@ -2,7 +2,7 @@
 //We should get the data from api in the future
 import Post from '../../../mock/mock-date-news.json'
 
-import Layout from '../../../layouts/Layout.astro'
+import Layout from '../../../layouts/Post_Layout.astro'
 import PostLayout from '@components/blog/Posts/PostLayout.astro';
 
 
@@ -27,7 +27,7 @@ return [
 const { postTitle } = Astro.params;
 ---
 <Layout title='Post' headerColor='bg-[#383C4B]'>
-  <main class='w-full' transition:animate='fade'>
+  <main class='w-full bg-white' transition:animate='fade'>
     <PostLayout data={Post} />
   </main>
 </Layout>
