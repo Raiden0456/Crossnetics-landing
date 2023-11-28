@@ -3,7 +3,8 @@ import PostDescription from './PostDescription.astro';
 import PostContent from './PostContent.astro';
 import Navigation  from './SideSection/Navigation.tsx';
 import Question from './SideSection/Question.astro';
-import PostFooter from './PostFooter.astro';
+import PostFooter from './PostFooter.tsx';
+
 
 interface DescriptionData {
   image: {
@@ -66,7 +67,7 @@ const NavHeaders = contentData.map((content) => ({
         <PostContent {...content} />
       ))}
       <hr class='w-full' />
-      <PostFooter likes={666} />
+      <PostFooter likes={666} client:load/>
     </div>
     <div class="lg:hidden">
       <Question {...QuestionMock} />

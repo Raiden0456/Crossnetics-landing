@@ -66,7 +66,6 @@ const Navigation: React.FC<NavigationProps> = ({ headers }) => {
           key={header.id}
           onClick={() => scrollToSection(header.id)}
           className={`flex flex-row gap-x-2 rounded-lg items-start justify-start transition-all duration-300 cursor-pointer w-fit ${
-            // Apply different styling if the section is active
             activeSection == header.id
               ? "text-white bg-blue-500 ml-px scale-105 p-2"
               : "text-gray-600 hover:scale-105"
