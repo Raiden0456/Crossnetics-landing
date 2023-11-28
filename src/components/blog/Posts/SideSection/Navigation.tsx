@@ -59,23 +59,26 @@ const Navigation: React.FC<NavigationProps> = ({ headers }) => {
   // Render the navigation component
   return (
     <div className="flex flex-col min-w-[250px] h-fit gap-y-4 p-6 rounded-[40px] bg-sky-50">
-      {headers.map((header) => (
+    {headers
+      .filter((header) => header.title.trim() !== '') // Filter out headers with empty titles
+      .map((header) => (
         <div
           key={header.id}
           onClick={() => scrollToSection(header.id)}
-          className={`flex flex-row gap-x-2 rounded-lg items-start justify-start transition-all duration-300 cursor-pointer ${
+          className={`flex flex-row gap-x-2 rounded-lg items-start justify-start transition-all duration-300 cursor-pointer w-fit ${
             // Apply different styling if the section is active
             activeSection == header.id
-              ? "text-white bg-blue-500 ml-px p-2 w-fit scale-105"
+              ? "text-white bg-blue-500 ml-px scale-105 p-2"
               : "text-gray-600 hover:scale-105"
           }`}
         >
-          <p className="font-semibold text-base leading-tight mt-0.5">
+          <p className="font-semibold text-sm leading-tight mt-0.5">
             {header.title}
           </p>
         </div>
-      ))}
-    </div>
+    ))}
+  </div>
+  
   );
 };
 

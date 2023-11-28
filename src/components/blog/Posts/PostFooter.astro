@@ -1,0 +1,21 @@
+---
+import like from'../../../images/icons/like.svg'
+import share from'../../../images/icons/share.svg'
+
+import Button from '@components/Button/Button.astro';
+
+interface Props {
+  likes: number;
+}
+
+const { likes } = Astro.props;
+---
+
+<div class="flex flex-row gap-6 justify-center lg:justify-start">
+  <div class="flex flex-row gap-2 items-center ">
+    <img src="/like.svg"></img>
+    <p class="text-gray-400 text-xs">{likes}</p>
+  </div>
+  <Button icon={like} width='w-fit' bgColor="bg-sky-100" paddingX="px-6" paddingY="py-3" textColor='text-blue-500' buttonText='Like' />
+  <Button icon={share} width='w-fit' bgColor="bg-sky-100" paddingX="px-6" paddingY="py-3" textColor='text-blue-500'  buttonText='Share' />
+</div>

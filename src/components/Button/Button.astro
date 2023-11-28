@@ -1,22 +1,26 @@
 ---
-//interface
+import { Image } from 'astro:assets'
 interface Props {
   paddingX?: string
   paddingY?: string
   bgColor?: string
   textColor?: string
   width?: string
+  icon?: any
   buttonText: string
 }
 
+
+
 // data
-const { paddingX = "px-2", paddingY = "py-1", textColor = "text-blue-500", bgColor = "bg-white", width = "w-full", buttonText } = Astro.props
+const { paddingX = "px-2", paddingY = "py-1", textColor = "text-blue-500", bgColor = "bg-white", width = "w-full", icon, buttonText } = Astro.props
 ---
 
 <div
   class={`${paddingX} ${paddingY} ${bgColor} ${width} rounded-2xl justify-center items-center inline-flex cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg`}
 >
-  <div class={`${textColor} text-xs font-extrabold uppercase`}>
+  <div class={`${textColor} text-xs font-extrabold uppercase flex flex-row gap-2 items-center justify-center`}>
+    {icon && <Image src={icon} alt="icon" width={15} height={15} /> }
     {buttonText}
   </div>
 </div>
