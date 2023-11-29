@@ -13,7 +13,7 @@ interface Props {
 const { image, title, author, tags, date } = Astro.props;
 ---
 
-<div class='flex mb-20 gap-10 md:gap-20 flex-col md:flex-row'>
+<div class='flex gap-10 md:gap-20 flex-col md:flex-row'>
   <div class='flex flex-col items-start w-full md:w-1/2 gap-4'>
     <div class='w-full h-56 xl:h-80 overflow-hidden rounded-[25px] xl:rounded-[40px]'>
       <img src={image.url} class='w-full h-full object-cover' />

@@ -16,6 +16,8 @@ interface Post {
 
 interface BlogSkeletonProps {
   height?: string | number;
+  cardBgColor?: string;
+  cardShadow?: string;
   rounded?: string | number;
   vertical?: boolean;
   post: Post;
@@ -23,6 +25,8 @@ interface BlogSkeletonProps {
 
 const BlogItemSkeleton = ({
   height,
+  cardBgColor = "bg-white",
+  cardShadow = "drop-shadow-lg",
   rounded,
   vertical,
   post,
@@ -44,14 +48,14 @@ const BlogItemSkeleton = ({
         <Skeleton style={style} />
       ) : (
         <div
-          className={`bg-white drop-shadow-lg min-h-64 rounded-[40px] flex ${orientationClasses} overflow-hidden`}
+          className={`${cardBgColor} ${cardShadow} min-h-[300px] rounded-[40px] flex ${orientationClasses} overflow-hidden`}
         >
           <img
             src={post.image}
             alt={post.title}
             className={orientationImageClasses}
           />
-          <div className="p-6 xl:p-8 flex flex-col gap-y-2 xl:gap-y-4">
+          <div className="p-6 xl:p-8 flex flex-col gap-y-2 xl:gap-y-4 justify-between">
             <div className=" text-slate-400 text-2xs font-medium">
               {post.date}
             </div>
