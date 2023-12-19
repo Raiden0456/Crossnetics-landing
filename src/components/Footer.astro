@@ -19,115 +19,118 @@ interface Props {
 const { contact_us, discover, social_media, button } = Astro.props
 ---
 
-<div
+<div class="flex flex-col bottom-0 mt-auto">
+  <div
   class='h-fit min-h-52 bg-footer-dark flex flex-col items-center justify-center bottom-0 mt-auto'
->
-  <div
-    class='w-10/12 lg:w-2/3 flex flex-col lg:flex-row items-start justify-center my-8 gap-6'
-  >
-    <Image
-      class='hidden lg:flex h-1/2 lg:h-1/3'
-      src={cool_logo}
-      alt=''
-      width={50}
-      height={50}
-    />
-    <div class='w-full flex flex-row items-start lg:flex-col gap-6'>
-      <div class='w-full flex flex-row items-start gap-6'>
-        <div class='w-full flex flex-row md:justify-between gap-6'>
-          <p
-            class='hidden lg:flex text-slate-300 text-sm xl:text-base font-bold whitespace-pre-line self-start'
-          >
-            {discover}
-          </p>
-          <div
-            class='flex flex-row flex-wrap items-center right-0 justify-start md:justify-end gap-4 w-fit'
-          >
-            {
-              social_media.map((social, index) => (
-                <div class='flex flex-row gap-x-1 2lg:gap-x-2 items-center justify-center w-22 text-slate-300 hover:text-sky-100'>
-                  <Image
-                    src={social.icon}
-                    alt=''
-                    width={10}
-                    height={10}
-                    class='w-[20px] lg:w-[10px]'
-                  />
-                  <a
-                    href={social.url}
-                    class='hidden lg:flex text-sm font-bold uppercase'
-                  >
-                    {social.title}
-                  </a>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-      <div
-        class='w-full flex flex-row justify-end lg:justify-between gap-6'
-      >
-        <div
-          class='hidden lg:flex w-fit h-11 px-6 py-2.5 bg-footer-button hover:bg-gray-600 rounded-2xl justify-center items-center cursor-pointer text-footer-button-text hover:text-footer-button-hover-text'
-        >
-          <div class='text-xs font-extrabold uppercase'>{button}</div>
-        </div>
-        <a
-          href='/web3-guide'
-          class='w-fit h-11 px-6 py-2.5 bg-footer-button hover:bg-gray-600 rounded-2xl flex justify-center items-center cursor-pointer text-footer-button-text hover:text-footer-button-hover-text text-base'
-        >
-          <span class='font-light'>WEB</span><span
-            class='font-semibold'>3.0</span
-          ><span class='font-thin'></span><span class='font-light'
-            >GUIDE</span
-          >
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-<div
-  class='h-fit min-h-10 bg-footer-dark flex items-center justify-center bottom-0'
->
-  <div
-    class='w-10/12 lg:w-2/3 flex items-center justify-between mb-8'
   >
     <div
-      class='w-full flex flex-row flex-wrap items-center justify-between gap-y-4'
+      class='w-10/12 lg:w-2/3 flex flex-col lg:flex-row items-start justify-center my-8 gap-6'
+    >
+      <Image
+        class='hidden lg:flex h-1/2 lg:h-1/3'
+        src={cool_logo}
+        alt=''
+        width={50}
+        height={50}
+      />
+      <div class='w-full flex flex-row items-start lg:flex-col gap-6'>
+        <div class='w-full flex flex-row items-start gap-6'>
+          <div class='w-full flex flex-row md:justify-between gap-6'>
+            <p
+              class='hidden lg:flex text-slate-300 text-sm xl:text-base font-bold whitespace-pre-line self-start'
+            >
+              {discover}
+            </p>
+            <div
+              class='flex flex-row flex-wrap items-center right-0 justify-start md:justify-end gap-4 w-fit'
+            >
+              {
+                social_media.map((social, index) => (
+                  <div class='flex flex-row gap-x-1 2lg:gap-x-2 items-center justify-center w-22 text-slate-300 hover:text-sky-100'>
+                    <Image
+                      src={social.icon}
+                      alt=''
+                      width={10}
+                      height={10}
+                      class='w-[20px] lg:w-[10px]'
+                    />
+                    <a
+                      href={social.url}
+                      class='hidden lg:flex text-sm font-bold uppercase'
+                    >
+                      {social.title}
+                    </a>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+        <div
+          class='w-full flex flex-row justify-end lg:justify-between gap-6'
+        >
+          <div
+            class='hidden lg:flex w-fit h-11 px-6 py-2.5 bg-footer-button hover:bg-gray-600 rounded-2xl justify-center items-center cursor-pointer text-footer-button-text hover:text-footer-button-hover-text'
+          >
+            <div class='text-xs font-extrabold uppercase'>{button}</div>
+          </div>
+          <a
+            href='/web3-guide'
+            class='w-fit h-11 px-6 py-2.5 bg-footer-button hover:bg-gray-600 rounded-2xl flex justify-center items-center cursor-pointer text-footer-button-text hover:text-footer-button-hover-text text-base'
+          >
+            <span class='font-light'>WEB</span><span
+              class='font-semibold'>3.0</span
+            ><span class='font-thin'></span><span class='font-light'
+              >GUIDE</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class='h-fit min-h-10 bg-footer-dark flex items-center justify-center bottom-0'
+  >
+    <div
+      class='w-10/12 lg:w-2/3 flex items-center justify-between mb-8'
     >
       <div
-        class='flex flex-row flex-wrap items-center justify-start gap-2 lg:gap-6 w-full lg:w-1/2'
+        class='w-full flex flex-row flex-wrap items-center justify-between gap-y-4'
       >
-        <a
-          href='/privacy-policy'
-          class='text-blue-500 hover:text-blue-400 text-xs font-medium underline capitalize'
-          >Privacy policy</a
+        <div
+          class='flex flex-row flex-wrap items-center justify-start gap-2 lg:gap-6 w-full lg:w-1/2'
         >
-        <a
-          href='/terms-of-service'
-          class='text-blue-500 hover:text-blue-400 text-xs font-medium underline capitalize'
-          >Terms of service</a
-        >
-        <a
-          href='/data-privacy-faq'
-          class='text-blue-500 hover:text-blue-400 text-xs font-medium underline capitalize'
-          >Data & Privacy FAQ</a
-        >
-        <a
-          href='/influencer-opt-out'
-          class='text-blue-500 hover:text-blue-400 text-xs font-medium underline capitalize'
-          >Influencer Opt Out</a
-        >
-      </div>
-      <div class='flex flex-row gap-x-2 items-center justify-center'>
-        <p class='text-slate-300 text-xs font-medium'>{contact_us}</p>
-        <a
-          href='mailto:info@crossnetics.com'
-          class='text-blue-500 hover:text-blue-400 text-xs font-medium underline'
-          >info@crossnetics.com
-        </a>
+          <a
+            href='/privacy-policy'
+            class='text-blue-500 hover:text-blue-400 text-xs font-medium underline capitalize'
+            >Privacy policy</a
+          >
+          <a
+            href='/terms-of-service'
+            class='text-blue-500 hover:text-blue-400 text-xs font-medium underline capitalize'
+            >Terms of service</a
+          >
+          <a
+            href='/data-privacy-faq'
+            class='text-blue-500 hover:text-blue-400 text-xs font-medium underline capitalize'
+            >Data & Privacy FAQ</a
+          >
+          <a
+            href='/influencer-opt-out'
+            class='text-blue-500 hover:text-blue-400 text-xs font-medium underline capitalize'
+            >Influencer Opt Out</a
+          >
+        </div>
+        <div class='flex flex-row gap-x-2 items-center justify-center'>
+          <p class='text-slate-300 text-xs font-medium'>{contact_us}</p>
+          <a
+            href='mailto:info@crossnetics.com'
+            class='text-blue-500 hover:text-blue-400 text-xs font-medium underline'
+            >info@crossnetics.com
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </div>
+

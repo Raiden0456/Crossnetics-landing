@@ -1,0 +1,102 @@
+---
+import PostDescription from './PostDescription.astro';
+import PostContent from './PostContent.astro';
+import Navigation  from './SideSection/Navigation.tsx';
+import Question from './SideSection/Question.astro';
+import PostFooter from './PostFooter.tsx';
+import PrevNext from './PrevNext/PrevNext.tsx';
+
+
+interface DescriptionData {
+  image: {
+    url: string;
+    copyright: string;
+  };
+  title: string;
+  author: string;
+  tags: string[];
+  date: string;
+}
+
+interface ContentData {
+  id: string;
+  titleType: boolean;
+  title: string;
+  text: string;
+  image: {
+    url: string;
+    copyright: string;
+  };
+}
+
+interface PostData {
+  description: DescriptionData;
+  content: ContentData[];
+}
+
+interface Props {
+  data: PostData;
+}
+
+const QuestionMock = {
+  title: "Not finding what you're looking for?",
+  description: "Don't be shy and let us know about your challenge.",
+  buttonText: 'Ask a queston',
+}
+
+// This data should be fetched from the database
+const PrevPostMock = {
+  id: 2,
+  title: 'Previous Post',
+  date: 'March 10, 2023',
+  text: 'Previous post is about how old it is, lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+  tags: ['Bullshit'],
+  likes: 69,
+  image: "/facebook_banner.png"
+  
+}
+
+const NextPostMock = {
+  id: 3,
+  title: 'Next Post',
+  date: 'may 10, 2023',
+  text: 'Next post is about how new it is, lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+  tags: ['Bullshit'],
+  likes: 96,
+  image: "/facebook_banner.png"
+  
+}
+//*   *//                                     
+
+const { data } = Astro.props
+
+const descriptionData = data.description;
+const contentData = data.content;
+
+const NavHeaders = contentData.map((content) => ({
+  id: content.id,
+  title: content.title,
+}));
+---
+
+<!-- Layout component -->
+<div class="flex flex-col gap-20">
+  <PostDescription {...descriptionData} />
+  <div class="flex flex-col lg:flex-row gap-20 w-full">
+    <div class="hidden lg:flex flex-col gap-6 sticky top-28 h-fit">
+      <Navigation headers={NavHeaders} client:load/>
+      <Question {...QuestionMock} />
+    </div>
+    <div class="flex flex-col gap-10">
+      {contentData.map((content) => (
+        <PostContent {...content} />
+      ))}
+      <hr class='w-full' />
+      <PostFooter likes={666} client:load/>
+    </div>
+    <div class="lg:hidden">
+      <Question {...QuestionMock} />
+    </div>
+  </div>
+  <PrevNext prevPost={PrevPostMock} nextPost={NextPostMock} client:load/>
+</div>

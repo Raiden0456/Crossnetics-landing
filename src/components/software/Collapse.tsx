@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
+// Define interfaces for your props
 interface Details {
   title: string;
   description: string;
@@ -19,21 +20,26 @@ interface Props {
   sections: Sectione[];
 }
 
+// Setting default props
 Collapse.defaultProps = {
   sections: [],
 };
 
+// Main Collapse component function
 export default function Collapse({ sections }: Props) {
-  const headerHeight = 100;
+  // Constants and state variables
+  const headerHeight = 100; // Height of the header for offset calculation
+  // Initialize the state to track which sections are open
   const initialOpenSections = useMemo(() => new Array(sections.length).fill(false), [sections.length]);
   const [openSections, setOpenSections] = useState<boolean[]>(initialOpenSections);
-  const [activeSection, setActiveSection] = useState<number | null>(null);
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeSection, setActiveSection] = useState<number | null>(null); // Active section for highlighting
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]); // References to each section
 
+  // Update the active section based on scroll position
   const updateActiveSection = useCallback(() => {
     const viewportHeight = window.innerHeight;
-    const middle = viewportHeight / 2; // Middle of the viewport
-  
+    const middle = viewportHeight / 2; // Middle of the viewport for calculation
+
     let activeIndex = null;
   
     for (let i = 0; i < sectionRefs.current.length; i++) {
@@ -52,13 +58,13 @@ export default function Collapse({ sections }: Props) {
     setActiveSection(activeIndex);
   }, [openSections]);
   
-  
-
+  // Attach and clean up the scroll event listener
   useEffect(() => {
     window.addEventListener("scroll", updateActiveSection);
     return () => window.removeEventListener("scroll", updateActiveSection);
   }, [updateActiveSection]);
 
+  // Scroll to a specific section
   const scrollToSection = useCallback((index: number) => {
     const section = sectionRefs.current[index];
     if (section) {
@@ -69,8 +75,7 @@ export default function Collapse({ sections }: Props) {
     }
   }, []);
   
-  
-
+  // Handle click on navigation to open a section and scroll to it
   const handleNavigationClick = (index: number) => {
     const newOpenSections = [...openSections];
     newOpenSections[index] = true; // Always open the section
@@ -79,6 +84,7 @@ export default function Collapse({ sections }: Props) {
     updateActiveSection();
   };
 
+  // Toggle a section open or closed
   const handleSectionToggle = (index: number) => {
     const newOpenSections = [...openSections];
     newOpenSections[index] = !newOpenSections[index];
@@ -91,6 +97,9 @@ export default function Collapse({ sections }: Props) {
     updateActiveSection();
   };
 
+  // TODO: Refactor this component to split into smaller subcomponents for better maintainability and readability.
+
+  // Render the component
   return (
     <div className="bg-gradient-to-b from-sky-200 via-sky-100 to-sky-200 flex items-center justify-center">
       <div className="w-10/12 lg:w-2/3 flex items-center justify-start 2lg:justify-center my-20">

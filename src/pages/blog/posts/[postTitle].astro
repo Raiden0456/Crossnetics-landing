@@ -1,0 +1,34 @@
+---
+//We should get the data from api in the future
+import Post from '../../../mock/mock-date-news.json'
+
+import Layout from '../../../layouts/Post_Layout.astro'
+import PostLayout from '@components/blog/Posts/PostLayout.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+// Fetch data from your backend
+//   const posts = await fetch('https://your-backend.com/api/posts').then(res => res.json());
+
+//   // Map over the fetched data to create paths
+//   const paths = posts.map(post => {
+//     return { params: { postTitle: post.title } };
+//   });
+
+//   return paths;
+
+return [
+    { params: { postTitle: 'my-first-post' } },
+    { params: { postTitle: 'another-post' } },
+  ];
+
+}
+
+const { postTitle } = Astro.params;
+---
+<Layout title='Post' headerColor='bg-[#383C4B]'>
+  <main class='w-full bg-white' transition:animate='fade'>
+    <PostLayout data={Post} />
+  </main>
+</Layout>

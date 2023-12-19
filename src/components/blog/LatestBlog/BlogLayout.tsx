@@ -1,5 +1,7 @@
 import React from 'react'
+
 import BlogItemSkeleton from './BlogItemSkeleton.tsx'
+
 import useWindowDimensions from '../../../hooks/useWindowDimensions.tsx'
 
 interface Posts {
